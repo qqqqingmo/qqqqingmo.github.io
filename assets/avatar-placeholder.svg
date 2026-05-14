@@ -1,0 +1,18 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Avatar placeholder</title>
+  <desc id="desc">A clean abstract profile placeholder with academic blue and indigo shapes.</desc>
+  <rect width="640" height="640" rx="48" fill="#EEF4FB"/>
+  <circle cx="503" cy="130" r="126" fill="#DDE8FF"/>
+  <circle cx="142" cy="518" r="166" fill="#E6F0FF"/>
+  <path d="M93 424C150 333 229 287 331 287C432 287 508 333 550 424V557H93V424Z" fill="#244F9E"/>
+  <circle cx="320" cy="228" r="116" fill="#F9FBFF"/>
+  <path d="M211 233C227 169 267 137 331 137C389 137 430 169 453 233C438 268 396 294 331 294C266 294 226 268 211 233Z" fill="#D8E3F7"/>
+  <path d="M236 225C247 179 278 156 329 156C376 156 408 179 424 225C413 246 379 264 329 264C279 264 248 246 236 225Z" fill="#18366C"/>
+  <circle cx="283" cy="227" r="12" fill="#F9FBFF"/>
+  <circle cx="374" cy="227" r="12" fill="#F9FBFF"/>
+  <path d="M291 276C313 291 341 291 365 276" stroke="#F9FBFF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M159 457C216 414 270 392 321 392C373 392 426 414 480 457" stroke="#6E7DDC" stroke-width="22" stroke-linecap="round"/>
+  <path d="M134 118H261" stroke="#244F9E" stroke-width="18" stroke-linecap="round"/>
+  <path d="M134 158H226" stroke="#6E7DDC" stroke-width="18" stroke-linecap="round"/>
+  <path d="M486 448H540" stroke="#F9FBFF" stroke-width="16" stroke-linecap="round"/>
+</svg>
