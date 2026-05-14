@@ -13,6 +13,12 @@ Website: <https://qqqqingmo.github.io>
 ├── script.js
 ├── assets/
 │   ├── avatar-placeholder.svg
+│   ├── visual-layout.svg
+│   ├── visual-video.svg
+│   ├── visual-relighting.svg
+│   ├── visual-mapping.svg
+│   ├── visual-music.svg
+│   ├── visual-rhythm.svg
 │   └── favicon.svg
 └── README.md
 ```
@@ -53,7 +59,7 @@ For a user site repository named `qqqqingmo.github.io`, GitHub Pages will serve 
 3. Set the source to `Deploy from a branch`.
 4. Select branch `main` and folder `/root`.
 
-## Replace the Avatar
+## Replace the Avatar and Visuals
 
 The current avatar is a placeholder:
 
@@ -73,6 +79,19 @@ Then update the image path in `index.html`:
 <img src="assets/avatar.jpg" alt="Jiangyue Zeng" />
 ```
 
+The refreshed homepage uses local SVG visual placeholders:
+
+```text
+assets/visual-layout.svg
+assets/visual-video.svg
+assets/visual-relighting.svg
+assets/visual-mapping.svg
+assets/visual-music.svg
+assets/visual-rhythm.svg
+```
+
+Replace these with project figures, result images, personal photos, or updated illustrations when they are ready. Keep the paths in `index.html` updated.
+
 ## Update Publications and Projects
 
 Edit the `Publications` and `Projects` sections in `index.html`.
@@ -89,4 +108,4 @@ Recommended checks before publishing:
 - The site uses plain HTML, CSS, and vanilla JavaScript.
 - No npm, Vite, React, or build step is required.
 - External links use `target="_blank"` and `rel="noopener noreferrer"`.
-- The design includes responsive layout, mobile navigation, active section highlighting, hover states, and reduced-motion support.
+- The design includes responsive layout, mobile navigation, active section highlighting, hover states, reveal animations, floating hero visuals, and reduced-motion support.

@@ -1,0 +1,41 @@
+<svg width="720" height="500" viewBox="0 0 720 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Semantic mapping placeholder</title>
+  <desc id="desc">Abstract 3D point cloud and top-down semantic map projection.</desc>
+  <defs>
+    <linearGradient id="bg" x1="58" y1="52" x2="662" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9FFF8"/>
+      <stop offset="0.45" stop-color="#EEF1FF"/>
+      <stop offset="1" stop-color="#FFF1F7"/>
+    </linearGradient>
+    <linearGradient id="map" x1="134" y1="132" x2="590" y2="384" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58BDA5"/>
+      <stop offset="0.55" stop-color="#4666D8"/>
+      <stop offset="1" stop-color="#E66FA8"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="500" rx="42" fill="url(#bg)"/>
+  <g opacity="0.65">
+    <path d="M160 332L358 156L562 332L360 424L160 332Z" fill="#FFFFFF"/>
+    <path d="M160 332L358 156L562 332L360 424L160 332Z" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round"/>
+  </g>
+  <path d="M226 320L358 206L492 320L360 378L226 320Z" fill="url(#map)" opacity="0.85"/>
+  <path d="M306 274L356 232L410 274L358 300L306 274Z" fill="#FFFDFB" opacity="0.9"/>
+  <path d="M252 326L304 286L356 312L304 342L252 326Z" fill="#FFFDFB" opacity="0.62"/>
+  <path d="M402 314L456 286L504 322L452 346L402 314Z" fill="#FFFDFB" opacity="0.62"/>
+  <g fill="#4A3F78">
+    <circle cx="194" cy="124" r="8"/>
+    <circle cx="264" cy="92" r="6"/>
+    <circle cx="350" cy="118" r="9"/>
+    <circle cx="458" cy="98" r="7"/>
+    <circle cx="534" cy="142" r="9"/>
+    <circle cx="598" cy="206" r="6"/>
+    <circle cx="132" cy="208" r="7"/>
+    <circle cx="178" cy="250" r="6"/>
+  </g>
+  <g stroke="#4A3F78" stroke-width="3" opacity="0.38">
+    <path d="M194 124L264 92L350 118L458 98L534 142L598 206"/>
+    <path d="M132 208L194 124L350 118L598 206"/>
+  </g>
+  <rect x="86" y="402" width="158" height="30" rx="15" fill="#FFFFFF" opacity="0.78"/>
+  <rect x="492" y="54" width="142" height="30" rx="15" fill="#FFFFFF" opacity="0.72"/>
+</svg>

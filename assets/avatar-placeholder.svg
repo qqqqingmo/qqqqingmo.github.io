@@ -1,18 +1,37 @@
 <svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Avatar placeholder</title>
-  <desc id="desc">A clean abstract profile placeholder with academic blue and indigo shapes.</desc>
-  <rect width="640" height="640" rx="48" fill="#EEF4FB"/>
-  <circle cx="503" cy="130" r="126" fill="#DDE8FF"/>
-  <circle cx="142" cy="518" r="166" fill="#E6F0FF"/>
-  <path d="M93 424C150 333 229 287 331 287C432 287 508 333 550 424V557H93V424Z" fill="#244F9E"/>
-  <circle cx="320" cy="228" r="116" fill="#F9FBFF"/>
-  <path d="M211 233C227 169 267 137 331 137C389 137 430 169 453 233C438 268 396 294 331 294C266 294 226 268 211 233Z" fill="#D8E3F7"/>
-  <path d="M236 225C247 179 278 156 329 156C376 156 408 179 424 225C413 246 379 264 329 264C279 264 248 246 236 225Z" fill="#18366C"/>
-  <circle cx="283" cy="227" r="12" fill="#F9FBFF"/>
-  <circle cx="374" cy="227" r="12" fill="#F9FBFF"/>
-  <path d="M291 276C313 291 341 291 365 276" stroke="#F9FBFF" stroke-width="12" stroke-linecap="round"/>
-  <path d="M159 457C216 414 270 392 321 392C373 392 426 414 480 457" stroke="#6E7DDC" stroke-width="22" stroke-linecap="round"/>
-  <path d="M134 118H261" stroke="#244F9E" stroke-width="18" stroke-linecap="round"/>
-  <path d="M134 158H226" stroke="#6E7DDC" stroke-width="18" stroke-linecap="round"/>
-  <path d="M486 448H540" stroke="#F9FBFF" stroke-width="16" stroke-linecap="round"/>
+  <desc id="desc">A warm abstract profile placeholder with soft pink, lavender, and blue shapes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="74" y1="42" x2="582" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4F8"/>
+      <stop offset="0.48" stop-color="#F0EAFF"/>
+      <stop offset="1" stop-color="#E6F7FF"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="164" y1="344" x2="510" y2="589" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E66FA8"/>
+      <stop offset="0.56" stop-color="#6755D8"/>
+      <stop offset="1" stop-color="#4666D8"/>
+    </linearGradient>
+    <filter id="shadow" x="80" y="72" width="500" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#5F537E" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="640" height="640" rx="56" fill="url(#bg)"/>
+  <circle cx="108" cy="122" r="42" fill="#FFD7E6"/>
+  <circle cx="532" cy="164" r="94" fill="#D9E7FF"/>
+  <circle cx="508" cy="472" r="118" fill="#FFE5C8"/>
+  <path d="M118 230C182 142 276 100 400 104" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-dasharray="4 34"/>
+  <g filter="url(#shadow)">
+    <path d="M122 466C160 356 230 302 332 302C431 302 496 356 520 466V562H122V466Z" fill="url(#shirt)"/>
+    <circle cx="322" cy="246" r="118" fill="#FFFDFB"/>
+    <path d="M207 245C224 175 267 140 337 140C398 140 442 175 466 245C449 283 406 311 337 311C267 311 224 283 207 245Z" fill="#4A3F78"/>
+    <circle cx="285" cy="242" r="12" fill="#FFFFFF"/>
+    <circle cx="383" cy="242" r="12" fill="#FFFFFF"/>
+    <path d="M296 286C318 301 348 301 374 286" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+    <path d="M188 430C240 392 288 373 333 373C382 373 428 392 472 430" stroke="#FFC1DB" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <rect x="82" y="382" width="90" height="22" rx="11" fill="#FFFFFF" opacity="0.82"/>
+  <rect x="468" y="322" width="76" height="22" rx="11" fill="#FFFFFF" opacity="0.82"/>
+  <path d="M104 418H156" stroke="#E66FA8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M488 358H540" stroke="#6755D8" stroke-width="10" stroke-linecap="round"/>
 </svg>

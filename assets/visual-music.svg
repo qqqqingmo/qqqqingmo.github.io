@@ -1,0 +1,29 @@
+<svg width="720" height="500" viewBox="0 0 720 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Music and creative media placeholder</title>
+  <desc id="desc">A soft playlist card with waves, notes, and colorful creative media shapes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="52" y1="42" x2="668" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF2E8"/>
+      <stop offset="0.48" stop-color="#FFEAF5"/>
+      <stop offset="1" stop-color="#EBF6FF"/>
+    </linearGradient>
+    <linearGradient id="disc" x1="178" y1="120" x2="520" y2="404" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E66FA8"/>
+      <stop offset="0.56" stop-color="#6755D8"/>
+      <stop offset="1" stop-color="#58BDA5"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="500" rx="42" fill="url(#bg)"/>
+  <rect x="118" y="98" width="484" height="304" rx="36" fill="#FFFFFF" opacity="0.72"/>
+  <circle cx="250" cy="250" r="92" fill="url(#disc)"/>
+  <circle cx="250" cy="250" r="34" fill="#FFFDFB" opacity="0.92"/>
+  <path d="M410 172H540" stroke="#6755D8" stroke-width="18" stroke-linecap="round"/>
+  <path d="M410 224H520" stroke="#E66FA8" stroke-width="18" stroke-linecap="round" opacity="0.82"/>
+  <path d="M410 276H562" stroke="#58BDA5" stroke-width="18" stroke-linecap="round" opacity="0.82"/>
+  <path d="M410 328H494" stroke="#F4A86D" stroke-width="18" stroke-linecap="round" opacity="0.82"/>
+  <path d="M110 424C178 358 244 452 312 386C380 322 450 438 606 342" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round" opacity="0.88"/>
+  <path d="M164 142V220" stroke="#4A3F78" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="144" cy="224" r="22" fill="#4A3F78"/>
+  <path d="M554 96V164" stroke="#4A3F78" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="536" cy="168" r="19" fill="#4A3F78"/>
+</svg>

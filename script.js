@@ -5,9 +5,38 @@ const navLinks = Array.from(document.querySelectorAll(".nav-link"));
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
+const revealItems = Array.from(document.querySelectorAll(".reveal"));
+let ticking = false;
 
 const setHeaderState = () => {
   header.classList.toggle("scrolled", window.scrollY > 12);
+};
+
+const setActiveLink = () => {
+  const offset = window.scrollY + header.offsetHeight + 120;
+  let currentId = sections[0]?.id;
+
+  sections.forEach((section) => {
+    if (section.offsetTop <= offset) {
+      currentId = section.id;
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.toggle("active", link.getAttribute("href") === `#${currentId}`);
+  });
+};
+
+const onScroll = () => {
+  setHeaderState();
+
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      setActiveLink();
+      ticking = false;
+    });
+    ticking = true;
+  }
 };
 
 const closeMenu = () => {
@@ -23,7 +52,11 @@ navToggle.addEventListener("click", () => {
 });
 
 navLinks.forEach((link) => {
-  link.addEventListener("click", closeMenu);
+  link.addEventListener("click", () => {
+    closeMenu();
+    navLinks.forEach((item) => item.classList.remove("active"));
+    link.classList.add("active");
+  });
 });
 
 document.addEventListener("keydown", (event) => {
@@ -32,29 +65,23 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-const observer = new IntersectionObserver(
+const revealObserver = new IntersectionObserver(
   (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-    if (!visible) {
-      return;
-    }
-
-    navLinks.forEach((link) => {
-      link.classList.toggle(
-        "active",
-        link.getAttribute("href") === `#${visible.target.id}`,
-      );
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
     });
   },
   {
-    rootMargin: "-25% 0px -55% 0px",
-    threshold: [0.12, 0.35, 0.6],
+    rootMargin: "0px 0px -10% 0px",
+    threshold: 0.12,
   },
 );
 
-sections.forEach((section) => observer.observe(section));
+revealItems.forEach((item) => revealObserver.observe(item));
 setHeaderState();
-window.addEventListener("scroll", setHeaderState, { passive: true });
+setActiveLink();
+window.addEventListener("scroll", onScroll, { passive: true });
+window.addEventListener("hashchange", setActiveLink);
