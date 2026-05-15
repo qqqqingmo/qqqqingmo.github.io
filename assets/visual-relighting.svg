@@ -3,26 +3,26 @@
   <desc id="desc">Abstract relighting scene with light beams and foreground-background separation.</desc>
   <defs>
     <linearGradient id="bg" x1="48" y1="28" x2="682" y2="462" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF5E8"/>
-      <stop offset="0.48" stop-color="#F6ECFF"/>
-      <stop offset="1" stop-color="#E7F7FF"/>
+      <stop stop-color="#F4F8FA"/>
+      <stop offset="0.48" stop-color="#E7F1F4"/>
+      <stop offset="1" stop-color="#EDF6F8"/>
     </linearGradient>
     <linearGradient id="beam" x1="128" y1="76" x2="562" y2="428" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFE39A"/>
-      <stop offset="0.4" stop-color="#F4A86D"/>
-      <stop offset="1" stop-color="#E66FA8"/>
+      <stop stop-color="#a8d8ea"/>
+      <stop offset="0.4" stop-color="#9cc6dc"/>
+      <stop offset="1" stop-color="#66ccff"/>
     </linearGradient>
     <linearGradient id="shape" x1="205" y1="156" x2="516" y2="384" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#6755D8"/>
-      <stop offset="1" stop-color="#4666D8"/>
+      <stop stop-color="#2d5f86"/>
+      <stop offset="1" stop-color="#4fa9c6"/>
     </linearGradient>
   </defs>
   <rect width="720" height="500" rx="42" fill="url(#bg)"/>
   <path d="M108 76L568 424H108V76Z" fill="url(#beam)" opacity="0.42"/>
-  <path d="M612 74L228 424H612V74Z" fill="#DDF4FF" opacity="0.72"/>
-  <circle cx="126" cy="88" r="38" fill="#FFE39A"/>
+  <path d="M612 74L228 424H612V74Z" fill="#E6F2F4" opacity="0.72"/>
+  <circle cx="126" cy="88" r="38" fill="#a8d8ea"/>
   <circle cx="365" cy="258" r="116" fill="url(#shape)"/>
-  <path d="M226 358C266 306 309 280 357 280C407 280 452 306 492 358V408H226V358Z" fill="#43326E"/>
+  <path d="M226 358C266 306 309 280 357 280C407 280 452 306 492 358V408H226V358Z" fill="#142c44"/>
   <circle cx="360" cy="212" r="54" fill="#FFFDFB"/>
   <path d="M210 124H540" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" opacity="0.65"/>
   <path d="M180 452H582" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" opacity="0.7"/>

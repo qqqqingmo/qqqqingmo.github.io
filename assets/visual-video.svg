@@ -3,14 +3,14 @@
   <desc id="desc">Abstract video frames with motion waves and temporal consistency marks.</desc>
   <defs>
     <linearGradient id="bg" x1="54" y1="40" x2="672" y2="450" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#EAF3FF"/>
-      <stop offset="0.52" stop-color="#F4EDFF"/>
-      <stop offset="1" stop-color="#FFF2E6"/>
+      <stop stop-color="#F4F8FA"/>
+      <stop offset="0.52" stop-color="#E7F1F4"/>
+      <stop offset="1" stop-color="#F4F8FA"/>
     </linearGradient>
     <linearGradient id="frame" x1="116" y1="146" x2="574" y2="340" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#4666D8"/>
-      <stop offset="0.55" stop-color="#6755D8"/>
-      <stop offset="1" stop-color="#E66FA8"/>
+      <stop stop-color="#4fa9c6"/>
+      <stop offset="0.55" stop-color="#2d5f86"/>
+      <stop offset="1" stop-color="#66ccff"/>
     </linearGradient>
   </defs>
   <rect width="720" height="500" rx="42" fill="url(#bg)"/>
@@ -24,8 +24,8 @@
     <rect x="496" y="158" width="134" height="184" rx="28" fill="white" opacity="0.72"/>
     <rect x="520" y="190" width="86" height="106" rx="24" fill="url(#frame)" opacity="0.7"/>
   </g>
-  <path d="M108 392C192 326 278 420 366 354C456 286 522 372 626 302" stroke="#6755D8" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
-  <path d="M112 420C202 356 278 448 370 382C456 320 536 404 632 334" stroke="#E66FA8" stroke-width="10" stroke-linecap="round" opacity="0.54"/>
+  <path d="M108 392C192 326 278 420 366 354C456 286 522 372 626 302" stroke="#2d5f86" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+  <path d="M112 420C202 356 278 448 370 382C456 320 536 404 632 334" stroke="#66ccff" stroke-width="10" stroke-linecap="round" opacity="0.54"/>
   <g fill="#FFFFFF" opacity="0.9">
     <circle cx="154" cy="414" r="9"/>
     <circle cx="268" cy="414" r="9"/>

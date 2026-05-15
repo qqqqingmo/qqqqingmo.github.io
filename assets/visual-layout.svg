@@ -3,14 +3,14 @@
   <desc id="desc">Sparse dot layouts and generated pattern tiles on a soft gradient background.</desc>
   <defs>
     <linearGradient id="bg" x1="56" y1="36" x2="672" y2="454" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF0F7"/>
-      <stop offset="0.48" stop-color="#F0ECFF"/>
-      <stop offset="1" stop-color="#E8F9FF"/>
+      <stop stop-color="#F4F8FA"/>
+      <stop offset="0.48" stop-color="#E7F1F4"/>
+      <stop offset="1" stop-color="#eaf3f5"/>
     </linearGradient>
     <linearGradient id="tile" x1="128" y1="120" x2="602" y2="412" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E66FA8"/>
-      <stop offset="0.52" stop-color="#6755D8"/>
-      <stop offset="1" stop-color="#58BDA5"/>
+      <stop stop-color="#66ccff"/>
+      <stop offset="0.52" stop-color="#2d5f86"/>
+      <stop offset="1" stop-color="#d7eef8"/>
     </linearGradient>
   </defs>
   <rect width="720" height="500" rx="42" fill="url(#bg)"/>
@@ -27,13 +27,13 @@
   </g>
   <rect x="98" y="86" width="522" height="336" rx="32" fill="white" opacity="0.42"/>
   <g>
-    <circle cx="154" cy="164" r="15" fill="#E66FA8"/>
-    <circle cx="256" cy="196" r="15" fill="#6755D8"/>
-    <circle cx="358" cy="148" r="15" fill="#58BDA5"/>
-    <circle cx="460" cy="276" r="15" fill="#F4A86D"/>
-    <circle cx="562" cy="228" r="15" fill="#4666D8"/>
-    <circle cx="205" cy="316" r="15" fill="#F09CC2"/>
-    <circle cx="408" cy="356" r="15" fill="#8E82EF"/>
+    <circle cx="154" cy="164" r="15" fill="#66ccff"/>
+    <circle cx="256" cy="196" r="15" fill="#2d5f86"/>
+    <circle cx="358" cy="148" r="15" fill="#d7eef8"/>
+    <circle cx="460" cy="276" r="15" fill="#9cc6dc"/>
+    <circle cx="562" cy="228" r="15" fill="#4fa9c6"/>
+    <circle cx="205" cy="316" r="15" fill="#8fb9d0"/>
+    <circle cx="408" cy="356" r="15" fill="#b9d9e8"/>
   </g>
   <g opacity="0.9">
     <rect x="126" y="132" width="66" height="66" rx="18" fill="url(#tile)"/>

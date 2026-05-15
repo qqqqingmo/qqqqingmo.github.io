@@ -1,37 +1,37 @@
 <svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Avatar placeholder</title>
-  <desc id="desc">A warm abstract profile placeholder with soft pink, lavender, and blue shapes.</desc>
+  <desc id="desc">A cool abstract profile placeholder with soft paper, cyan, blue-green, and navy shapes.</desc>
   <defs>
     <linearGradient id="bg" x1="74" y1="42" x2="582" y2="610" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF4F8"/>
-      <stop offset="0.48" stop-color="#F0EAFF"/>
-      <stop offset="1" stop-color="#E6F7FF"/>
+      <stop stop-color="#F7F9FB"/>
+      <stop offset="0.48" stop-color="#E7F1F4"/>
+      <stop offset="1" stop-color="#EDF6F8"/>
     </linearGradient>
     <linearGradient id="shirt" x1="164" y1="344" x2="510" y2="589" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E66FA8"/>
-      <stop offset="0.56" stop-color="#6755D8"/>
-      <stop offset="1" stop-color="#4666D8"/>
+      <stop stop-color="#66ccff"/>
+      <stop offset="0.56" stop-color="#2d5f86"/>
+      <stop offset="1" stop-color="#4fa9c6"/>
     </linearGradient>
     <filter id="shadow" x="80" y="72" width="500" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#5F537E" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#5f7385" flood-opacity="0.18"/>
     </filter>
   </defs>
   <rect width="640" height="640" rx="56" fill="url(#bg)"/>
-  <circle cx="108" cy="122" r="42" fill="#FFD7E6"/>
-  <circle cx="532" cy="164" r="94" fill="#D9E7FF"/>
-  <circle cx="508" cy="472" r="118" fill="#FFE5C8"/>
+  <circle cx="108" cy="122" r="42" fill="#D7EBEF"/>
+  <circle cx="532" cy="164" r="94" fill="#DCECEF"/>
+  <circle cx="508" cy="472" r="118" fill="#D9EDF0"/>
   <path d="M118 230C182 142 276 100 400 104" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-dasharray="4 34"/>
   <g filter="url(#shadow)">
     <path d="M122 466C160 356 230 302 332 302C431 302 496 356 520 466V562H122V466Z" fill="url(#shirt)"/>
     <circle cx="322" cy="246" r="118" fill="#FFFDFB"/>
-    <path d="M207 245C224 175 267 140 337 140C398 140 442 175 466 245C449 283 406 311 337 311C267 311 224 283 207 245Z" fill="#4A3F78"/>
+    <path d="M207 245C224 175 267 140 337 140C398 140 442 175 466 245C449 283 406 311 337 311C267 311 224 283 207 245Z" fill="#142c44"/>
     <circle cx="285" cy="242" r="12" fill="#FFFFFF"/>
     <circle cx="383" cy="242" r="12" fill="#FFFFFF"/>
     <path d="M296 286C318 301 348 301 374 286" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
-    <path d="M188 430C240 392 288 373 333 373C382 373 428 392 472 430" stroke="#FFC1DB" stroke-width="18" stroke-linecap="round"/>
+    <path d="M188 430C240 392 288 373 333 373C382 373 428 392 472 430" stroke="#9fd9ed" stroke-width="18" stroke-linecap="round"/>
   </g>
   <rect x="82" y="382" width="90" height="22" rx="11" fill="#FFFFFF" opacity="0.82"/>
   <rect x="468" y="322" width="76" height="22" rx="11" fill="#FFFFFF" opacity="0.82"/>
-  <path d="M104 418H156" stroke="#E66FA8" stroke-width="10" stroke-linecap="round"/>
-  <path d="M488 358H540" stroke="#6755D8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M104 418H156" stroke="#66ccff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M488 358H540" stroke="#2d5f86" stroke-width="10" stroke-linecap="round"/>
 </svg>

@@ -3,14 +3,14 @@
   <desc id="desc">Abstract rhythm circle and arcade button motif in soft colors.</desc>
   <defs>
     <linearGradient id="bg" x1="46" y1="44" x2="674" y2="454" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#EEFAFF"/>
-      <stop offset="0.48" stop-color="#F3ECFF"/>
-      <stop offset="1" stop-color="#FFF0F7"/>
+      <stop stop-color="#F4F8FA"/>
+      <stop offset="0.48" stop-color="#E7F1F4"/>
+      <stop offset="1" stop-color="#F4F8FA"/>
     </linearGradient>
     <linearGradient id="ring" x1="166" y1="70" x2="552" y2="444" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#58BDA5"/>
-      <stop offset="0.5" stop-color="#6755D8"/>
-      <stop offset="1" stop-color="#E66FA8"/>
+      <stop stop-color="#d7eef8"/>
+      <stop offset="0.5" stop-color="#2d5f86"/>
+      <stop offset="1" stop-color="#66ccff"/>
     </linearGradient>
   </defs>
   <rect width="720" height="500" rx="42" fill="url(#bg)"/>
@@ -28,7 +28,7 @@
     <circle cx="168" cy="250" r="22"/>
     <circle cx="224" cy="114" r="22"/>
   </g>
-  <g stroke="#4A3F78" stroke-width="8" stroke-linecap="round" opacity="0.32">
+  <g stroke="#142c44" stroke-width="8" stroke-linecap="round" opacity="0.32">
     <path d="M360 58V106"/>
     <path d="M496 114L462 148"/>
     <path d="M552 250H504"/>
