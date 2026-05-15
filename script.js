@@ -26,18 +26,22 @@ const translations = {
     "interest.generation": "Image and video generation",
     "about.title": "About",
     "about.p1":
-      "I am Jiangyue Zeng, an undergraduate student in the AI direction of Yuanpei College at Peking University, with research interests in Generative AI, AI for Art, and image/video generation.",
+      "I am Jiangyue Zeng, an undergraduate student in the AI direction of Yuanpei College at Peking University, with research interests primarily in Generative AI, AI for Art, and image/video generation.",
     "about.p2":
       'Currently a research intern at <a href="http://struct.wict.pku.edu.cn/" target="_blank" rel="noopener noreferrer">STRUCT</a> (Spatial and Temporal Restoration, Understanding and Compression Team), Wangxuan Institute of Computer Technology, Peking University, advised by <a href="https://williamyang1991.github.io/" target="_blank" rel="noopener noreferrer">Shuai Yang</a>.',
     "publications.title": "Publications",
     "publication.flowportal.meta": "CVPR 2026",
+    "publication.flowportal.authors":
+      "Wenshuo Gao, Junyi Fan, <strong>Jiangyue Zeng</strong>, Shuai Yang",
     "publication.flowportal.desc":
       "Training-free video relighting and background replacement with an emphasis on temporal consistency, structure preservation, and detail transfer.",
     "publication.paper": "Paper",
     "publication.project": "Project",
-    "publication.plaid.meta": "Manuscript / Under preparation",
+    "publication.plaid.meta": "Under Review",
+    "publication.plaid.authors":
+      "<strong>Jiangyue Zeng</strong>, Anonymous Co-authors",
     "publication.plaid.desc":
-      "A training-free layout-controllable generation framework for repeated-instance pattern synthesis, using sparse dot layouts and attention-level foreground/background decoupling.",
+      "A training-free framework for controllable image generation with layout guidance.",
     "experience.title": "Education",
     "experience.internMeta": "<strong><u>Present</u></strong>",
     "experience.internTitle": "Research Intern, STRUCT",
@@ -60,7 +64,7 @@ const translations = {
       "I enjoy J-Pop, Vocaloid music, and rhythm games such as maimai DX.",
     "contact.title": "Contact",
     "contact.desc":
-      "I am open to research conversations and collaborations around Generative AI and AIGC, AI for Art, and image/video generation.",
+      "I am open to research conversations and collaborations around Generative AI and AIGC, etc!",
     "contact.email": "Email",
     "footer.copyright": "© 2026 Jiangyue Zeng. Built with GitHub Pages.",
   },
@@ -96,13 +100,17 @@ const translations = {
       '目前在北京大学王选计算机研究所 <a href="http://struct.wict.pku.edu.cn/" target="_blank" rel="noopener noreferrer">STRUCT</a>小组科研实习，师从<a href="https://williamyang1991.github.io/" target="_blank" rel="noopener noreferrer">杨帅</a>。',
     "publications.title": "论文",
     "publication.flowportal.meta": "CVPR 2026",
+    "publication.flowportal.authors":
+      "Wenshuo Gao, Junyi Fan, <strong>Jiangyue Zeng</strong>, Shuai Yang",
     "publication.flowportal.desc":
       "训练自由的视频重光照与背景替换方法，重点关注时间一致性、结构保持与细节迁移。",
     "publication.paper": "论文",
     "publication.project": "项目主页",
-    "publication.plaid.meta": "手稿 / 准备中",
+    "publication.plaid.meta": "Under Review",
+    "publication.plaid.authors":
+      "<strong>Jiangyue Zeng</strong>，匿名合著者",
     "publication.plaid.desc":
-      "一个面向重复实例图案合成的训练自由布局可控生成框架，使用稀疏点布局以及注意力层面的前景/背景解耦。",
+      "一个面向可控图像生成布局引导的训练自由框架。",
     "experience.title": "教育经历",
     "experience.internMeta": "<strong><u>至今</u></strong>",
     "experience.internTitle": "STRUCT 科研实习",
@@ -122,7 +130,7 @@ const translations = {
     "life.jpop.desc": "我喜欢 J-Pop、Vocaloid等音乐，也喜欢玩 maimai DX 这类音游！",
     "contact.title": "联系",
     "contact.desc":
-      "欢迎围绕生成式人工智能与 AIGC、AI for Art、图像与视频生成进行研究交流与合作。",
+      "欢迎围绕生成式人工智能与AIGC等方向与我交流与合作！",
     "contact.email": "邮箱",
   },
 };
@@ -276,6 +284,12 @@ const onScroll = () => {
 if (languageToggle) {
   languageToggle.addEventListener("click", () => {
     applyLanguage(currentLanguage === "zh" ? "en" : "zh");
+  });
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    applyTheme(currentTheme === "dark" ? "light" : "dark");
   });
 }
 
