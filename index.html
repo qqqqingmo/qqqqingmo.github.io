@@ -11,11 +11,11 @@
     <meta property="og:title" content="Jiangyue Zeng" />
     <meta
       property="og:description"
-      content="Academic and creative portfolio homepage of Jiangyue Zeng."
+      content="Academic homepage of Jiangyue Zeng."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qqqqingmo.github.io" />
-    <meta name="theme-color" content="#f6fbff" />
+    <meta name="theme-color" content="#fefffe" />
     <title>Jiangyue Zeng</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
@@ -23,9 +23,8 @@
   <body>
     <header class="site-header" id="top">
       <nav class="nav" aria-label="Primary navigation">
-        <a class="nav-logo" href="#hero" aria-label="Jiangyue Zeng homepage">
-          <span class="logo-mark" aria-hidden="true">JZ</span>
-          <span>Jiangyue Zeng</span>
+        <a class="nav-logo" href="#about" aria-label="Jiangyue Zeng homepage">
+          Jiangyue Zeng
         </a>
         <button
           class="nav-toggle"
@@ -40,257 +39,148 @@
         </button>
         <ul class="nav-menu" id="nav-menu">
           <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#research">Research</a></li>
-          <li><a class="nav-link" href="#highlights">Highlights</a></li>
           <li><a class="nav-link" href="#publications">Publications</a></li>
           <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#beyond">Life</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#life">Life</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="hero section" id="hero" aria-labelledby="hero-title">
-        <div class="hero-content reveal">
-          <p class="eyebrow">Academic + Creative AI Portfolio</p>
-          <h1 id="hero-title">Jiangyue Zeng</h1>
-          <p class="hero-subtitle">
-            Undergraduate Student in AI, Peking University
-          </p>
-          <p class="hero-description">
-            Currently exploring creative intelligence through pixels, motion,
-            and generative models. I like building visual systems that are both
-            controllable and expressive.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#highlights">See Visual Work</a>
-            <a class="button button-secondary" href="#contact">Contact Me</a>
-          </div>
-          <div class="tag-list hero-tags" aria-label="Research and personal keywords">
-            <span>AIGC</span>
-            <span>Diffusion</span>
-            <span>Video</span>
-            <span>Creative AI</span>
-            <span>J-Pop</span>
-            <span>maimai DX</span>
-          </div>
-        </div>
-
-        <div class="hero-collage reveal" aria-label="Creative visual collage">
-          <div class="collage-card avatar-tile float-slow">
+    <main class="page-shell">
+      <aside class="profile-column reveal" aria-label="Profile summary">
+        <div class="profile-sticky">
+          <div class="portrait">
             <img
               src="assets/avatar-placeholder.svg"
               alt="Abstract avatar placeholder for Jiangyue Zeng"
-              width="260"
-              height="260"
+              width="256"
+              height="256"
             />
           </div>
-          <div class="collage-card visual-tile visual-tile-large float-medium">
-            <img
-              src="assets/visual-layout.svg"
-              alt="Abstract layout-controllable generation placeholder"
-              width="260"
-              height="180"
-            />
-            <span>Layout control</span>
+
+          <div class="profile-heading">
+            <h1>Jiangyue Zeng</h1>
+            <p class="profile-title">Undergraduate Student in AI</p>
+            <p class="profile-affiliation">Peking University</p>
           </div>
-          <div class="collage-card visual-tile visual-tile-small float-fast">
-            <img
-              src="assets/visual-video.svg"
-              alt="Abstract video generation placeholder"
-              width="180"
-              height="132"
-            />
-            <span>Motion</span>
+
+          <div class="profile-links" aria-label="Contact links">
+            <a href="mailto:zengjy@stu.pku.edu.cn">Email</a>
+            <a
+              href="https://github.com/qqqqingmo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://qqqqingmo.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Website
+            </a>
           </div>
-          <div class="floating-chip chip-a">Creative AI</div>
-          <div class="floating-chip chip-b">Video Editing</div>
-          <div class="floating-chip chip-c">AIGC</div>
-          <div class="floating-orbit" aria-hidden="true"></div>
-        </div>
-      </section>
 
-      <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">Researching Generative Visual Media</h2>
+          <section class="side-panel" aria-labelledby="interests-title">
+            <h2 id="interests-title">Research Interests</h2>
+            <ul>
+              <li>Generative AI and AIGC</li>
+              <li>Diffusion models</li>
+              <li>Controllable image and video generation</li>
+              <li>Video editing and relighting</li>
+              <li>AI for creative media</li>
+            </ul>
+          </section>
+
+          <section class="side-panel compact-panel" aria-labelledby="keywords-title">
+            <h2 id="keywords-title">Keywords</h2>
+            <div class="keyword-list">
+              <span>AIGC</span>
+              <span>Diffusion</span>
+              <span>Video</span>
+              <span>Creative AI</span>
+              <span>J-Pop</span>
+              <span>maimai DX</span>
+            </div>
+          </section>
         </div>
-        <div class="about-grid">
-          <div class="about-copy reveal">
+      </aside>
+
+      <div class="content-column">
+        <section class="content-section about-section reveal" id="about">
+          <p class="section-kicker">About</p>
+          <h2>About</h2>
+          <div class="prose">
             <p>
-              I am Jiangyue Zeng, an undergraduate student at Peking University.
-              My academic interests lie at the intersection of generative AI,
-              computer vision, and creative media. I am particularly interested
-              in AIGC, generative models, diffusion models, image and video
-              editing, controllable generation, and AI-assisted visual creation.
+              I am Jiangyue Zeng, an undergraduate student at Peking University,
+              working around generative AI, computer vision, and creative
+              media.
             </p>
             <p>
-              My current interests include training-free controllable generation
-              and video editing or relighting methods that preserve structure,
-              temporal consistency, and visual details. I enjoy thinking about
-              how creative systems can feel expressive while still giving users
-              meaningful control.
+              My current interests include AIGC, diffusion models, image and
+              video editing, controllable generation, and AI-assisted visual
+              creation. I am especially interested in methods that make visual
+              generation more controllable, consistent, and useful for creative
+              workflows.
+            </p>
+            <p>
+              Recently, I have been exploring training-free controllable
+              generation and video editing or relighting methods that preserve
+              structure, temporal consistency, and visual detail.
             </p>
           </div>
-          <aside class="profile-note reveal" aria-label="Profile summary">
-            <p class="note-title">Current Lens</p>
-            <p>
-              Generative models are most exciting to me when they become tools
-              for visual thinking, not just image production.
-            </p>
-            <dl>
-              <div>
-                <dt>Affiliation</dt>
-                <dd>Peking University</dd>
-              </div>
-              <div>
-                <dt>Direction</dt>
-                <dd>Yuanpei College / Artificial Intelligence</dd>
-              </div>
-              <div>
-                <dt>Focus</dt>
-                <dd>AIGC, video editing, controllable generation</dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
-      </section>
+        </section>
 
-      <section class="section" id="research" aria-labelledby="research-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Research</p>
-          <h2 id="research-title">Research Interests</h2>
-          <p>
-            I am interested in methods that make visual generation more
-            controllable, consistent, and useful for both research and creative
-            practice.
-          </p>
-        </div>
-        <div class="research-grid">
-          <article class="interest-card reveal">
-            <span class="interest-icon" aria-hidden="true">✦</span>
-            <h3>Generative AI &amp; AIGC</h3>
-            <p>
-              Models and workflows for generating, editing, and composing visual
-              content with flexible user control.
-            </p>
-          </article>
-          <article class="interest-card reveal">
-            <span class="interest-icon" aria-hidden="true">◇</span>
-            <h3>Diffusion Models</h3>
-            <p>
-              Diffusion-based image and video synthesis, including attention
-              control, inversion, and guidance strategies.
-            </p>
-          </article>
-          <article class="interest-card reveal">
-            <span class="interest-icon" aria-hidden="true">◎</span>
-            <h3>Controllable Image and Video Generation</h3>
-            <p>
-              Layout, identity, motion, and semantic control without heavy
-              retraining.
-            </p>
-          </article>
-          <article class="interest-card reveal">
-            <span class="interest-icon" aria-hidden="true">◐</span>
-            <h3>Video Editing and Relighting</h3>
-            <p>
-              Video-level editing methods that preserve temporal coherence,
-              geometry, and fine-grained visual detail.
-            </p>
-          </article>
-          <article class="interest-card reveal">
-            <span class="interest-icon" aria-hidden="true">♬</span>
-            <h3>AI for Creative Media</h3>
-            <p>
-              Generative models for art, design, pattern generation, and
-              AI-assisted creative workflows.
-            </p>
-          </article>
-          <article class="interest-card reveal">
-            <span class="interest-icon" aria-hidden="true">⌁</span>
-            <h3>Multimodal Understanding and Generation</h3>
-            <p>
-              Visual, textual, spatial, and temporal signals for expressive
-              generation and reasoning.
-            </p>
-          </article>
-        </div>
-      </section>
+        <section class="content-section reveal" id="news">
+          <div class="section-heading-row">
+            <div>
+              <p class="section-kicker">Now</p>
+              <h2>Current Focus</h2>
+            </div>
+          </div>
+          <div class="note-list">
+            <article class="note-item">
+              <time>2026</time>
+              <p>
+                Working on controllable visual generation, video editing, and
+                research prototypes for creative media.
+              </p>
+            </article>
+            <article class="note-item">
+              <time>2025</time>
+              <p>
+                FlowPortal manuscript released on arXiv, focusing on
+                training-free video relighting and background replacement.
+              </p>
+            </article>
+          </div>
+        </section>
 
-      <section class="section highlights-section" id="highlights" aria-labelledby="highlights-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Visual Highlights</p>
-          <h2 id="highlights-title">Pixels, Motion, Layouts, and Maps</h2>
-          <p>
-            A small gallery of visual directions I am exploring. The images are
-            abstract placeholders and can be replaced with project results later.
-          </p>
-        </div>
-        <div class="highlight-gallery">
-          <article class="highlight-card highlight-wide reveal">
-            <img
-              src="assets/visual-layout.svg"
-              alt="Abstract visual for layout-controllable generation"
-            />
+        <section class="content-section reveal" id="publications">
+          <div class="section-heading-row">
             <div>
-              <p class="card-kicker">Pattern + Control</p>
-              <h3>Layout-controllable generation</h3>
-              <p>Controlling repeated-instance patterns through sparse layouts.</p>
+              <p class="section-kicker">Publications</p>
+              <h2>Selected Publications</h2>
             </div>
-          </article>
-          <article class="highlight-card reveal">
-            <img src="assets/visual-relighting.svg" alt="Abstract relighting visual" />
-            <div>
-              <p class="card-kicker">Light + Video</p>
-              <h3>Video relighting</h3>
-              <p>Preserving structure while changing illumination and background.</p>
-            </div>
-          </article>
-          <article class="highlight-card reveal">
-            <img src="assets/visual-video.svg" alt="Abstract temporal smoothing visual" />
-            <div>
-              <p class="card-kicker">Temporal Consistency</p>
-              <h3>Video smoothing</h3>
-              <p>Reducing jitter while keeping high-frequency detail.</p>
-            </div>
-          </article>
-          <article class="highlight-card reveal">
-            <img src="assets/visual-mapping.svg" alt="Abstract semantic mapping visual" />
-            <div>
-              <p class="card-kicker">3D + Robotics</p>
-              <h3>Semantic mapping</h3>
-              <p>Projecting RGB-D observations into structured spatial maps.</p>
-            </div>
-          </article>
-          <article class="highlight-card reveal">
-            <img src="assets/visual-music.svg" alt="Abstract creative media visual" />
-            <div>
-              <p class="card-kicker">Creative Media</p>
-              <h3>Creative experiments</h3>
-              <p>Exploring playful visual systems for expressive media creation.</p>
-            </div>
-          </article>
-        </div>
-      </section>
+          </div>
 
-      <section class="section publications-section" id="publications" aria-labelledby="publications-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Publications</p>
-          <h2 id="publications-title">Publications &amp; Manuscripts</h2>
-        </div>
-        <div class="publication-list">
-          <article class="publication-card reveal">
-            <div class="publication-main">
-              <p class="publication-venue">arXiv, 2025</p>
-              <!-- Please verify any future conference status, such as CVPR 2026, before publishing it here. -->
+          <div class="publication-list">
+            <article class="publication-card">
+              <p class="publication-meta">arXiv, 2025</p>
               <h3>
                 FlowPortal: Residual-Corrected Flow for Training-Free Video
                 Relighting and Background Replacement
               </h3>
               <p class="authors">Wenshuo Gao, Junyi Fan, Jiangyue Zeng, Shuai Yang</p>
-              <div class="publication-links">
+              <p>
+                Training-free video relighting and background replacement with
+                an emphasis on temporal consistency, structure preservation, and
+                detail transfer.
+              </p>
+              <div class="inline-links">
                 <a
                   href="https://arxiv.org/abs/2511.18346"
                   target="_blank"
@@ -306,215 +196,200 @@
                   Project
                 </a>
               </div>
-            </div>
-            <div class="tag-list compact">
-              <span>Video Relighting</span>
-              <span>Training-Free</span>
-              <span>Flow Models</span>
-            </div>
-          </article>
+            </article>
 
-          <article class="publication-card manuscript reveal">
-            <div class="publication-main">
-              <p class="publication-venue">Manuscript / Under preparation</p>
-              <h3>PLAID: Training-Free Layout-Controllable Pattern Generation</h3>
-              <p>
-                Training-free layout-controllable pattern generation with sparse
-                dot layouts, repeated-instance synthesis, and attention-level
-                foreground/background decoupling.
-              </p>
-            </div>
-            <div class="tag-list compact">
-              <span>Diffusion Models</span>
-              <span>Layout Control</span>
-              <span>Pattern Generation</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section projects-section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Projects</p>
-          <h2 id="projects-title">Selected Projects</h2>
-          <p>
-            A portfolio-style view of research and exploration projects across
-            controllable generation, video, and spatial understanding.
-          </p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <img src="assets/visual-layout.svg" alt="Abstract PLAID project visual" />
-            <div class="project-content">
+            <article class="publication-card">
+              <p class="publication-meta">Manuscript / Under preparation</p>
               <h3>PLAID: Training-Free Layout-Controllable Pattern Generation</h3>
               <p>
                 A training-free layout-controllable generation framework for
-                repeated-instance pattern synthesis, using sparse dot-based
-                layouts and attention-level foreground/background decoupling.
+                repeated-instance pattern synthesis, using sparse dot layouts
+                and attention-level foreground/background decoupling.
               </p>
-              <div class="tag-list compact">
-                <span>Diffusion Models</span>
-                <span>Layout Control</span>
-                <span>Training-Free Generation</span>
-              </div>
-            </div>
-          </article>
-          <article class="project-card reveal">
-            <img src="assets/visual-relighting.svg" alt="Abstract FlowPortal visual" />
-            <div class="project-content">
-              <h3>FlowPortal / Video Relighting</h3>
-              <p>
-                Research on training-free video relighting and background
-                replacement with emphasis on temporal consistency, structural
-                preservation, and detail transfer.
-              </p>
-              <div class="tag-list compact">
-                <span>Video Editing</span>
-                <span>Relighting</span>
-                <span>Flow Models</span>
-              </div>
-            </div>
-          </article>
-          <article class="project-card reveal">
-            <img src="assets/visual-video.svg" alt="Abstract video smoothing visual" />
-            <div class="project-content">
-              <h3>Video Smoothing with Wan2.1</h3>
-              <p>
-                Exploring VAE encode-noise-denoise-decode pipelines for reducing
-                temporal jitter in edited videos, with frequency-aware detail
-                preservation.
-              </p>
-              <div class="tag-list compact">
-                <span>Video Generation</span>
-                <span>Temporal Consistency</span>
-                <span>Wan2.1</span>
-              </div>
-            </div>
-          </article>
-          <article class="project-card reveal">
-            <img src="assets/visual-mapping.svg" alt="Abstract semantic mapping visual" />
-            <div class="project-content">
-              <h3>Semantic Mapping in AI2-THOR</h3>
-              <p>
-                Building semantic maps by combining RGB-D observations, camera
-                poses, instance segmentation, point clouds, and 2D map projection.
-              </p>
-              <div class="tag-list compact">
-                <span>Robotics</span>
-                <span>Semantic Mapping</span>
-                <span>3D Vision</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
+            </article>
+          </div>
+        </section>
 
-      <section class="section education-section" id="experience" aria-labelledby="experience-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Education</p>
-          <h2 id="experience-title">Experience &amp; Education</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content">
+        <section class="content-section reveal" id="projects">
+          <div class="section-heading-row">
+            <div>
+              <p class="section-kicker">Projects</p>
+              <h2>Selected Projects</h2>
+            </div>
+          </div>
+
+          <div class="project-list">
+            <article class="project-card">
+              <img
+                src="assets/visual-layout.svg"
+                alt="Abstract layout-controllable generation visual"
+                width="180"
+                height="126"
+              />
+              <div>
+                <h3>PLAID</h3>
+                <p>
+                  Training-free layout-controllable pattern generation with
+                  sparse layouts, repeated-instance synthesis, and foreground or
+                  background attention control.
+                </p>
+                <div class="mini-tags">
+                  <span>Diffusion Models</span>
+                  <span>Layout Control</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="assets/visual-relighting.svg"
+                alt="Abstract video relighting visual"
+                width="180"
+                height="126"
+              />
+              <div>
+                <h3>FlowPortal / Video Relighting</h3>
+                <p>
+                  Research on video relighting and background replacement with
+                  attention to motion consistency and structural preservation.
+                </p>
+                <div class="mini-tags">
+                  <span>Video Editing</span>
+                  <span>Relighting</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="assets/visual-video.svg"
+                alt="Abstract temporal smoothing visual"
+                width="180"
+                height="126"
+              />
+              <div>
+                <h3>Video Smoothing with Wan2.1</h3>
+                <p>
+                  Exploring VAE encode-noise-denoise-decode pipelines for
+                  reducing temporal jitter while preserving high-frequency
+                  detail.
+                </p>
+                <div class="mini-tags">
+                  <span>Temporal Consistency</span>
+                  <span>Video Generation</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="assets/visual-mapping.svg"
+                alt="Abstract semantic mapping visual"
+                width="180"
+                height="126"
+              />
+              <div>
+                <h3>Semantic Mapping in AI2-THOR</h3>
+                <p>
+                  Building semantic maps from RGB-D observations, camera poses,
+                  segmentation, point clouds, and 2D projection.
+                </p>
+                <div class="mini-tags">
+                  <span>Robotics</span>
+                  <span>3D Vision</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section reveal" id="experience">
+          <p class="section-kicker">Experience</p>
+          <h2>Education</h2>
+          <div class="timeline">
+            <article class="timeline-item">
               <p class="timeline-meta">Present</p>
               <h3>Peking University</h3>
-              <p>Undergraduate Student, Yuanpei College / Artificial Intelligence direction</p>
+              <p>
+                Undergraduate student, Yuanpei College / Artificial
+                Intelligence direction.
+              </p>
               <p class="muted-text">Beijing, China</p>
-            </div>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content">
+            </article>
+            <article class="timeline-item">
               <p class="timeline-meta">Current focus</p>
               <h3>Research in AI for Art and Creative Media</h3>
               <p>
-                Focus on generative AI, controllable generation, image/video
-                editing, and diffusion-based methods.
+                Generative AI, controllable generation, image and video editing,
+                and diffusion-based creative workflows.
               </p>
-            </div>
-          </article>
-        </div>
-      </section>
+            </article>
+          </div>
+        </section>
 
-      <section class="section life-section" id="beyond" aria-labelledby="beyond-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Life</p>
-          <h2 id="beyond-title">Beyond Research</h2>
-          <p>
-            Outside research, I enjoy anime, J-Pop, and rhythm games such as
-            maimai DX.
-          </p>
-        </div>
-        <div class="life-grid">
-          <article class="life-card reveal">
-            <div class="life-visual stars" aria-hidden="true">✦</div>
-            <h3>Anime &amp; ACG</h3>
-            <p>
-              I enjoy anime and ACG culture, especially works with expressive
-              visual styles, emotional storytelling, and imaginative
-              world-building.
-            </p>
-          </article>
-          <article class="life-card reveal">
-            <img src="assets/visual-music.svg" alt="Abstract J-Pop playlist visual" />
-            <h3>J-Pop</h3>
-            <p>
-              J-Pop is often part of my daily routine, whether I am coding,
-              walking, or working on creative projects.
-            </p>
-          </article>
-          <article class="life-card reveal">
-            <img src="assets/visual-rhythm.svg" alt="Abstract rhythm game visual" />
-            <h3>maimai DX</h3>
-            <p>
-              I enjoy playing maimai DX, where rhythm, music, and motion come
-              together in a uniquely satisfying arcade experience.
-            </p>
-          </article>
-        </div>
-      </section>
+        <section class="content-section reveal" id="life">
+          <p class="section-kicker">Life</p>
+          <h2>Beyond Research</h2>
+          <div class="life-list">
+            <article class="life-item">
+              <h3>Anime and ACG</h3>
+              <p>
+                I enjoy works with expressive visual styles, emotional
+                storytelling, and imaginative world-building.
+              </p>
+            </article>
+            <article class="life-item">
+              <h3>J-Pop</h3>
+              <p>
+                J-Pop is often part of my daily routine, whether I am coding,
+                walking, or working on creative projects.
+              </p>
+            </article>
+            <article class="life-item">
+              <h3>maimai DX</h3>
+              <p>
+                I enjoy playing maimai DX, where rhythm, music, and motion come
+                together in a satisfying arcade experience.
+              </p>
+            </article>
+          </div>
+        </section>
 
-      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Get in Touch</h2>
+        <section class="content-section contact-section reveal" id="contact">
+          <p class="section-kicker">Contact</p>
+          <h2>Contact</h2>
           <p>
             I am open to research conversations and collaborations around
             generative AI, controllable generation, and creative visual media.
           </p>
-        </div>
-        <div class="contact-grid">
-          <a class="contact-card reveal" href="mailto:zengjy@stu.pku.edu.cn">
-            <span>Email</span>
-            <strong>zengjy@stu.pku.edu.cn</strong>
-          </a>
-          <a
-            class="contact-card reveal"
-            href="https://github.com/qqqqingmo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>GitHub</span>
-            <strong>github.com/qqqqingmo</strong>
-          </a>
-          <a
-            class="contact-card reveal"
-            href="https://qqqqingmo.github.io"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>Website</span>
-            <strong>qqqqingmo.github.io</strong>
-          </a>
-        </div>
-      </section>
+          <div class="contact-list">
+            <a href="mailto:zengjy@stu.pku.edu.cn">
+              <span>Email</span>
+              <strong>zengjy@stu.pku.edu.cn</strong>
+            </a>
+            <a
+              href="https://github.com/qqqqingmo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>GitHub</span>
+              <strong>github.com/qqqqingmo</strong>
+            </a>
+            <a
+              href="https://qqqqingmo.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Website</span>
+              <strong>qqqqingmo.github.io</strong>
+            </a>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
       <p>&copy; 2026 Jiangyue Zeng. Built with GitHub Pages.</p>
-      <p>Last updated: 2026</p>
     </footer>
 
     <script src="script.js"></script>
