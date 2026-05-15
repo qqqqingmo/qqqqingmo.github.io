@@ -359,7 +359,6 @@ body.menu-open .site-header {
 
 .portrait:hover {
   box-shadow: var(--shadow-xl);
-  transform: scale(1.05);
 }
 
 .portrait img {
@@ -849,7 +848,7 @@ body.menu-open .site-header {
 .publication-card:hover,
 .project-card:hover {
   box-shadow: 0 22px 48px rgba(30, 41, 59, 0.12);
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .life-item {
