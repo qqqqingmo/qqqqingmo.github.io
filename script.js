@@ -14,6 +14,8 @@ const translations = {
     "nav.contact": "Contact",
     "language.target": "中文",
     "language.title": "Switch to Chinese",
+    "theme.dark": "Switch to dark mode",
+    "theme.light": "Switch to light mode",
     "profile.summaryLabel": "Profile summary",
     "profile.avatarAlt": "Abstract avatar placeholder for Jiangyue Zeng",
     "profile.name": "Jiangyue Zeng",
@@ -83,6 +85,8 @@ const translations = {
     "nav.contact": "联系",
     "language.target": "EN",
     "language.title": "切换到英文",
+    "theme.dark": "切换到深色模式",
+    "theme.light": "切换到浅色模式",
     "profile.summaryLabel": "个人简介",
     "profile.avatarAlt": "曾姜月的抽象头像占位图",
     "profile.name": "曾姜月",
@@ -138,6 +142,7 @@ const translations = {
 const header = document.querySelector(".site-header");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
+const themeToggle = document.querySelector("[data-theme-toggle]");
 const languageToggle = document.querySelector("[data-language-toggle]");
 const languageTarget = document.querySelector("[data-language-target]");
 const navLinks = Array.from(document.querySelectorAll(".nav-link"));
@@ -146,6 +151,7 @@ const sections = navLinks
   .filter(Boolean);
 let ticking = false;
 let currentLanguage = "en";
+let currentTheme = "light";
 
 const setMetaContent = (selector, value) => {
   const element = document.querySelector(selector);
@@ -228,9 +234,11 @@ const applyLanguage = (language, { persist = true, updateUrl = true } = {}) => {
 const applyTheme = (theme) => {
   currentTheme = theme;
   document.documentElement.setAttribute("data-theme", currentTheme);
+  const dictionary = translations[currentLanguage];
   if (themeToggle) {
-    themeToggle.setAttribute("aria-label", currentTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-    themeToggle.setAttribute("title", currentTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    const label = currentTheme === "dark" ? dictionary["theme.light"] : dictionary["theme.dark"];
+    themeToggle.setAttribute("aria-label", label);
+    themeToggle.setAttribute("title", label);
   }
   localStorage.setItem("homepage-theme", currentTheme);
 };
@@ -299,6 +307,12 @@ const onScroll = () => {
   }
 };
 
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    applyTheme(currentTheme === "dark" ? "light" : "dark");
+  });
+}
+
 if (languageToggle) {
   languageToggle.addEventListener("click", () => {
     applyLanguage(currentLanguage === "zh" ? "en" : "zh");
@@ -328,6 +342,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 applyLanguage(getInitialLanguage(), { persist: false, updateUrl: false });
+applyTheme(getInitialTheme());
 setHeaderState();
 setActiveLink();
 window.addEventListener("scroll", onScroll, { passive: true });
