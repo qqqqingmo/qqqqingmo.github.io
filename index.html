@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Jiangyue Zeng - Undergraduate student in AI at Peking University, interested in generative AI, computer vision, controllable image/video generation, and creative media."
+      content="Jiangyue Zeng - Undergraduate student in AI at Peking University, interested in Generative AI and AIGC, AI for Art, and image/video generation."
     />
     <meta name="author" content="Jiangyue Zeng" />
     <meta property="og:title" content="Jiangyue Zeng" />
@@ -18,164 +18,175 @@
     <meta name="theme-color" content="#fefffe" />
     <title>Jiangyue Zeng</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="dns-prefetch" href="https://google-fonts.jialeliu.com" />
+    <link rel="preconnect" href="https://google-fonts.jialeliu.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header" id="top">
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="nav-logo" href="#about" aria-label="Jiangyue Zeng homepage">
+      <nav class="nav" aria-label="Primary navigation" data-i18n-aria="nav.label">
+        <a class="nav-logo" href="#about" aria-label="Jiangyue Zeng homepage" data-i18n-aria="nav.homeLabel" data-i18n="profile.name">
           Jiangyue Zeng
         </a>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-          aria-label="Toggle navigation menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-menu" id="nav-menu">
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#publications">Publications</a></li>
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#experience">Experience</a></li>
-          <li><a class="nav-link" href="#life">Life</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+
+        <div class="nav-right">
+          <ul class="nav-menu" id="nav-menu">
+            <li><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
+            <li><a class="nav-link" href="#publications" data-i18n="nav.publications">Publications</a></li>
+            <li><a class="nav-link" href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a class="nav-link" href="#life" data-i18n="nav.life">Life</a></li>
+            <li><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+
+          <button
+            class="language-toggle"
+            type="button"
+            data-language-toggle
+            aria-label="Switch to Chinese"
+            title="Switch to Chinese"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />
+              <path d="M3.8 9h16.4M3.8 15h16.4M12 3c2 2.3 3 5.3 3 9s-1 6.7-3 9M12 3c-2 2.3-3 5.3-3 9s1 6.7 3 9" />
+            </svg>
+            <span data-language-target>中文</span>
+          </button>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Toggle navigation menu"
+            data-i18n-aria="nav.toggle"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </nav>
     </header>
 
     <main class="page-shell">
-      <aside class="profile-column reveal" aria-label="Profile summary">
+      <aside class="profile-column" aria-label="Profile summary" data-i18n-aria="profile.summaryLabel">
         <div class="profile-sticky">
           <div class="portrait">
             <img
-              src="assets/avatar-placeholder.svg"
-              alt="Abstract avatar placeholder for Jiangyue Zeng"
+              src="assets/me.png"
+              alt="Portrait photo of Jiangyue Zeng"
+              data-i18n-alt="profile.avatarAlt"
               width="256"
               height="256"
             />
           </div>
 
           <div class="profile-heading">
-            <h1>Jiangyue Zeng</h1>
-            <p class="profile-title">Undergraduate Student in AI</p>
-            <p class="profile-affiliation">Peking University</p>
+            <h1 data-i18n="profile.name">Jiangyue Zeng</h1>
+            <p class="profile-title" data-i18n="profile.title">Undergraduate Student in AI</p>
+            <p class="profile-affiliation" data-i18n="profile.institution">Peking University</p>
           </div>
 
-          <div class="profile-links" aria-label="Contact links">
-            <a href="mailto:zengjy@stu.pku.edu.cn">Email</a>
+          <div class="profile-links" aria-label="Contact links" data-i18n-aria="profile.linksLabel">
+            <a href="mailto:zengjy@stu.pku.edu.cn" aria-label="Email" title="Email" data-i18n-aria="contact.email" data-i18n-title="contact.email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <span class="sr-only" data-i18n="contact.email">Email</span>
+            </a>
+            <a
+              href="https://scholar.google.com/citations?user=bn_f6OoAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Scholar"
+              title="Google Scholar"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z" />
+                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path d="M12 14v7" />
+              </svg>
+              <span class="sr-only">Google Scholar</span>
+            </a>
+            <a
+              href="https://orcid.org/0009-0003-2567-380X"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ORCID"
+              title="ORCID"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z" />
+              </svg>
+              <span class="sr-only">ORCID</span>
+            </a>
             <a
               href="https://github.com/qqqqingmo"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
             >
-              GitHub
-            </a>
-            <a
-              href="https://qqqqingmo.github.io"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Website
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
+              <span class="sr-only">GitHub</span>
             </a>
           </div>
 
           <section class="side-panel" aria-labelledby="interests-title">
-            <h2 id="interests-title">Research Interests</h2>
+            <h2 id="interests-title" data-i18n="profile.interestsTitle">Research Interests</h2>
             <ul>
-              <li>Generative AI and AIGC</li>
-              <li>Diffusion models</li>
-              <li>Controllable image and video generation</li>
-              <li>Video editing and relighting</li>
-              <li>AI for creative media</li>
+              <li data-i18n="interest.generative">Generative AI and AIGC</li>
+              <li data-i18n="interest.art">AI for Art</li>
+              <li data-i18n="interest.generation">Image and video generation</li>
             </ul>
-          </section>
-
-          <section class="side-panel compact-panel" aria-labelledby="keywords-title">
-            <h2 id="keywords-title">Keywords</h2>
-            <div class="keyword-list">
-              <span>AIGC</span>
-              <span>Diffusion</span>
-              <span>Video</span>
-              <span>Creative AI</span>
-              <span>J-Pop</span>
-              <span>maimai DX</span>
-            </div>
           </section>
         </div>
       </aside>
 
       <div class="content-column">
-        <section class="content-section about-section reveal" id="about">
-          <p class="section-kicker">About</p>
-          <h2>About</h2>
+        <section class="content-section" id="about">
+          <h2 data-i18n="about.title">About</h2>
           <div class="prose">
-            <p>
+            <p data-i18n-html="about.p1">
               I am Jiangyue Zeng, an undergraduate student at Peking University,
-              working around generative AI, computer vision, and creative
-              media.
+              working around Generative AI and AIGC, AI for Art, and image/video
+              generation.
             </p>
-            <p>
-              My current interests include AIGC, diffusion models, image and
-              video editing, controllable generation, and AI-assisted visual
-              creation. I am especially interested in methods that make visual
-              generation more controllable, consistent, and useful for creative
-              workflows.
-            </p>
-            <p>
-              Recently, I have been exploring training-free controllable
-              generation and video editing or relighting methods that preserve
-              structure, temporal consistency, and visual detail.
+            <p data-i18n-html="about.p2">
+              Currently a research intern at
+              <a href="http://struct.wict.pku.edu.cn/" target="_blank" rel="noopener noreferrer">STRUCT</a>
+              (Spatial and Temporal Restoration, Understanding and Compression
+              Team), Wangxuan Institute of Computer Technology, Peking
+              University, advised by
+              <a href="https://williamyang1991.github.io/" target="_blank" rel="noopener noreferrer">Shuai Yang</a>.
+              Recent work focuses on controllable image and video generation
+              methods for creative visual media.
             </p>
           </div>
         </section>
 
-        <section class="content-section reveal" id="news">
+        <section class="content-section" id="publications">
           <div class="section-heading-row">
-            <div>
-              <p class="section-kicker">Now</p>
-              <h2>Current Focus</h2>
-            </div>
-          </div>
-          <div class="note-list">
-            <article class="note-item">
-              <time>2026</time>
-              <p>
-                Working on controllable visual generation, video editing, and
-                research prototypes for creative media.
-              </p>
-            </article>
-            <article class="note-item">
-              <time>2025</time>
-              <p>
-                FlowPortal manuscript released on arXiv, focusing on
-                training-free video relighting and background replacement.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="content-section reveal" id="publications">
-          <div class="section-heading-row">
-            <div>
-              <p class="section-kicker">Publications</p>
-              <h2>Selected Publications</h2>
-            </div>
+            <h2 data-i18n="publications.title">Publications</h2>
           </div>
 
           <div class="publication-list">
             <article class="publication-card">
-              <p class="publication-meta">arXiv, 2025</p>
+              <p class="publication-meta" data-i18n="publication.flowportal.meta">CVPR 2026</p>
               <h3>
                 FlowPortal: Residual-Corrected Flow for Training-Free Video
                 Relighting and Background Replacement
               </h3>
               <p class="authors">Wenshuo Gao, Junyi Fan, Jiangyue Zeng, Shuai Yang</p>
-              <p>
+              <p data-i18n="publication.flowportal.desc">
                 Training-free video relighting and background replacement with
                 an emphasis on temporal consistency, structure preservation, and
                 detail transfer.
@@ -185,6 +196,7 @@
                   href="https://arxiv.org/abs/2511.18346"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-i18n="publication.paper"
                 >
                   Paper
                 </a>
@@ -192,6 +204,7 @@
                   href="https://gaowenshuo.github.io/FlowPortalProject/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-i18n="publication.project"
                 >
                   Project
                 </a>
@@ -199,9 +212,9 @@
             </article>
 
             <article class="publication-card">
-              <p class="publication-meta">Manuscript / Under preparation</p>
+              <p class="publication-meta" data-i18n="publication.plaid.meta">Manuscript / Under preparation</p>
               <h3>PLAID: Training-Free Layout-Controllable Pattern Generation</h3>
-              <p>
+              <p data-i18n="publication.plaid.desc">
                 A training-free layout-controllable generation framework for
                 repeated-instance pattern synthesis, using sparse dot layouts
                 and attention-level foreground/background decoupling.
@@ -210,161 +223,77 @@
           </div>
         </section>
 
-        <section class="content-section reveal" id="projects">
-          <div class="section-heading-row">
-            <div>
-              <p class="section-kicker">Projects</p>
-              <h2>Selected Projects</h2>
-            </div>
-          </div>
-
-          <div class="project-list">
-            <article class="project-card">
-              <img
-                src="assets/visual-layout.svg"
-                alt="Abstract layout-controllable generation visual"
-                width="180"
-                height="126"
-              />
-              <div>
-                <h3>PLAID</h3>
-                <p>
-                  Training-free layout-controllable pattern generation with
-                  sparse layouts, repeated-instance synthesis, and foreground or
-                  background attention control.
-                </p>
-                <div class="mini-tags">
-                  <span>Diffusion Models</span>
-                  <span>Layout Control</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img
-                src="assets/visual-relighting.svg"
-                alt="Abstract video relighting visual"
-                width="180"
-                height="126"
-              />
-              <div>
-                <h3>FlowPortal / Video Relighting</h3>
-                <p>
-                  Research on video relighting and background replacement with
-                  attention to motion consistency and structural preservation.
-                </p>
-                <div class="mini-tags">
-                  <span>Video Editing</span>
-                  <span>Relighting</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img
-                src="assets/visual-video.svg"
-                alt="Abstract temporal smoothing visual"
-                width="180"
-                height="126"
-              />
-              <div>
-                <h3>Video Smoothing with Wan2.1</h3>
-                <p>
-                  Exploring VAE encode-noise-denoise-decode pipelines for
-                  reducing temporal jitter while preserving high-frequency
-                  detail.
-                </p>
-                <div class="mini-tags">
-                  <span>Temporal Consistency</span>
-                  <span>Video Generation</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img
-                src="assets/visual-mapping.svg"
-                alt="Abstract semantic mapping visual"
-                width="180"
-                height="126"
-              />
-              <div>
-                <h3>Semantic Mapping in AI2-THOR</h3>
-                <p>
-                  Building semantic maps from RGB-D observations, camera poses,
-                  segmentation, point clouds, and 2D projection.
-                </p>
-                <div class="mini-tags">
-                  <span>Robotics</span>
-                  <span>3D Vision</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="content-section reveal" id="experience">
-          <p class="section-kicker">Experience</p>
-          <h2>Education</h2>
+        <section class="content-section" id="experience">
+          <h2 data-i18n="experience.title">Education</h2>
           <div class="timeline">
             <article class="timeline-item">
-              <p class="timeline-meta">Present</p>
-              <h3>Peking University</h3>
-              <p>
-                Undergraduate student, Yuanpei College / Artificial
-                Intelligence direction.
-              </p>
-              <p class="muted-text">Beijing, China</p>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-body">
+                <p class="timeline-meta" data-i18n-html="experience.internMeta"><strong><u>Present</u></strong></p>
+                <h3 data-i18n="experience.internTitle">Research Intern, STRUCT</h3>
+                <p data-i18n-html="experience.internDesc">
+                  Spatial and Temporal Restoration, Understanding and Compression
+                  Team
+                  (<a href="http://struct.wict.pku.edu.cn/" target="_blank" rel="noopener noreferrer">STRUCT</a>),
+                  Wangxuan Institute of Computer Technology, Peking University,
+                  advised by
+                  <a href="https://williamyang1991.github.io/" target="_blank" rel="noopener noreferrer">Shuai Yang</a>.
+                </p>
+                <p class="muted-text" data-i18n="experience.location">Beijing, China</p>
+              </div>
             </article>
             <article class="timeline-item">
-              <p class="timeline-meta">Current focus</p>
-              <h3>Research in AI for Art and Creative Media</h3>
-              <p>
-                Generative AI, controllable generation, image and video editing,
-                and diffusion-based creative workflows.
-              </p>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-body">
+                <p class="timeline-meta" data-i18n-html="experience.present"><strong><u>Present</u></strong></p>
+                <h3 data-i18n="experience.pku">Peking University</h3>
+                <p data-i18n="experience.pkuDesc">
+                  Undergraduate student, Yuanpei College / Artificial
+                  Intelligence direction.
+                </p>
+                <p class="muted-text" data-i18n="experience.location">Beijing, China</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-body">
+                <p class="timeline-meta" data-i18n="experience.highSchoolMeta">Secondary education</p>
+                <h3 data-i18n="experience.highSchoolTitle">Tianjin Tanggu No.1 High School</h3>
+                <p data-i18n="experience.highSchoolDesc">
+                  Secondary school education in Tianjin.
+                </p>
+              </div>
             </article>
           </div>
         </section>
 
-        <section class="content-section reveal" id="life">
-          <p class="section-kicker">Life</p>
-          <h2>Beyond Research</h2>
+        <section class="content-section" id="life">
+          <h2 data-i18n="life.title">Beyond Research</h2>
           <div class="life-list">
             <article class="life-item">
-              <h3>Anime and ACG</h3>
-              <p>
-                I enjoy works with expressive visual styles, emotional
-                storytelling, and imaginative world-building.
+              <h3 data-i18n="life.acg.title">ACG</h3>
+              <p data-i18n="life.anime.desc">
+                Animation, comics, and games are part of my long-term interests.
               </p>
             </article>
             <article class="life-item">
-              <h3>J-Pop</h3>
-              <p>
-                J-Pop is often part of my daily routine, whether I am coding,
-                walking, or working on creative projects.
-              </p>
-            </article>
-            <article class="life-item">
-              <h3>maimai DX</h3>
-              <p>
-                I enjoy playing maimai DX, where rhythm, music, and motion come
-                together in a satisfying arcade experience.
+              <h3 data-i18n="life.jpop.title">J-Pop & Vocaloid</h3>
+              <p data-i18n="life.jpop.desc">
+                I enjoy J-Pop, Vocaloid music, and rhythm games such as maimai DX.
               </p>
             </article>
           </div>
         </section>
 
-        <section class="content-section contact-section reveal" id="contact">
-          <p class="section-kicker">Contact</p>
-          <h2>Contact</h2>
-          <p>
+        <section class="content-section contact-section" id="contact">
+          <h2 data-i18n="contact.title">Contact</h2>
+          <p data-i18n="contact.desc">
             I am open to research conversations and collaborations around
-            generative AI, controllable generation, and creative visual media.
+            Generative AI and AIGC, AI for Art, and image/video generation.
           </p>
           <div class="contact-list">
             <a href="mailto:zengjy@stu.pku.edu.cn">
-              <span>Email</span>
+              <span data-i18n="contact.email">Email</span>
               <strong>zengjy@stu.pku.edu.cn</strong>
             </a>
             <a
@@ -375,21 +304,13 @@
               <span>GitHub</span>
               <strong>github.com/qqqqingmo</strong>
             </a>
-            <a
-              href="https://qqqqingmo.github.io"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Website</span>
-              <strong>qqqqingmo.github.io</strong>
-            </a>
           </div>
         </section>
       </div>
     </main>
 
     <footer class="footer">
-      <p>&copy; 2026 Jiangyue Zeng. Built with GitHub Pages.</p>
+      <p data-i18n="footer.copyright">&copy; 2026 Jiangyue Zeng. Built with GitHub Pages.</p>
     </footer>
 
     <script src="script.js"></script>
