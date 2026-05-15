@@ -263,7 +263,7 @@ const getInitialLanguage = () => {
     return saved;
   }
 
-  return navigator.language?.toLowerCase().startsWith("zh") ? "zh" : "en";
+  return "en";
 };
 
 const setHeaderState = () => {
