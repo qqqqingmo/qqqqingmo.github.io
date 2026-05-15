@@ -225,6 +225,24 @@ const applyLanguage = (language, { persist = true, updateUrl = true } = {}) => {
   setActiveLink();
 };
 
+const applyTheme = (theme) => {
+  currentTheme = theme;
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  if (themeToggle) {
+    themeToggle.setAttribute("aria-label", currentTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    themeToggle.setAttribute("title", currentTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+  }
+  localStorage.setItem("homepage-theme", currentTheme);
+};
+
+const getInitialTheme = () => {
+  const saved = localStorage.getItem("homepage-theme");
+  if (saved === "dark" || saved === "light") {
+    return saved;
+  }
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+};
+
 const getInitialLanguage = () => {
   const params = new URLSearchParams(window.location.search);
   const requested = params.get("lang");
@@ -284,12 +302,6 @@ const onScroll = () => {
 if (languageToggle) {
   languageToggle.addEventListener("click", () => {
     applyLanguage(currentLanguage === "zh" ? "en" : "zh");
-  });
-}
-
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    applyTheme(currentTheme === "dark" ? "light" : "dark");
   });
 }
 

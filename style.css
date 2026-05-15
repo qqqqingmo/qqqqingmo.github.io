@@ -103,18 +103,23 @@ img {
   z-index: 50;
   height: var(--header-height);
   background: transparent;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
   transition:
     background-color 300ms ease-out,
     border-color 300ms ease-out,
-    box-shadow 300ms ease-out;
+    box-shadow 300ms ease-out,
+    backdrop-filter 300ms ease-out,
+    -webkit-backdrop-filter 300ms ease-out;
 }
 
 .site-header.scrolled,
 body.menu-open .site-header {
   border-bottom: 1px solid rgba(226, 232, 240, 0.5);
   background: rgba(254, 255, 254, 0.8);
-  box-shadow: var(--shadow-lg);
+  -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
+  box-shadow: var(--shadow-lg);
 }
 
 .nav {
