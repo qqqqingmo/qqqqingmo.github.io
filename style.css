@@ -741,10 +741,10 @@ body.menu-open .site-header {
 
 .doodle-about-stars {
   position: absolute;
-  top: -1.7rem;
-  left: -2.7rem;
-  width: 4.4rem;
-  transform: rotate(-8deg);
+  top: -2.2rem;
+  left: -3.6rem;
+  width: 4.2rem;
+  transform: rotate(-0deg);
 }
 
 .doodle-about-research {
@@ -772,10 +772,10 @@ body.menu-open .site-header {
 .name-spiral-underline {
   position: absolute;
   right: -0.4em;
-  bottom: -0.36em;
+  bottom: -0.45em;
   left: -0.18em;
   width: calc(100% + 0.58em);
-  height: 0.64em;
+  height: 0.85em;
   max-width: none;
   opacity: 0.88;
 }
@@ -792,8 +792,8 @@ body.menu-open .site-header {
 .section-heading-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 0.2rem;
   margin-bottom: 1rem;
 }
 
@@ -803,9 +803,9 @@ body.menu-open .site-header {
 
 .doodle-publication-book {
   flex: 0 0 auto;
-  width: 7.75rem;
-  margin: -0.95rem 2.1rem -0.7rem auto;
-  transform: rotate(-5deg);
+  width: 5.35rem;
+  margin: -0.65rem 0 -0.6rem 0.05rem;
+  transform: rotate(-4deg);
 }
 
 .prose,
@@ -893,18 +893,19 @@ body.menu-open .site-header {
 }
 
 .doodle-life-acg {
-  flex: 0 0 auto;
-  width: 9.75rem;
-  margin: -1.25rem 2.1rem -1.2rem auto;
+  position: absolute;
+  top: -4.25rem;
+  right: 0.7rem;
+  width: 8.2rem;
   transform: rotate(2deg);
 }
 
 .doodle-contact-envelope {
   position: absolute;
-  top: -1.35rem;
-  left: 5rem;
-  width: 4.7rem;
-  transform: rotate(-7deg);
+  top: 50%;
+  right: 0.25rem;
+  width: 5.5rem;
+  transform: translateY(-50%) rotate(-6deg);
 }
 
 .timeline {
@@ -934,6 +935,18 @@ body.menu-open .site-header {
   border-radius: 0;
   background: transparent;
   box-shadow: none;
+}
+
+.timeline-item-pku .timeline-body {
+  padding-right: 6.5rem;
+}
+
+.doodle-education-stars {
+  position: absolute;
+  top: 0.85rem;
+  right: 6rem;
+  width: 4rem;
+  transform: rotate(0deg);
 }
 
 .timeline-item:hover {
@@ -1026,9 +1039,14 @@ body.menu-open .site-header {
 }
 
 .life-item {
+  position: relative;
   padding: 0.5rem 0 0.5rem 1rem;
   border-left: 3px solid var(--neutral-200);
   transition: border-color var(--transition);
+}
+
+.life-item-acg {
+  padding-right: 6.5rem;
 }
 
 .life-item:hover {
@@ -1168,6 +1186,7 @@ body.menu-open .site-header {
 }
 
 .contact-list a {
+  position: relative;
   display: grid;
   gap: 0.125rem;
   padding: 0.5rem 0;
@@ -1186,6 +1205,11 @@ body.menu-open .site-header {
   box-shadow: none;
   transform: none;
   padding-left: 0.5rem;
+}
+
+.contact-email-link {
+  min-height: 5.6rem;
+  padding-right: 6.5rem !important;
 }
 
 .contact-list span {
@@ -1310,7 +1334,9 @@ body.menu-open .site-header {
   }
 
   .doodle-about-stars {
-    display: none;
+    top: -1.95rem;
+    left: -0.95rem;
+    width: 3.85rem;
   }
 
   .doodle-about-research {
@@ -1321,25 +1347,42 @@ body.menu-open .site-header {
   }
 
   .doodle-publication-book {
-    width: 5.7rem;
-    margin: -0.75rem 0 -0.45rem auto;
+    width: 4.6rem;
+    margin: -0.55rem 0 -0.45rem 0;
   }
 
   .life-heading-row {
     align-items: flex-start;
-    flex-wrap: wrap;
-    row-gap: 0.125rem;
   }
 
   .doodle-life-acg {
-    width: 6.9rem;
-    margin: -1.15rem 0 -0.85rem auto;
+    top: -3.35rem;
+    right: 0.2rem;
+    width: 5.8rem;
   }
 
   .doodle-contact-envelope {
-    top: -1.2rem;
-    left: 4.2rem;
-    width: 3.9rem;
+    right: 0;
+    width: 4.5rem;
+  }
+
+  .timeline-item-pku .timeline-body {
+    padding-right: 4.25rem;
+  }
+
+  .doodle-education-stars {
+    top: 1rem;
+    right: 0.1rem;
+    width: 3.5rem;
+  }
+
+  .life-item-acg {
+    padding-right: 4.8rem;
+  }
+
+  .contact-email-link {
+    min-height: 4.25rem;
+    padding-right: 4.6rem !important;
   }
 
   .portrait {
