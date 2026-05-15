@@ -1,3 +1,6 @@
+const nameUnderlineImage =
+  '<img class="name-spiral-underline" src="素材/0螺旋线.png" alt="" aria-hidden="true" />';
+
 const translations = {
   en: {
     "meta.title": "Jiangyue Zeng",
@@ -28,7 +31,7 @@ const translations = {
     "interest.generation": "Image and video generation",
     "about.title": "About",
     "about.p1":
-      "I am Jiangyue Zeng, an undergraduate student in the AI direction of Yuanpei College at Peking University, with research interests primarily in Generative AI, AI for Art, and image/video generation.",
+      `I am <span class="about-name-mark">Jiangyue Zeng${nameUnderlineImage}</span>, an undergraduate student in the AI direction of Yuanpei College at Peking University, with research interests primarily in Generative AI, AI for Art, and image/video generation.`,
     "about.p2":
       'Currently a research intern at <a href="http://struct.wict.pku.edu.cn/" target="_blank" rel="noopener noreferrer">STRUCT</a> (Spatial and Temporal Restoration, Understanding and Compression Team), Wangxuan Institute of Computer Technology, Peking University, advised by <a href="https://williamyang1991.github.io/" target="_blank" rel="noopener noreferrer">Shuai Yang</a>.',
     "publications.title": "Publications",
@@ -99,7 +102,7 @@ const translations = {
     "interest.generation": "图像与视频生成",
     "about.title": "关于我",
     "about.p1":
-      "我是曾姜月，北京大学元培学院人工智能方向本科生，研究兴趣主要为生成式人工智能、人工智能与艺术、图像与视频生成等方向。",
+      `我是<span class="about-name-mark">曾姜月${nameUnderlineImage}</span>，北京大学元培学院人工智能方向本科生，研究兴趣主要为生成式人工智能、人工智能与艺术、图像与视频生成等方向。`,
     "about.p2":
       '目前在北京大学王选计算机研究所 <a href="http://struct.wict.pku.edu.cn/" target="_blank" rel="noopener noreferrer">STRUCT</a>小组科研实习，师从<a href="https://williamyang1991.github.io/" target="_blank" rel="noopener noreferrer">杨帅</a>。',
     "publications.title": "论文",

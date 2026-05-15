@@ -90,6 +90,7 @@ html {
 body {
   min-width: 320px;
   margin: 0;
+  overflow-x: hidden;
   color: var(--foreground);
   background:
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
@@ -121,6 +122,22 @@ svg {
 
 img {
   max-width: 100%;
+}
+
+.doodle-img,
+.name-spiral-underline {
+  pointer-events: none;
+  user-select: none;
+}
+
+.doodle-img {
+  opacity: 0.86;
+  object-fit: contain;
+}
+
+[data-theme="dark"] .doodle-img,
+[data-theme="dark"] .name-spiral-underline {
+  opacity: 0.78;
 }
 
 .sr-only {
@@ -714,10 +731,53 @@ body.menu-open .site-header {
   display: grid;
   gap: 1.875rem;
   min-width: 0;
+  max-width: 100%;
 }
 
 .content-section {
+  position: relative;
   scroll-margin-top: 6rem;
+}
+
+.doodle-about-stars {
+  position: absolute;
+  top: -1.7rem;
+  left: -2.7rem;
+  width: 4.4rem;
+  transform: rotate(-8deg);
+}
+
+.doodle-about-research {
+  position: absolute;
+  top: -1.4rem;
+  right: 2.25rem;
+  width: 6.8rem;
+  transform: rotate(-7deg);
+}
+
+#about .prose {
+  padding-right: min(8.25rem, 23vw);
+}
+
+.about-name-mark {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.14em;
+  color: var(--primary);
+  font-weight: 500;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.name-spiral-underline {
+  position: absolute;
+  right: -0.4em;
+  bottom: -0.36em;
+  left: -0.18em;
+  width: calc(100% + 0.58em);
+  height: 0.64em;
+  max-width: none;
+  opacity: 0.88;
 }
 
 .content-section h2 {
@@ -741,11 +801,20 @@ body.menu-open .site-header {
   margin-bottom: 0;
 }
 
+.doodle-publication-book {
+  flex: 0 0 auto;
+  width: 7.75rem;
+  margin: -0.95rem 2.1rem -0.7rem auto;
+  transform: rotate(-5deg);
+}
+
 .prose,
 .contact-section > p {
+  max-width: 100%;
   color: var(--neutral-700);
   font-size: 0.9375rem;
   line-height: 1.65;
+  overflow-wrap: break-word;
 }
 
 .prose a,
@@ -809,6 +878,33 @@ body.menu-open .site-header {
 .contact-list {
   display: grid;
   gap: 1rem;
+}
+
+.life-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.life-heading-row h2 {
+  margin-bottom: 0;
+}
+
+.doodle-life-acg {
+  flex: 0 0 auto;
+  width: 9.75rem;
+  margin: -1.25rem 2.1rem -1.2rem auto;
+  transform: rotate(2deg);
+}
+
+.doodle-contact-envelope {
+  position: absolute;
+  top: -1.35rem;
+  left: 5rem;
+  width: 4.7rem;
+  transform: rotate(-7deg);
 }
 
 .timeline {
@@ -1209,6 +1305,43 @@ body.menu-open .site-header {
     gap: 0;
   }
 
+  #about .prose {
+    padding-right: 0;
+  }
+
+  .doodle-about-stars {
+    display: none;
+  }
+
+  .doodle-about-research {
+    position: static;
+    width: 5.8rem;
+    margin: -2.55rem 0 0.45rem auto;
+    transform: rotate(-7deg);
+  }
+
+  .doodle-publication-book {
+    width: 5.7rem;
+    margin: -0.75rem 0 -0.45rem auto;
+  }
+
+  .life-heading-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 0.125rem;
+  }
+
+  .doodle-life-acg {
+    width: 6.9rem;
+    margin: -1.15rem 0 -0.85rem auto;
+  }
+
+  .doodle-contact-envelope {
+    top: -1.2rem;
+    left: 4.2rem;
+    width: 3.9rem;
+  }
+
   .portrait {
     margin: 0 auto 1.5rem;
   }
@@ -1228,6 +1361,43 @@ body.menu-open .site-header {
 
   .project-card img {
     max-height: 13.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    width: min(100% - 24px, var(--nav-container));
+  }
+
+  .nav-logo {
+    min-width: 0;
+    max-width: 9.5rem;
+    overflow: hidden;
+    font-size: 1.0625rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .nav-right {
+    flex-shrink: 0;
+    gap: 0.375rem;
+  }
+
+  .theme-toggle,
+  .language-toggle,
+  .nav-toggle {
+    height: 2.25rem;
+    border-radius: 0.45rem;
+  }
+
+  .theme-toggle,
+  .nav-toggle {
+    width: 2.25rem;
+  }
+
+  .language-toggle {
+    min-width: 3.125rem;
+    padding: 0 0.4rem;
   }
 }
 
