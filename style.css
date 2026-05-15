@@ -772,10 +772,10 @@ body.menu-open .site-header {
 .name-spiral-underline {
   position: absolute;
   right: -0.4em;
-  bottom: -0.45em;
+  bottom: -0.6em;
   left: -0.18em;
   width: calc(100% + 0.58em);
-  height: 0.85em;
+  height: 1.2em;
   max-width: none;
   opacity: 0.88;
 }
