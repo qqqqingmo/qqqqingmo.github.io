@@ -23,7 +23,7 @@ const translations = {
     "demo.title": "System walkthrough",
     "demo.desc":
       "Covers the complete interaction path from <strong>cover animation, global statistics, gallery filtering</strong> to <strong>individual image details</strong>, providing various analytical views such as <strong>count statistics, co-occurrence matrix, network graph, and color clustering</strong>; supports filtering by dynasty, location, and other dimensions, allowing viewing of <strong>metadata, typical patterns, local regions, color analysis, cave location</strong>, and <strong>related samples</strong> for individual images.",
-    "role.kicker": "Role",
+    "role.kicker": "Work",
     "role.title": "Contribution",
     "role.frontend.title": "Frontend system",
     "role.frontend.desc":
@@ -68,7 +68,7 @@ const translations = {
     "demo.title": "系统概览",
     "demo.desc":
       "系统涵盖从<strong>封面动画、全局统计、图库筛选</strong>到<strong>单图详情</strong>的完整交互路径，提供<strong>计数统计、共现矩阵、网络图、颜色聚类</strong>等多种分析视图；支持按朝代、位置等维度筛选，可查看单张图像的<strong>元信息、典型纹样、局部区域、色彩分析、所在洞窟</strong>以及<strong>相关样本</strong>。",
-    "role.kicker": "角色",
+    "role.kicker": "工作",
     "role.title": "贡献",
     "role.frontend.title": "前端系统",
     "role.frontend.desc":
@@ -94,6 +94,7 @@ const translations = {
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const languageToggle = document.querySelector("[data-language-toggle]");
 const languageTarget = document.querySelector("[data-language-target]");
+const header = document.querySelector(".project-header");
 let currentLanguage = "en";
 let currentTheme = "light";
 
@@ -179,3 +180,13 @@ if (languageToggle) {
     applyLanguage(currentLanguage === "zh" ? "en" : "zh");
   });
 }
+
+const updateHeaderState = () => {
+  if (!header) {
+    return;
+  }
+  header.classList.toggle("scrolled", window.scrollY > 24);
+};
+
+updateHeaderState();
+window.addEventListener("scroll", updateHeaderState, { passive: true });
