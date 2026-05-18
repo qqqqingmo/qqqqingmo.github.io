@@ -41,11 +41,12 @@
   </head>
   <body>
     <header class="project-header">
-      <nav class="project-nav" aria-label="Project navigation">
-        <a class="project-brand" href="../../">Jiangyue Zeng</a>
+      <nav class="project-nav" aria-label="Primary navigation" data-i18n-aria="nav.label">
+        <a class="project-brand" href="../../" data-i18n="profile.name">Jiangyue Zeng</a>
         <div class="project-nav-links">
-          <a href="../../">Home</a>
-          <a href="#demo">Demo</a>
+          <a href="../../" data-i18n="nav.home">Home</a>
+          <a href="#demo" data-i18n="nav.demo">Demo</a>
+
           <button
             class="theme-toggle"
             type="button"
@@ -61,6 +62,20 @@
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
+
+          <button
+            class="language-toggle"
+            type="button"
+            data-language-toggle
+            aria-label="Switch to Chinese"
+            title="Switch to Chinese"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />
+              <path d="M3.8 9h16.4M3.8 15h16.4M12 3c2 2.3 3 5.3 3 9s-1 6.7-3 9M12 3c-2 2.3-3 5.3-3 9s1 6.7 3 9" />
+            </svg>
+            <span data-language-target>中文</span>
+          </button>
         </div>
       </nav>
     </header>
@@ -68,35 +83,35 @@
     <main class="project-page">
       <section class="project-hero">
         <div class="project-title-block">
-          <p class="project-kicker">Project</p>
-          <h1>Dunhuang Pattern Visualization</h1>
-          <p class="project-subtitle">敦煌纹样可视化系统</p>
-          <p class="project-lead">
+          <p class="project-kicker" data-i18n="hero.kicker">Project</p>
+          <h1 data-i18n="hero.title">Dunhuang Pattern Visualization</h1>
+          <p class="project-subtitle" data-i18n="hero.subtitle">敦煌纹样可视化系统</p>
+          <p class="project-lead" data-i18n-html="hero.lead">
             面向<strong>敦煌藻井与纹样图像数据</strong>的交互式前端可视化网页，将图像浏览、纹样筛选、详情分析和统计图表组织成一条连续的研究数据探索路径。
           </p>
         </div>
         <dl class="project-meta">
           <div>
-            <dt>Type</dt>
-            <dd>Research Visualization</dd>
+            <dt data-i18n="meta.type">Type</dt>
+            <dd data-i18n="meta.typeValue">Research Visualization</dd>
           </div>
           <div>
-            <dt>Focus</dt>
-            <dd>Cultural heritage data, Visual analytics, Frontend interaction</dd>
+            <dt data-i18n="meta.focus">Focus</dt>
+            <dd data-i18n="meta.focusValue">Cultural heritage data, Visual analytics, Frontend interaction</dd>
           </div>
           <div>
-            <dt>My role</dt>
-            <dd>Frontend system, Data preparation, Visual analytics, UI design</dd>
+            <dt data-i18n="meta.role">My role</dt>
+            <dd data-i18n="meta.roleValue">Frontend system, Data preparation, Visual analytics, UI design</dd>
           </div>
         </dl>
       </section>
 
 
-      <section class="project-section" id="demo">
+      <section class="project-section" id="role">
         <div class="section-heading demo-section-heading">
-          <p class="project-kicker section-eyebrow demo-eyebrow">Demo</p>
+          <p class="project-kicker section-eyebrow demo-eyebrow" data-i18n="role.kicker">Role</p>
           <div class="demo-title-row">
-            <h2>System walkthrough</h2>
+            <h2 data-i18n="role.title">Contribution</h2>
             <img
               class="demo-heading-doodle"
               src="../../素材/2画盘.png"
@@ -104,7 +119,48 @@
               aria-hidden="true"
             />
           </div>
-          <p>
+        </div>
+        <div class="contribution-grid">
+          <article>
+            <h3 data-i18n="role.frontend.title">Frontend system</h3>
+            <p data-i18n-html="role.frontend.desc">
+              基本独立完成前端页面设计与实现，搭建从<strong>封面、全局统计、图库到详情页</strong>的完整交互流程。
+            </p>
+            <ul>
+              <li data-i18n="role.frontend.li1">设计页面结构、路由关系和主要交互状态。</li>
+              <li data-i18n="role.frontend.li2">实现图像浏览、条件筛选、详情页切换和图表展示。</li>
+              <li data-i18n="role.frontend.li3">整理作品展示版本，使研究型项目可以作为可访问的网页 demo 呈现。</li>
+            </ul>
+          </article>
+          <article>
+            <h3 data-i18n="role.data.title">Data and analytics</h3>
+            <p data-i18n-html="role.data.desc">
+              完成数据处理、统计分析和后端侧统计代码，将原始研究数据整理为<strong>前端清晰的数据结构</strong>。
+            </p>
+            <ul>
+              <li data-i18n="role.data.li1">分类纹样、图像元信息和整理统计字段。</li>
+              <li data-i18n="role.data.li2">实现纹样计数、共现关系、颜色聚类等分析结果。</li>
+              <li data-i18n="role.data.li3">分析输出并映射到所需的数据格式。</li>
+            </ul>
+          </article>
+          <article>
+            <h3 data-i18n="role.visual.title">Visualization design</h3>
+            <p data-i18n-html="role.visual.desc">
+              负责<strong>完整UI设计，</strong>把文化遗产数据转译为更易阅读的界面表达，在学术信息密度和网页可用性之间平衡。
+            </p>
+            <ul>
+              <li data-i18n="role.visual.li1">根据研究问题选择图库、矩阵、网络图和聚类视图等表达形式。</li>
+              <li data-i18n="role.visual.li2">控制页面叙事节奏，使浏览路径从整体概览逐步进入局部分析。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section" id="demo">
+        <div class="section-heading demo-section-heading">
+          <p class="project-kicker section-eyebrow demo-eyebrow" data-i18n="demo.kicker">Demo</p>
+          <h2 data-i18n="demo.title">System walkthrough</h2>
+          <p data-i18n-html="demo.desc">
             系统涵盖从<strong>封面动画、全局统计、图库筛选</strong>到<strong>单图详情</strong>的完整交互路径，提供<strong>计数统计、共现矩阵、网络图、颜色聚类</strong>等多种分析视图；支持按朝代、位置等维度筛选，可查看单张图像的<strong>元信息、典型纹样、局部区域、色彩分析、所在洞窟</strong>以及<strong>相关样本</strong>。
           </p>
         </div>
@@ -115,51 +171,10 @@
           </video>
         </figure>
       </section>
-
-      <section class="project-section" id="role">
-        <div class="section-heading">
-          <p class="project-kicker section-eyebrow demo-eyebrow">Role</p>
-          <h2>Contribution</h2>
-        </div>
-        <div class="contribution-grid">
-          <article>
-            <h3>Frontend system</h3>
-            <p>
-              基本独立完成前端页面设计与实现，搭建从<strong>封面、全局统计、图库到详情页</strong>的完整交互流程。
-            </p>
-            <ul>
-              <li>设计页面结构、路由关系和主要交互状态。</li>
-              <li>实现图像浏览、条件筛选、详情页切换和图表展示。</li>
-              <li>整理作品展示版本，使研究型项目可以作为可访问的网页 demo 呈现。</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Data and analytics</h3>
-            <p>
-              完成数据处理、统计分析和后端侧统计代码，将原始研究数据整理为<strong>前端清晰的数据结构</strong>。
-            </p>
-            <ul>
-              <li>分类纹样、图像元信息和整理统计字段。</li>
-              <li>实现纹样计数、共现关系、颜色聚类等分析结果。</li>
-              <li>分析输出并映射到所需的数据格式。</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Visualization design</h3>
-            <p>
-              负责<strong>完整UI设计，</strong>把文化遗产数据转译为更易阅读的界面表达，在学术信息密度和网页可用性之间平衡。
-            </p>
-            <ul>
-              <li>根据研究问题选择图库、矩阵、网络图和聚类视图等表达形式。</li>
-              <li>控制页面叙事节奏，使浏览路径从整体概览逐步进入局部分析。</li>
-            </ul>
-          </article>
-        </div>
-      </section>
     </main>
 
     <footer class="project-footer">
-      <a href="../../">Back to Homepage</a>
+      <a href="../../" data-i18n="footer.back">Back to Homepage</a>
       <span>© 2026 Jiangyue Zeng</span>
     </footer>
 
