@@ -45,41 +45,46 @@
         <a class="project-brand" href="../../">Jiangyue Zeng</a>
         <div class="project-nav-links">
           <a href="../../">Home</a>
+          <a href="#overview">Overview</a>
           <a href="#demo">Demo</a>
-          <a href="#features">Features</a>
-          <a href="#role">Role</a>
+          <a href="#implementation">Implementation</a>
         </div>
       </nav>
     </header>
 
     <main class="project-page">
       <section class="project-hero">
-        <div class="project-kicker">Portfolio Case Study</div>
-        <h1>Dunhuang Pattern Visualization / 敦煌纹样可视化系统</h1>
-        <p class="project-lead">
-          一个面向敦煌纹样数据的交互式前端可视化网页，用于纹样浏览、筛选、分析与展示。
-        </p>
-        <div class="project-actions">
-          <a href="#demo" class="project-button primary">Watch Demo</a>
+        <div class="project-title-block">
+          <p class="project-kicker">Project</p>
+          <h1>Dunhuang Pattern Visualization</h1>
+          <p class="project-subtitle">敦煌纹样可视化系统</p>
+          <p class="project-lead">
+            面向<strong>敦煌藻井与纹样图像数据</strong>的交互式前端可视化网页，将图像浏览、纹样筛选、详情分析和统计图表组织成一条连续的研究数据探索路径。
+          </p>
         </div>
+        <dl class="project-meta">
+          <div>
+            <dt>Type</dt>
+            <dd>Research Visualization</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Cultural heritage data, Visual analytics, Frontend interaction</dd>
+          </div>
+          <div>
+            <dt>My role</dt>
+            <dd>Frontend system, Data preparation, Visual analytics, UI design</dd>
+          </div>
+        </dl>
       </section>
 
-      <section class="project-section project-overview">
-        <div>
-          <p class="section-eyebrow">Context</p>
-          <h2>把研究型文化遗产数据转化成可浏览、可分析的前端产品</h2>
-        </div>
-        <p>
-          该项目围绕敦煌藻井与纹样图像数据，设计了从封面叙事、全局统计、图库筛选到单图详情分析的完整浏览路径。页面侧重图像内容展示、色彩统计、纹样共现、聚类浏览和详情页交互，适合作为前端工程能力、可视化表达和产品化思考的综合展示案例。
-        </p>
-      </section>
 
       <section class="project-section" id="demo">
         <div class="section-heading">
           <p class="section-eyebrow">Demo</p>
-          <h2>完整高清视频</h2>
+          <h2>System walkthrough</h2>
           <p>
-            视频展示首页动画、进入数据库、图库筛选、纹样详情、统计图表、聚类可视化和主要页面交互。
+            视频记录了从首页动画进入数据库、再到图库筛选、纹样详情、统计图表和聚类可视化等完整功能。
           </p>
         </div>
 
@@ -92,31 +97,79 @@
           >
             <source src="../../assets/dunhuang-pattern-vis/demo.MP4" type="video/mp4" />
           </video>
-          <figcaption>完整 demo：从封面入口到数据库浏览、筛选、详情页和统计可视化。</figcaption>
+          <figcaption>BGM：江上清风游</figcaption>
         </figure>
       </section>
 
-      <section class="project-section" id="features">
+      <section class="project-section" id="implementation">
         <div class="section-heading">
-          <p class="section-eyebrow">Implemented Features</p>
-          <h2>实现功能</h2>
+          <p class="section-eyebrow">Implementation</p>
+          <h2>Implemented modules</h2>
         </div>
-        <div class="feature-grid">
+        <div class="module-list">
           <article>
-            <h3>沉浸式入口与数据库导航</h3>
-            <p>从敦煌主题封面进入全局统计和图案库，用动画与视觉入口串联浏览路径。</p>
+            <div class="module-title">
+              <span class="module-index">01</span>
+              <h3>入口叙事与信息架构</h3>
+            </div>
+            <div class="module-body">
+              <p>
+                从敦煌主题封面进入数据库，把视觉叙事和数据浏览连接起来，避免 demo 只停留在静态展示。
+              </p>
+              <ul>
+                <li><strong>封面入口：</strong>用主题化视觉和动效建立项目语境。</li>
+                <li><strong>路径组织：</strong>串联全局统计、图案库和详情页，形成可回溯的浏览流程。</li>
+                <li><strong>导航逻辑：</strong>把研究数据拆成 overview、gallery、detail、analytics 等可理解层级。</li>
+              </ul>
+            </div>
           </article>
           <article>
-            <h3>纹样图库与多维筛选</h3>
-            <p>支持按朝代、位置等维度筛选图像，并从图库跳转到单张纹样详情。</p>
+            <div class="module-title">
+              <span class="module-index">02</span>
+              <h3>纹样图库与多维筛选</h3>
+            </div>
+            <div class="module-body">
+              <p>
+                将纹样图像组织成可筛选、可比较的图库界面，让用户能从大规模图像集合中定位感兴趣的样本。
+              </p>
+              <ul>
+                <li><strong>筛选维度：</strong>支持按朝代、位置、图像类别等条件缩小结果范围。</li>
+                <li><strong>结果浏览：</strong>以图像为中心呈现样本，同时保留必要的元信息。</li>
+                <li><strong>详情跳转：</strong>从图库直接进入单张纹样详情，保持探索链路连续。</li>
+              </ul>
+            </div>
           </article>
           <article>
-            <h3>单图详情与纹样定位</h3>
-            <p>在详情页展示图像元信息、典型纹样、局部区域、布局层级和相关纹样信息。</p>
+            <div class="module-title">
+              <span class="module-index">03</span>
+              <h3>单图详情与纹样定位</h3>
+            </div>
+            <div class="module-body">
+              <p>
+                详情页承担从“看见图像”到“理解图像结构”的过渡，突出纹样、局部区域和布局关系。
+              </p>
+              <ul>
+                <li><strong>图像元信息：</strong>展示编号、来源、年代、位置等基础字段。</li>
+                <li><strong>局部定位：</strong>呈现典型纹样、局部区域和相关标注，帮助理解纹样在图像中的位置。</li>
+                <li><strong>关联信息：</strong>补充布局层级、相似纹样与相关样本，支持继续探索。</li>
+              </ul>
+            </div>
           </article>
           <article>
-            <h3>统计与可视化分析</h3>
-            <p>实现纹样计数、共现矩阵、网络图、朝代色彩演变、颜色聚类和相似纹样展示。</p>
+            <div class="module-title">
+              <span class="module-index">04</span>
+              <h3>统计图表与视觉分析</h3>
+            </div>
+            <div class="module-body">
+              <p>
+                将纹样数据进一步转化为可分析的图表视图，用于观察数量分布、共现关系和颜色变化。
+              </p>
+              <ul>
+                <li><strong>纹样统计：</strong>实现计数、占比和类别分布等基础统计视图。</li>
+                <li><strong>关系分析：</strong>通过共现矩阵和网络图展示纹样之间的关联结构。</li>
+                <li><strong>颜色分析：</strong>呈现朝代色彩演变、颜色聚类和相似纹样检索结果。</li>
+              </ul>
+            </div>
           </article>
         </div>
       </section>
@@ -124,14 +177,42 @@
       <section class="project-section" id="role">
         <div class="section-heading">
           <p class="section-eyebrow">Role</p>
-          <h2>我的职责</h2>
+          <h2>Contribution</h2>
         </div>
-        <ul class="responsibility-list">
-          <li>基本独立完成前端页面设计与实现，搭建从封面、全局统计、图库到详情页的完整交互流程。</li>
-          <li>实现纹样数据浏览、筛选、分类、图像展示、详情页交互和可视化图表呈现。</li>
-          <li>参与并实现部分数据处理、统计分析和后端侧统计代码，将研究数据转化为前端可用的数据结构。</li>
-          <li>负责项目工程化组织和作品展示整理，使研究型项目可以作为前端与产品能力 demo 展示。</li>
-        </ul>
+        <div class="contribution-grid">
+          <article>
+            <h3>Frontend system</h3>
+            <p>
+              基本独立完成前端页面设计与实现，搭建从<strong>封面、全局统计、图库到详情页</strong>的完整交互流程。
+            </p>
+            <ul>
+              <li>设计页面结构、路由关系和主要交互状态。</li>
+              <li>实现图像浏览、条件筛选、详情页切换和图表展示。</li>
+              <li>整理作品展示版本，使研究型项目可以作为可访问的网页 demo 呈现。</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Data and analytics</h3>
+            <p>
+              完成数据处理、统计分析和后端侧统计代码，将原始研究数据整理为<strong>前端清晰的数据结构</strong>。
+            </p>
+            <ul>
+              <li>参与纹样分类、图像元信息和统计字段的整理。</li>
+              <li>实现纹样计数、共现关系、颜色聚类等分析结果。</li>
+              <li>分析输出并映射到所需的数据格式。</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Visualization design</h3>
+            <p>
+              负责<strong>完整UI设计，</strong>把文化遗产数据转译为更易阅读的界面表达，在学术信息密度和网页可用性之间平衡。
+            </p>
+            <ul>
+              <li>根据研究问题选择图库、矩阵、网络图和聚类视图等表达形式。</li>
+              <li>控制页面叙事节奏，使浏览路径从整体概览逐步进入局部分析。</li>
+            </ul>
+          </article>
+        </div>
       </section>
     </main>
 
