@@ -12,6 +12,7 @@ const translations = {
     "nav.toggle": "Toggle navigation menu",
     "nav.about": "About",
     "nav.publications": "Publications",
+    "nav.projects": "Projects",
     "nav.experience": "Experience",
     "nav.life": "Life",
     "nav.contact": "Contact",
@@ -42,7 +43,7 @@ const translations = {
       "Training-free video relighting and background replacement with an emphasis on temporal consistency, structure preservation, and detail transfer.",
     "publication.paper": "Paper",
     "publication.project": "Project",
-    "publication.plaid.meta": "Under Review",
+    "publication.plaid.meta": "CCF-A Under Review",
     "publication.plaid.authors":
       "<strong>Jiangyue Zeng</strong>, Anonymous Co-authors",
     "publication.plaid.desc":
@@ -83,6 +84,7 @@ const translations = {
     "nav.toggle": "打开或关闭导航菜单",
     "nav.about": "关于我",
     "nav.publications": "论文",
+    "nav.projects": "项目",
     "nav.experience": "经历",
     "nav.life": "生活",
     "nav.contact": "联系",
@@ -113,7 +115,7 @@ const translations = {
       "训练自由的视频重光照与背景替换方法，重点关注时间一致性、结构保持与细节迁移。",
     "publication.paper": "论文",
     "publication.project": "项目主页",
-    "publication.plaid.meta": "Under Review",
+    "publication.plaid.meta": "CCF-A Under Review",
     "publication.plaid.authors":
       "<strong>Jiangyue Zeng</strong>，匿名合著者",
     "publication.plaid.desc":
@@ -150,7 +152,10 @@ const languageToggle = document.querySelector("[data-language-toggle]");
 const languageTarget = document.querySelector("[data-language-target]");
 const navLinks = Array.from(document.querySelectorAll(".nav-link"));
 const sections = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
+  .map((link) => {
+    const href = link.getAttribute("href");
+    return href?.startsWith("#") ? document.querySelector(href) : null;
+  })
   .filter(Boolean);
 let ticking = false;
 let currentLanguage = "en";
