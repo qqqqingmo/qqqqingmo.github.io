@@ -45,9 +45,22 @@
         <a class="project-brand" href="../../">Jiangyue Zeng</a>
         <div class="project-nav-links">
           <a href="../../">Home</a>
-          <a href="#overview">Overview</a>
           <a href="#demo">Demo</a>
-          <a href="#implementation">Implementation</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to dark mode"
+            title="Switch to dark mode"
+          >
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
         </div>
       </nav>
     </header>
@@ -80,103 +93,32 @@
 
 
       <section class="project-section" id="demo">
-        <div class="section-heading">
-          <p class="section-eyebrow">Demo</p>
-          <h2>System walkthrough</h2>
+        <div class="section-heading demo-section-heading">
+          <p class="project-kicker section-eyebrow demo-eyebrow">Demo</p>
+          <div class="demo-title-row">
+            <h2>System walkthrough</h2>
+            <img
+              class="demo-heading-doodle"
+              src="../../素材/2画盘.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
           <p>
-            视频记录了从首页动画进入数据库、再到图库筛选、纹样详情、统计图表和聚类可视化等完整功能。
+            系统涵盖从<strong>封面动画、全局统计、图库筛选</strong>到<strong>单图详情</strong>的完整交互路径，提供<strong>计数统计、共现矩阵、网络图、颜色聚类</strong>等多种分析视图；支持按朝代、位置等维度筛选，可查看单张图像的<strong>元信息、典型纹样、局部区域、色彩分析、所在洞窟</strong>以及<strong>相关样本</strong>。
           </p>
         </div>
 
         <figure class="demo-video-card">
-          <video
-            controls
-            playsinline
-            preload="metadata"
-            aria-label="Dunhuang pattern visualization demo video"
-          >
+          <video controls playsinline>
             <source src="../../assets/dunhuang-pattern-vis/demo.MP4" type="video/mp4" />
           </video>
-          <figcaption>BGM：江上清风游</figcaption>
         </figure>
-      </section>
-
-      <section class="project-section" id="implementation">
-        <div class="section-heading">
-          <p class="section-eyebrow">Implementation</p>
-          <h2>Implemented modules</h2>
-        </div>
-        <div class="module-list">
-          <article>
-            <div class="module-title">
-              <span class="module-index">01</span>
-              <h3>入口叙事与信息架构</h3>
-            </div>
-            <div class="module-body">
-              <p>
-                从敦煌主题封面进入数据库，把视觉叙事和数据浏览连接起来，避免 demo 只停留在静态展示。
-              </p>
-              <ul>
-                <li><strong>封面入口：</strong>用主题化视觉和动效建立项目语境。</li>
-                <li><strong>路径组织：</strong>串联全局统计、图案库和详情页，形成可回溯的浏览流程。</li>
-                <li><strong>导航逻辑：</strong>把研究数据拆成 overview、gallery、detail、analytics 等可理解层级。</li>
-              </ul>
-            </div>
-          </article>
-          <article>
-            <div class="module-title">
-              <span class="module-index">02</span>
-              <h3>纹样图库与多维筛选</h3>
-            </div>
-            <div class="module-body">
-              <p>
-                将纹样图像组织成可筛选、可比较的图库界面，让用户能从大规模图像集合中定位感兴趣的样本。
-              </p>
-              <ul>
-                <li><strong>筛选维度：</strong>支持按朝代、位置、图像类别等条件缩小结果范围。</li>
-                <li><strong>结果浏览：</strong>以图像为中心呈现样本，同时保留必要的元信息。</li>
-                <li><strong>详情跳转：</strong>从图库直接进入单张纹样详情，保持探索链路连续。</li>
-              </ul>
-            </div>
-          </article>
-          <article>
-            <div class="module-title">
-              <span class="module-index">03</span>
-              <h3>单图详情与纹样定位</h3>
-            </div>
-            <div class="module-body">
-              <p>
-                详情页承担从“看见图像”到“理解图像结构”的过渡，突出纹样、局部区域和布局关系。
-              </p>
-              <ul>
-                <li><strong>图像元信息：</strong>展示编号、来源、年代、位置等基础字段。</li>
-                <li><strong>局部定位：</strong>呈现典型纹样、局部区域和相关标注，帮助理解纹样在图像中的位置。</li>
-                <li><strong>关联信息：</strong>补充布局层级、相似纹样与相关样本，支持继续探索。</li>
-              </ul>
-            </div>
-          </article>
-          <article>
-            <div class="module-title">
-              <span class="module-index">04</span>
-              <h3>统计图表与视觉分析</h3>
-            </div>
-            <div class="module-body">
-              <p>
-                将纹样数据进一步转化为可分析的图表视图，用于观察数量分布、共现关系和颜色变化。
-              </p>
-              <ul>
-                <li><strong>纹样统计：</strong>实现计数、占比和类别分布等基础统计视图。</li>
-                <li><strong>关系分析：</strong>通过共现矩阵和网络图展示纹样之间的关联结构。</li>
-                <li><strong>颜色分析：</strong>呈现朝代色彩演变、颜色聚类和相似纹样检索结果。</li>
-              </ul>
-            </div>
-          </article>
-        </div>
       </section>
 
       <section class="project-section" id="role">
         <div class="section-heading">
-          <p class="section-eyebrow">Role</p>
+          <p class="project-kicker section-eyebrow demo-eyebrow">Role</p>
           <h2>Contribution</h2>
         </div>
         <div class="contribution-grid">
@@ -197,7 +139,7 @@
               完成数据处理、统计分析和后端侧统计代码，将原始研究数据整理为<strong>前端清晰的数据结构</strong>。
             </p>
             <ul>
-              <li>参与纹样分类、图像元信息和统计字段的整理。</li>
+              <li>分类纹样、图像元信息和整理统计字段。</li>
               <li>实现纹样计数、共现关系、颜色聚类等分析结果。</li>
               <li>分析输出并映射到所需的数据格式。</li>
             </ul>
@@ -220,5 +162,7 @@
       <a href="../../">Back to Homepage</a>
       <span>© 2026 Jiangyue Zeng</span>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

@@ -66,10 +66,59 @@
   background: rgba(14, 165, 233, 0.1);
 }
 
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid var(--neutral-200);
+  border-radius: 0.4rem;
+  color: var(--neutral-600);
+  background: var(--background);
+  cursor: pointer;
+  transition: color var(--transition), background-color var(--transition), border-color var(--transition);
+}
+
+.theme-toggle:hover {
+  color: var(--primary);
+  background: var(--neutral-50);
+}
+
+.theme-toggle svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sun-icon {
+  display: block;
+}
+
+.moon-icon {
+  display: none;
+}
+
+[data-theme="dark"] .sun-icon {
+  display: none;
+}
+
+[data-theme="dark"] .moon-icon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle {
+  border-color: var(--neutral-200);
+  background: var(--neutral-50);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: var(--neutral-100);
+}
+
 .project-page {
   width: min(100% - 32px, var(--page-container));
   margin: 0 auto;
-  padding: 3rem 0 4rem;
+  padding: 0rem 0 4rem;
 }
 
 .project-hero {
@@ -77,18 +126,22 @@
   grid-template-columns: minmax(0, 1.45fr) minmax(16rem, 0.55fr);
   gap: 3rem;
   align-items: end;
-  padding: 4.5rem 0 3.5rem;
-  border-bottom: 1px solid var(--card-border);
+  padding: 3.5rem 0 1.1rem;
 }
 
 .project-kicker,
-.section-eyebrow {
+.section-eyebrow,
+.demo-eyebrow {
   margin: 0 0 0.75rem;
   color: var(--accent);
-  font-size: 0.8125rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.project-section .demo-eyebrow {
+  color: var(--accent);
 }
 
 .project-title-block {
@@ -134,11 +187,12 @@
   gap: 1rem;
   min-width: 0;
   padding: 1rem;
-  margin: 0;
+  margin: 0rem 0 0;
   border: 1px solid var(--card-border);
   border-radius: 0.5rem;
   background: var(--card-bg);
   box-shadow: 0 12px 32px rgba(30, 41, 59, 0.08);
+  transform: translateY(1.15rem);
 }
 
 .project-meta div {
@@ -162,8 +216,11 @@
 
 .project-section {
   scroll-margin-top: 6rem;
-  padding: 3.25rem 0;
-  border-bottom: 1px solid var(--card-border);
+  padding: 2.75rem 0;
+}
+
+#demo {
+  padding-top: 1.4rem;
 }
 
 .project-section h2 {
@@ -191,16 +248,35 @@
   line-height: 1.65;
 }
 
-.project-overview {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 3rem;
-  align-items: start;
-}
-
 .section-heading {
   max-width: 760px;
   margin-bottom: 1.5rem;
+}
+
+.demo-section-heading {
+  position: relative;
+  max-width: 860px;
+}
+
+.demo-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.demo-heading-doodle {
+  flex: 0 0 auto;
+  width: 6.5rem;
+  margin: -1.8rem 0 -1.95rem 0.45rem;
+  object-fit: contain;
+  opacity: 0.86;
+  transform: rotate(-7deg);
+  pointer-events: none;
+  user-select: none;
+}
+
+[data-theme="dark"] .demo-heading-doodle {
+  opacity: 0.78;
 }
 
 .demo-video-card {
@@ -216,8 +292,6 @@
 .demo-video-card video {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #0f172a;
 }
 
 .demo-video-card figcaption {
@@ -227,43 +301,29 @@
   line-height: 1.5;
 }
 
-.demo-video-card::after {
-  content: "Jiangyue Zeng";
-  position: absolute;
-  right: 0.75rem;
-  top: 0.75rem;
-  padding: 0.35rem 0.6rem;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: 0.35rem;
-  color: rgba(255, 255, 255, 0.92);
-  background: rgba(15, 23, 42, 0.52);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  pointer-events: none;
-}
-
 .module-list {
   display: grid;
-  gap: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
   max-width: 900px;
-  border-top: 1px solid var(--neutral-100);
 }
 
 .module-list article {
   display: grid;
-  grid-template-columns: minmax(10rem, 0.42fr) minmax(0, 1fr);
-  gap: 2rem;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--neutral-100);
+  gap: 0.5rem;
+  align-content: start;
+  padding: 0.95rem;
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  background: var(--card-bg);
+  box-shadow: 0 10px 26px rgba(30, 41, 59, 0.05);
 }
 
 .module-title {
-  display: grid;
+  display: flex;
   align-content: start;
-  gap: 0.45rem;
+  align-items: baseline;
+  gap: 0.5rem;
 }
 
 .module-index {
@@ -273,10 +333,6 @@
   line-height: 1.25rem;
 }
 
-.module-body {
-  min-width: 0;
-}
-
 .module-list p {
   margin: 0;
   color: var(--neutral-600);
@@ -284,7 +340,6 @@
   line-height: 1.55;
 }
 
-.module-list ul,
 .contribution-grid ul {
   display: grid;
   gap: 0.35rem;
@@ -293,7 +348,6 @@
   list-style: none;
 }
 
-.module-list li,
 .contribution-grid li {
   position: relative;
   padding-left: 0.95rem;
@@ -302,7 +356,6 @@
   line-height: 1.48;
 }
 
-.module-list li::before,
 .contribution-grid li::before {
   position: absolute;
   top: 0.58rem;
@@ -325,7 +378,9 @@
   border: 1px solid var(--card-border);
   border-radius: 0.5rem;
   background: var(--card-bg);
-  box-shadow: 0 12px 32px rgba(30, 41, 59, 0.06);
+  box-shadow:
+    0 18px 42px rgba(30, 41, 59, 0.11),
+    0 2px 8px rgba(30, 41, 59, 0.05);
 }
 
 .contribution-grid p {
@@ -358,8 +413,7 @@
 
 @media (max-width: 900px) {
   .project-hero,
-  .project-overview,
-  .module-list article,
+  .module-list,
   .contribution-grid {
     grid-template-columns: 1fr;
   }
@@ -368,10 +422,6 @@
     gap: 1.5rem;
     align-items: start;
     padding-top: 3.5rem;
-  }
-
-  .module-list article {
-    gap: 0.5rem;
   }
 
   .contribution-grid {
@@ -395,22 +445,32 @@
 
   .project-page {
     width: min(100% - 24px, var(--page-container));
-    padding-top: 1rem;
+    padding-top: 0.25rem;
   }
 
   .project-hero {
-    padding: 2.25rem 0 2.5rem;
+    padding: 2.25rem 0 1.1rem;
+  }
+
+  .project-meta {
+    transform: translateY(0.65rem);
   }
 
   .project-section {
-    padding: 2.5rem 0;
+    padding: 2.25rem 0;
   }
 
-  .demo-video-card::after {
-    right: 0.55rem;
-    top: 0.55rem;
-    max-width: calc(100% - 1.1rem);
-    font-size: 0.64rem;
+  #demo {
+    padding-top: 1.2rem;
+  }
+
+  .demo-title-row {
+    align-items: flex-start;
+  }
+
+  .demo-heading-doodle {
+    width: 6.1rem;
+    margin: -1.2rem 0 -1.35rem 0.1rem;
   }
 
   .project-footer {
@@ -422,8 +482,7 @@
 }
 
 @media (max-width: 520px) {
-  .project-nav-links a:nth-child(2),
-  .project-nav-links a:nth-child(4) {
+  .project-nav-links a {
     display: none;
   }
 }
