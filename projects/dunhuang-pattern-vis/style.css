@@ -255,7 +255,7 @@
 
 .project-section {
   scroll-margin-top: 6rem;
-  padding: 2.75rem 0;
+  padding: 1.5rem 0;
 }
 
 #demo {
@@ -275,7 +275,7 @@
 .project-section h3 {
   margin: 0;
   color: var(--primary);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.25;
 }
@@ -297,6 +297,10 @@
   max-width: 860px;
 }
 
+.demo-section-heading h2 {
+  margin: 0.85rem 0 0.75rem;
+}
+
 .demo-title-row {
   display: flex;
   align-items: center;
@@ -305,7 +309,7 @@
 
 .demo-heading-doodle {
   flex: 0 0 auto;
-  width: 6.5rem;
+  width: 7.2rem;
   margin: -1.8rem 0 -1.95rem 0.45rem;
   object-fit: contain;
   opacity: 0.86;
@@ -413,7 +417,7 @@
 }
 
 .contribution-grid article {
-  padding: 1rem;
+  padding: 1.25rem 1rem 1rem;
   border: 1px solid var(--card-border);
   border-radius: 0.5rem;
   background: var(--card-bg);
@@ -508,8 +512,8 @@
   }
 
   .demo-heading-doodle {
-    width: 6.1rem;
-    margin: -1.2rem 0 -1.35rem 0.1rem;
+    width: 6rem;
+    margin: -1.2rem 2 -2.5rem 0.1rem;
   }
 
   .project-footer {
