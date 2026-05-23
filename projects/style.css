@@ -1,0 +1,322 @@
+.projects-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-height);
+  background: transparent;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  transition:
+    background-color 300ms ease-out,
+    border-color 300ms ease-out,
+    box-shadow 300ms ease-out,
+    backdrop-filter 300ms ease-out,
+    -webkit-backdrop-filter 300ms ease-out;
+}
+
+.projects-header.scrolled {
+  border-bottom: 1px solid var(--header-border);
+  background: var(--header-bg);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  box-shadow: var(--shadow-lg);
+}
+
+.projects-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100% - 32px, var(--nav-container));
+  height: 100%;
+  margin: 0 auto;
+}
+
+.projects-brand {
+  flex-shrink: 0;
+  color: var(--primary);
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  font-weight: 600;
+  line-height: 1.625rem;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+.projects-brand:hover {
+  color: var(--accent);
+}
+
+.projects-nav-links,
+.projects-nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.projects-nav-links {
+  gap: 0.5rem;
+}
+
+.projects-nav-menu a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--neutral-600);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease;
+}
+
+.projects-nav-menu a:hover {
+  color: var(--primary);
+  background: rgba(14, 165, 233, 0.1);
+}
+
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .language-toggle {
+  border-color: var(--neutral-200);
+  background: var(--neutral-50);
+}
+
+[data-theme="dark"] .theme-toggle:hover,
+[data-theme="dark"] .language-toggle:hover {
+  background: var(--neutral-100);
+}
+
+.projects-page {
+  width: min(100% - 32px, var(--page-container));
+  padding: 2.7rem 0 4rem;
+  margin: 0 auto;
+}
+
+.projects-hero {
+  max-width: 760px;
+  margin-bottom: 1.8rem;
+}
+
+.projects-kicker {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.projects-hero h1 {
+  margin: 0;
+  color: var(--primary);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.projects-hero p:last-child {
+  max-width: 660px;
+  margin: 1rem 0 0;
+  color: var(--neutral-700);
+  font-size: 0.975rem;
+  line-height: 1.75;
+}
+
+.portfolio-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.portfolio-card {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: stretch;
+  padding: 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  background: var(--card-bg);
+  box-shadow: 0 14px 34px rgba(30, 41, 59, 0.08);
+  transition:
+    box-shadow var(--transition),
+    transform var(--transition),
+    border-color var(--transition);
+}
+
+.portfolio-card:hover {
+  border-color: rgba(14, 159, 178, 0.35);
+  box-shadow: 0 22px 48px rgba(30, 41, 59, 0.15);
+  transform: translateY(-2px);
+}
+
+.portfolio-thumb {
+  overflow: hidden;
+  min-height: 12.5rem;
+  margin: 0;
+  border-radius: 0.5rem;
+  background:
+    linear-gradient(135deg, rgba(14, 159, 178, 0.08), transparent 42%),
+    var(--neutral-50);
+}
+
+.portfolio-thumb img,
+.portfolio-thumb canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-copy {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+}
+
+.portfolio-type {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+
+.portfolio-copy h2 {
+  margin: 0;
+  color: var(--primary);
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.portfolio-copy p:not(.portfolio-type) {
+  margin: 0.75rem 0 0;
+  color: var(--neutral-700);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.portfolio-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.7rem;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--neutral-100);
+  border-radius: 0.25rem;
+  color: var(--neutral-500);
+  background: var(--neutral-50);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.projects-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100% - 32px, var(--page-container));
+  padding: 1.5rem 0 2.5rem;
+  margin: 0 auto;
+  color: var(--neutral-500);
+  font-size: 0.875rem;
+}
+
+.projects-footer a {
+  color: var(--accent);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.projects-footer a:hover {
+  color: var(--accent-dark);
+}
+
+@media (min-width: 640px) {
+  .projects-nav,
+  .projects-page,
+  .projects-footer {
+    width: min(100% - 48px, var(--page-container));
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-nav {
+    width: min(100% - 64px, var(--nav-container));
+  }
+
+  .projects-page,
+  .projects-footer {
+    width: min(100% - 64px, var(--page-container));
+  }
+
+  .projects-brand {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .portfolio-card {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-thumb {
+    min-height: 13.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .projects-nav,
+  .projects-page,
+  .projects-footer {
+    width: min(100% - 24px, var(--page-container));
+  }
+
+  .projects-page {
+    padding-top: 1.8rem;
+  }
+
+  .projects-brand {
+    min-width: 0;
+    max-width: 9.5rem;
+    overflow: hidden;
+    font-size: 1.0625rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .projects-nav-links {
+    flex-shrink: 0;
+    gap: 0.35rem;
+  }
+
+  .theme-toggle,
+  .language-toggle {
+    height: 2.25rem;
+    border-radius: 0.45rem;
+  }
+
+  .theme-toggle {
+    width: 2.25rem;
+  }
+
+  .language-toggle {
+    min-width: 3.125rem;
+    padding: 0 0.4rem;
+  }
+
+  .projects-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

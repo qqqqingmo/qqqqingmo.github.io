@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kaleidoscope Pattern Generator / 万花筒图案生成器：一个图像纹样生成工具的项目展示页，包含浏览器端 Canvas 实时 demo。"
+    />
+    <meta name="author" content="Jiangyue Zeng" />
+    <meta
+      property="og:title"
+      content="Kaleidoscope Pattern Generator / 万花筒图案生成器"
+    />
+    <meta
+      property="og:description"
+      content="一个从桌面图像处理工具整理出的项目案例，展示纹样生成、交互控制和前端可视化表达能力。"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://qqqqingmo.github.io/projects/kaleidoscope-generator/"
+    />
+    <meta name="theme-color" content="#fefffe" />
+    <title>Kaleidoscope Pattern Generator / 万花筒图案生成器</title>
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="dns-prefetch" href="https://google-fonts.jialeliu.com" />
+    <link rel="preconnect" href="https://google-fonts.jialeliu.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      const savedTheme = localStorage.getItem("homepage-theme");
+      if (savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+  </head>
+  <body>
+    <header class="project-header">
+      <nav class="project-nav" aria-label="Primary navigation" data-i18n-aria="nav.label">
+        <a class="project-brand" href="../../" data-i18n="profile.name">Jiangyue Zeng</a>
+        <div class="project-nav-links">
+          <div class="project-nav-menu">
+            <a href="../../" data-i18n="nav.home">Home</a>
+            <a href="../" data-i18n="nav.projects">Projects</a>
+            <a href="#demo" data-i18n="nav.demo">Live demo</a>
+          </div>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to dark mode"
+            title="Switch to dark mode"
+          >
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <button
+            class="language-toggle"
+            type="button"
+            data-language-toggle
+            aria-label="Switch to Chinese"
+            title="Switch to Chinese"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />
+              <path d="M3.8 9h16.4M3.8 15h16.4M12 3c2 2.3 3 5.3 3 9s-1 6.7-3 9M12 3c-2 2.3-3 5.3-3 9s1 6.7 3 9" />
+            </svg>
+            <span data-language-target>中文</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-page">
+      <section class="project-hero kaleidoscope-hero">
+        <div class="project-title-block">
+          <p class="project-kicker" data-i18n="hero.kicker">Project</p>
+          <h1 data-i18n="hero.title">Kaleidoscope Pattern Generator</h1>
+          <p class="project-subtitle" data-i18n="hero.subtitle">万花筒图案生成器</p>
+          <p class="project-lead" data-i18n-html="hero.lead">
+            一个从 <strong>PyQt + OpenCV 桌面图像处理工具</strong>整理出的项目案例：用户选择局部图像后，系统通过镜像、旋转和平铺生成连续纹样，并提供参数化控制与导出流程。
+          </p>
+          <div class="project-actions">
+            <a class="project-demo-link" href="#demo" data-i18n="hero.demoLink">Try Live Demo</a>
+          </div>
+        </div>
+
+        <dl class="project-meta">
+          <div>
+            <dt data-i18n="meta.type">Type</dt>
+            <dd data-i18n="meta.typeValue">Creative Tool / Image Processing</dd>
+          </div>
+          <div>
+            <dt data-i18n="meta.focus">Focus</dt>
+            <dd data-i18n="meta.focusValue">Canvas demo, Pattern generation, Interaction design</dd>
+          </div>
+          <div>
+            <dt data-i18n="meta.role">My role</dt>
+            <dd data-i18n="meta.roleValue">Independent development, Visual system, Product packaging</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="project-section" id="demo">
+        <div class="section-heading demo-section-heading">
+          <p class="project-kicker section-eyebrow" data-i18n="demo.kicker">Live Demo</p>
+          <h2 data-i18n="demo.title">Browser-side pattern playground</h2>
+          <p data-i18n-html="demo.desc">
+            展示版用 <strong>Canvas</strong> 重建核心交互：选择纹理焦点、切换生成结构、调整旋转/缩放/重复次数，并在浏览器内实时渲染结果。上传的图片只在本地浏览器处理，不会进入仓库或服务器。
+          </p>
+        </div>
+
+        <div class="demo-workspace" aria-label="Kaleidoscope live demo">
+          <figure class="canvas-panel source-panel">
+            <figcaption>
+              <span data-i18n="demo.source">Source texture</span>
+              <small data-i18n="demo.sourceHint">Drag inside the image</small>
+            </figcaption>
+            <canvas
+              id="source-canvas"
+              width="640"
+              height="460"
+              aria-label="Source image with selected pattern area"
+            ></canvas>
+          </figure>
+
+          <form class="control-panel" aria-label="Pattern controls">
+            <div class="control-row upload-row">
+              <label class="file-control">
+                <input id="image-upload" type="file" accept="image/png,image/jpeg,image/webp" />
+                <span data-i18n="controls.upload">Upload local image</span>
+              </label>
+              <button id="randomize-source" class="secondary-button" type="button" data-i18n="controls.randomize">
+                New sample
+              </button>
+            </div>
+
+            <div class="pattern-options" role="group" aria-label="Pattern mode">
+              <button class="pattern-button is-active" type="button" data-pattern="honeycomb" data-i18n="controls.honeycomb">Honeycomb</button>
+              <button class="pattern-button" type="button" data-pattern="triangle" data-i18n="controls.triangle">Triangle</button>
+              <button class="pattern-button" type="button" data-pattern="square" data-i18n="controls.square">Square</button>
+              <button class="pattern-button" type="button" data-pattern="brick" data-i18n="controls.brick">Brick</button>
+            </div>
+
+            <label class="range-control">
+              <span data-i18n="controls.segments">Segments</span>
+              <output id="segments-value">10</output>
+              <input id="segments" type="range" min="4" max="20" step="1" value="10" />
+            </label>
+
+            <label class="range-control">
+              <span data-i18n="controls.rotation">Rotation</span>
+              <output id="rotation-value">0°</output>
+              <input id="rotation" type="range" min="-180" max="180" step="1" value="0" />
+            </label>
+
+            <label class="range-control">
+              <span data-i18n="controls.scale">Texture scale</span>
+              <output id="scale-value">118%</output>
+              <input id="scale" type="range" min="70" max="180" step="1" value="118" />
+            </label>
+
+            <div class="repeat-grid">
+              <label class="range-control compact">
+                <span data-i18n="controls.repeatX">Horizontal repeat</span>
+                <output id="repeat-x-value">2</output>
+                <input id="repeat-x" type="range" min="1" max="5" step="1" value="2" />
+              </label>
+
+              <label class="range-control compact">
+                <span data-i18n="controls.repeatY">Vertical repeat</span>
+                <output id="repeat-y-value">2</output>
+                <input id="repeat-y" type="range" min="1" max="5" step="1" value="2" />
+              </label>
+            </div>
+
+            <div class="control-row">
+              <label class="toggle-control">
+                <input id="mirror-source" type="checkbox" checked />
+                <span data-i18n="controls.mirror">Mirror alternate slices</span>
+              </label>
+              <label class="toggle-control">
+                <input id="animate-output" type="checkbox" />
+                <span data-i18n="controls.animate">Motion</span>
+              </label>
+            </div>
+
+            <a id="download-pattern" class="download-button" href="#" download="kaleidoscope-pattern.png" data-i18n="controls.download">
+              Export PNG
+            </a>
+          </form>
+
+          <figure class="canvas-panel result-panel">
+            <figcaption>
+              <span data-i18n="demo.output">Generated pattern</span>
+              <small data-i18n="demo.outputHint">Rendered in real time</small>
+            </figcaption>
+            <canvas
+              id="result-canvas"
+              width="760"
+              height="760"
+              aria-label="Generated kaleidoscope pattern"
+            ></canvas>
+          </figure>
+        </div>
+      </section>
+
+      <section class="project-section" id="role">
+        <div class="section-heading">
+          <p class="project-kicker section-eyebrow" data-i18n="role.kicker">Work</p>
+          <h2 data-i18n="role.title">What this case demonstrates</h2>
+        </div>
+        <div class="contribution-grid">
+          <article>
+            <h3 data-i18n="role.product.title">Product framing</h3>
+            <p data-i18n-html="role.product.desc">
+              将一个本地桌面小工具整理成可展示的 <strong>作品案例</strong>：明确用户流程、核心交互、参数控制和导出结果，而不是只展示代码截图。
+            </p>
+          </article>
+          <article>
+            <h3 data-i18n="role.engineering.title">Engineering thinking</h3>
+            <p data-i18n-html="role.engineering.desc">
+              原项目使用 PyQt 组织界面、OpenCV 处理选区裁切与镜像平铺；展示页用前端 Canvas 复刻核心体验，说明我可以在不同技术栈之间抽象同一套交互模型。
+            </p>
+          </article>
+          <article>
+            <h3 data-i18n="role.frontend.title">Frontend direction</h3>
+            <p data-i18n-html="role.frontend.desc">
+              如果迁移成正式 Web App，可以自然拆成 <strong>React + Vite</strong> 页面、Canvas 渲染模块、Zustand 状态层、Tailwind 控件系统和 Web Worker 图像处理管线。
+            </p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="project-footer">
+      <a href="../" data-i18n="footer.projects">Back to Projects</a>
+      <span>© 2026 Jiangyue Zeng</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

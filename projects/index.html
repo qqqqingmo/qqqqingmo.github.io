@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Selected projects by Jiangyue Zeng, including visualization systems and creative image-processing tools."
+    />
+    <meta name="author" content="Jiangyue Zeng" />
+    <meta property="og:title" content="Projects / Jiangyue Zeng" />
+    <meta
+      property="og:description"
+      content="Selected projects by Jiangyue Zeng, including visualization systems and creative image-processing tools."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://qqqqingmo.github.io/projects/" />
+    <meta name="theme-color" content="#fefffe" />
+    <title>Projects / Jiangyue Zeng</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="dns-prefetch" href="https://google-fonts.jialeliu.com" />
+    <link rel="preconnect" href="https://google-fonts.jialeliu.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      const savedTheme = localStorage.getItem("homepage-theme");
+      if (savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+  </head>
+  <body>
+    <header class="projects-header">
+      <nav class="projects-nav" aria-label="Primary navigation" data-i18n-aria="nav.label">
+        <a class="projects-brand" href="../" data-i18n="profile.name">Jiangyue Zeng</a>
+        <div class="projects-nav-links">
+          <div class="projects-nav-menu">
+            <a href="../" data-i18n="nav.home">Home</a>
+          </div>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to dark mode"
+            title="Switch to dark mode"
+          >
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <button
+            class="language-toggle"
+            type="button"
+            data-language-toggle
+            aria-label="Switch to Chinese"
+            title="Switch to Chinese"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />
+              <path d="M3.8 9h16.4M3.8 15h16.4M12 3c2 2.3 3 5.3 3 9s-1 6.7-3 9M12 3c-2 2.3-3 5.3-3 9s1 6.7 3 9" />
+            </svg>
+            <span data-language-target>中文</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="projects-page">
+      <section class="projects-hero">
+        <p class="projects-kicker" data-i18n="hero.kicker">Projects</p>
+        <h1 data-i18n="hero.title">Selected Projects</h1>
+        <p data-i18n="hero.lead">
+          A compact index for project cases that are safe to publish and easy to inspect.
+        </p>
+      </section>
+
+      <section class="portfolio-grid" aria-label="Project list" data-i18n-aria="projects.label">
+        <a class="portfolio-card" href="dunhuang-pattern-vis/">
+          <figure class="portfolio-thumb">
+            <img
+              src="../assets/dunhuang-pattern-vis/poster.jpg"
+              alt="Dunhuang Pattern Visualization demo poster"
+              data-i18n-alt="project.dunhuang.alt"
+            />
+          </figure>
+          <div class="portfolio-copy">
+            <p class="portfolio-type" data-i18n="project.dunhuang.type">Research Visualization</p>
+            <h2 data-i18n="project.dunhuang.title">Dunhuang Pattern Visualization</h2>
+            <p data-i18n="project.dunhuang.desc">
+              Interactive visualization for cultural heritage image data, including browsing, filtering, detail analysis, and chart views.
+            </p>
+            <div class="portfolio-tags">
+              <span>Frontend</span>
+              <span>Visualization</span>
+              <span>Data UI</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="portfolio-card" href="kaleidoscope-generator/">
+          <figure class="portfolio-thumb generated-thumb">
+            <canvas
+              id="kaleidoscope-thumb"
+              width="720"
+              height="480"
+              aria-label="Generated kaleidoscope pattern preview"
+            ></canvas>
+          </figure>
+          <div class="portfolio-copy">
+            <p class="portfolio-type" data-i18n="project.kaleidoscope.type">Creative Tool</p>
+            <h2 data-i18n="project.kaleidoscope.title">Kaleidoscope Pattern Generator</h2>
+            <p data-i18n="project.kaleidoscope.desc">
+              A showcase-safe case for an image-processing pattern generator, with a browser-side real-time Canvas demo.
+            </p>
+            <div class="portfolio-tags">
+              <span>Canvas</span>
+              <span>Image Tool</span>
+              <span>Product Case</span>
+            </div>
+          </div>
+        </a>
+      </section>
+    </main>
+
+    <footer class="projects-footer">
+      <a href="../" data-i18n="footer.back">Back to Homepage</a>
+      <span>© 2026 Jiangyue Zeng</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
