@@ -273,9 +273,23 @@
   margin-bottom: 1.5rem;
 }
 
+.demo-section-heading {
+  position: relative;
+}
+
+.demo-section-heading h2 {
+  margin: 0.85rem 0 0.75rem;
+}
+
+.demo-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .demo-workspace {
   display: grid;
-  grid-template-columns: minmax(15rem, 0.82fr) minmax(17rem, 0.66fr) minmax(18rem, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.72fr) minmax(0, 1fr);
   gap: 1rem;
   align-items: start;
 }
@@ -292,6 +306,21 @@
 .canvas-panel {
   overflow: hidden;
   margin: 0;
+}
+
+.demo-heading-doodle {
+  flex: 0 0 auto;
+  width: 7.2rem;
+  margin: -1.8rem 0 -1.95rem 0.45rem;
+  object-fit: contain;
+  opacity: 0.86;
+  transform: rotate(-7deg);
+  pointer-events: none;
+  user-select: none;
+}
+
+[data-theme="dark"] .demo-heading-doodle {
+  opacity: 0.78;
 }
 
 .canvas-panel figcaption {
@@ -324,7 +353,7 @@
 }
 
 #source-canvas {
-  aspect-ratio: 1.39;
+  aspect-ratio: 1;
   cursor: crosshair;
   touch-action: none;
 }
@@ -635,5 +664,14 @@
   .canvas-panel figcaption {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .demo-title-row {
+    align-items: flex-start;
+  }
+
+  .demo-heading-doodle {
+    width: 6rem;
+    margin: -1.2rem 0 -2.5rem 0.1rem;
   }
 }

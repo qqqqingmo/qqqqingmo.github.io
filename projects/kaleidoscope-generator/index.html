@@ -14,7 +14,7 @@
     />
     <meta
       property="og:description"
-      content="一个从桌面图像处理工具整理出的项目案例，展示纹样生成、交互控制和前端可视化表达能力。"
+      content="一个图像处理工具整理出的项目案例，展示纹样生成、交互控制和前端可视化表达能力。"
     />
     <meta property="og:type" content="website" />
     <meta
@@ -31,7 +31,7 @@
       href="https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
     />
     <link rel="stylesheet" href="../../style.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=20260523-3" />
     <script>
       const savedTheme = localStorage.getItem("homepage-theme");
       if (savedTheme === "dark") {
@@ -90,25 +90,23 @@
           <h1 data-i18n="hero.title">Kaleidoscope Pattern Generator</h1>
           <p class="project-subtitle" data-i18n="hero.subtitle">万花筒图案生成器</p>
           <p class="project-lead" data-i18n-html="hero.lead">
-            一个从 <strong>PyQt + OpenCV 桌面图像处理工具</strong>整理出的项目案例：用户选择局部图像后，系统通过镜像、旋转和平铺生成连续纹样，并提供参数化控制与导出流程。
+            一个从 <strong>PyQt + OpenCV 图像处理工具</strong>整理出的项目案例：用户选择局部图像后，系统通过镜像、旋转和平铺生成连续纹样，并提供参数化控制与导出流程。
           </p>
-          <div class="project-actions">
-            <a class="project-demo-link" href="#demo" data-i18n="hero.demoLink">Try Live Demo</a>
           </div>
         </div>
 
         <dl class="project-meta">
           <div>
             <dt data-i18n="meta.type">Type</dt>
-            <dd data-i18n="meta.typeValue">Creative Tool / Image Processing</dd>
+            <dd data-i18n="meta.typeValue">Interactive System / Image Processing</dd>
           </div>
           <div>
             <dt data-i18n="meta.focus">Focus</dt>
-            <dd data-i18n="meta.focusValue">Canvas demo, Pattern generation, Interaction design</dd>
+            <dd data-i18n="meta.focusValue">Interactive visualization, Image processing, Pattern generation</dd>
           </div>
           <div>
             <dt data-i18n="meta.role">My role</dt>
-            <dd data-i18n="meta.roleValue">Independent development, Visual system, Product packaging</dd>
+            <dd data-i18n="meta.roleValue">System design, Visual design, Frontend implementation</dd>
           </div>
         </dl>
       </section>
@@ -116,9 +114,19 @@
       <section class="project-section" id="demo">
         <div class="section-heading demo-section-heading">
           <p class="project-kicker section-eyebrow" data-i18n="demo.kicker">Live Demo</p>
-          <h2 data-i18n="demo.title">Browser-side pattern playground</h2>
+          <div class="demo-title-row">
+            <h2 data-i18n="demo.title">Interactive pattern generation demo</h2>
+            <img
+              class="demo-heading-doodle"
+              src="../../素材/2画盘.png"
+              width="115"
+              height="115"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
           <p data-i18n-html="demo.desc">
-            展示版用 <strong>Canvas</strong> 重建核心交互：选择纹理焦点、切换生成结构、调整旋转/缩放/重复次数，并在浏览器内实时渲染结果。上传的图片只在本地浏览器处理，不会进入仓库或服务器。
+            基于 <strong>Canvas</strong> 的交互式纹样生成系统：选择纹理焦点、切换生成结构、调整旋转/缩放/重复次数，在浏览器内实时渲染结果。上传的图片只在本地浏览器处理，不会进入仓库或服务器。
           </p>
         </div>
 
@@ -130,8 +138,8 @@
             </figcaption>
             <canvas
               id="source-canvas"
-              width="640"
-              height="460"
+              width="760"
+              height="760"
               aria-label="Source image with selected pattern area"
             ></canvas>
           </figure>
@@ -220,25 +228,25 @@
       <section class="project-section" id="role">
         <div class="section-heading">
           <p class="project-kicker section-eyebrow" data-i18n="role.kicker">Work</p>
-          <h2 data-i18n="role.title">What this case demonstrates</h2>
+          <h2 data-i18n="role.title">Design Rationale</h2>
         </div>
         <div class="contribution-grid">
           <article>
-            <h3 data-i18n="role.product.title">Product framing</h3>
+            <h3 data-i18n="role.product.title">System design</h3>
             <p data-i18n-html="role.product.desc">
-              将一个本地桌面小工具整理成可展示的 <strong>作品案例</strong>：明确用户流程、核心交互、参数控制和导出结果，而不是只展示代码截图。
+              围绕<strong>纹样生成、参数控制与导出流程</strong>构建完整交互：梳理用户流程、核心交互、参数控制和输出能力，通过镜像、旋转、平铺用户选择的图像局部生成连续纹样。
             </p>
           </article>
           <article>
-            <h3 data-i18n="role.engineering.title">Engineering thinking</h3>
+            <h3 data-i18n="role.engineering.title">Computational approach</h3>
             <p data-i18n-html="role.engineering.desc">
-              原项目使用 PyQt 组织界面、OpenCV 处理选区裁切与镜像平铺；展示页用前端 Canvas 复刻核心体验，说明我可以在不同技术栈之间抽象同一套交互模型。
+              原项目使用 PyQt 构建界面、OpenCV 处理选区裁切与镜像平铺；本 demo 用 Canvas 在浏览器端复刻核心体验，展示跨技术栈抽象同一交互模型的能力。
             </p>
           </article>
           <article>
-            <h3 data-i18n="role.frontend.title">Frontend direction</h3>
+            <h3 data-i18n="role.frontend.title">Frontend implementation</h3>
             <p data-i18n-html="role.frontend.desc">
-              如果迁移成正式 Web App，可以自然拆成 <strong>React + Vite</strong> 页面、Canvas 渲染模块、Zustand 状态层、Tailwind 控件系统和 Web Worker 图像处理管线。
+              当前网页 demo 基于原生 JavaScript 与 Canvas 2D API 构建，在轻量的静态页面结构内实现纹样的实时渲染。原项目使用 PyQt 作为界面框架。
             </p>
           </article>
         </div>

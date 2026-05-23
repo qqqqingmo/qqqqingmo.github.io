@@ -19,10 +19,10 @@ const translations = {
     "project.dunhuang.title": "Dunhuang Pattern Visualization",
     "project.dunhuang.desc":
       "Interactive visualization for cultural heritage image data, including browsing, filtering, detail analysis, and chart views.",
-    "project.kaleidoscope.type": "Creative Tool",
+    "project.kaleidoscope.type": "Interactive System",
     "project.kaleidoscope.title": "Kaleidoscope Pattern Generator",
     "project.kaleidoscope.desc":
-      "A showcase-safe case for an image-processing pattern generator, with a browser-side real-time Canvas demo.",
+      "An interactive pattern generation system built with browser-side Canvas, demonstrating image processing and parameter controls.",
     "footer.back": "Back to Homepage",
   },
   zh: {
@@ -44,10 +44,10 @@ const translations = {
     "project.dunhuang.title": "敦煌纹样可视化系统",
     "project.dunhuang.desc":
       "面向文化遗产图像数据的交互式可视化网页，包含浏览、筛选、详情分析与统计图表视图。",
-    "project.kaleidoscope.type": "创意工具",
+    "project.kaleidoscope.type": "交互系统",
     "project.kaleidoscope.title": "万花筒图案生成器",
     "project.kaleidoscope.desc":
-      "一个图像处理纹样生成器的安全展示版本，包含浏览器端实时 Canvas demo。",
+      "基于浏览器端 Canvas 的交互式纹样生成系统，展示图像处理与参数化控制能力。",
     "footer.back": "返回首页",
   },
 };
