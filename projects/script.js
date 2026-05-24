@@ -2,7 +2,7 @@ const translations = {
   en: {
     "meta.title": "Projects / Jiangyue Zeng",
     "meta.description":
-      "Selected projects by Jiangyue Zeng, including visualization systems and creative image-processing tools.",
+      "Selected research and system design projects by Jiangyue Zeng, spanning cultural heritage visualization and interactive image generation.",
     "nav.label": "Primary navigation",
     "nav.home": "Home",
     "language.target": "中文",
@@ -12,7 +12,8 @@ const translations = {
     "profile.name": "Jiangyue Zeng",
     "hero.kicker": "Projects",
     "hero.title": "Selected Projects",
-    "hero.lead": "A compact index for project cases that are safe to publish and easy to inspect.",
+    "hero.lead":
+      "  ",
     "projects.label": "Project list",
     "project.dunhuang.alt": "Dunhuang Pattern Visualization demo poster",
     "project.dunhuang.type": "Research Visualization",
@@ -21,13 +22,14 @@ const translations = {
       "Interactive visualization for cultural heritage image data, including browsing, filtering, detail analysis, and chart views.",
     "project.kaleidoscope.type": "Interactive System",
     "project.kaleidoscope.title": "Kaleidoscope Pattern Generator",
+    "project.kaleidoscope.alt": "Kaleidoscope Pattern Generator pattern preview",
     "project.kaleidoscope.desc":
-      "An interactive pattern generation system built with browser-side Canvas, demonstrating image processing and parameter controls.",
+      "An interactive image-pattern system for region sampling, transformation structures, parameter control, and export.",
     "footer.back": "Back to Homepage",
   },
   zh: {
     "meta.title": "项目 / 曾姜月",
-    "meta.description": "曾姜月的项目案例，包括可视化系统与创意图像处理工具。",
+    "meta.description": "曾姜月的研究与系统设计项目，涵盖文化遗产可视化与交互式图像生成。",
     "nav.label": "主导航",
     "nav.home": "首页",
     "language.target": "EN",
@@ -36,8 +38,8 @@ const translations = {
     "theme.light": "切换到浅色模式",
     "profile.name": "曾姜月",
     "hero.kicker": "项目",
-    "hero.title": "项目案例",
-    "hero.lead": "这里集中放置适合公开展示、也方便对方快速查看的项目页面。",
+    "hero.title": "研究与设计项目",
+    "hero.lead": "  ",
     "projects.label": "项目列表",
     "project.dunhuang.alt": "敦煌纹样可视化系统演示封面",
     "project.dunhuang.type": "研究可视化",
@@ -46,8 +48,9 @@ const translations = {
       "面向文化遗产图像数据的交互式可视化网页，包含浏览、筛选、详情分析与统计图表视图。",
     "project.kaleidoscope.type": "交互系统",
     "project.kaleidoscope.title": "万花筒图案生成器",
+    "project.kaleidoscope.alt": "万花筒图案生成器纹样预览图",
     "project.kaleidoscope.desc":
-      "基于浏览器端 Canvas 的交互式纹样生成系统，展示图像处理与参数化控制能力。",
+      "面向图像局部采样与纹样生成的交互系统，支持结构切换、参数控制与结果导出。",
     "footer.back": "返回首页",
   },
 };
@@ -138,7 +141,6 @@ if (themeToggle) {
   applyTheme(getInitialTheme());
   themeToggle.addEventListener("click", () => {
     applyTheme(currentTheme === "dark" ? "light" : "dark");
-    drawKaleidoscopeThumb();
   });
 }
 
@@ -158,67 +160,3 @@ const updateHeaderState = () => {
 
 updateHeaderState();
 window.addEventListener("scroll", updateHeaderState, { passive: true });
-
-function drawKaleidoscopeThumb() {
-  const canvas = document.querySelector("#kaleidoscope-thumb");
-  if (!canvas) {
-    return;
-  }
-  const ctx = canvas.getContext("2d");
-  const w = canvas.width;
-  const h = canvas.height;
-  const cx = w * 0.5;
-  const cy = h * 0.5;
-  const radius = Math.hypot(w, h) * 0.55;
-  const segmentCount = 16;
-  const angle = (Math.PI * 2) / segmentCount;
-
-  const bg = ctx.createLinearGradient(0, 0, w, h);
-  bg.addColorStop(0, document.documentElement.getAttribute("data-theme") === "dark" ? "#13202b" : "#edf8f6");
-  bg.addColorStop(0.5, "#f0c49a");
-  bg.addColorStop(1, "#be5a38");
-  ctx.fillStyle = bg;
-  ctx.fillRect(0, 0, w, h);
-
-  for (let i = 0; i < segmentCount; i += 1) {
-    ctx.save();
-    ctx.translate(cx, cy);
-    ctx.rotate(i * angle);
-    if (i % 2 === 1) {
-      ctx.scale(1, -1);
-    }
-    ctx.beginPath();
-    ctx.moveTo(0, 0);
-    ctx.lineTo(radius, -Math.tan(angle * 0.5) * radius);
-    ctx.lineTo(radius, Math.tan(angle * 0.5) * radius);
-    ctx.closePath();
-    ctx.clip();
-
-    const petal = ctx.createRadialGradient(90, 0, 0, 90, 0, 210);
-    petal.addColorStop(0, "rgba(255, 255, 255, 0.82)");
-    petal.addColorStop(0.4, "rgba(14, 159, 178, 0.44)");
-    petal.addColorStop(1, "rgba(190, 90, 56, 0)");
-    ctx.fillStyle = petal;
-    ctx.beginPath();
-    ctx.ellipse(140, 0, 210, 42, 0, 0, Math.PI * 2);
-    ctx.fill();
-
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
-    ctx.lineWidth = 3;
-    ctx.beginPath();
-    ctx.moveTo(0, 0);
-    ctx.bezierCurveTo(110, -80, 230, 85, 360, -20);
-    ctx.stroke();
-    ctx.restore();
-  }
-
-  ctx.save();
-  ctx.globalCompositeOperation = "screen";
-  ctx.fillStyle = "rgba(255, 255, 255, 0.22)";
-  ctx.beginPath();
-  ctx.arc(cx, cy, 82, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.restore();
-}
-
-drawKaleidoscopeThumb();

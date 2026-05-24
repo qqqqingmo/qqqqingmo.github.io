@@ -2,6 +2,7 @@ const translations = {
   en: {
     "nav.label": "Primary navigation",
     "nav.home": "Home",
+    "nav.projects": "Projects",
     "nav.demo": "Demo",
     "language.target": "中文",
     "language.title": "Switch to Chinese",
@@ -48,6 +49,7 @@ const translations = {
   zh: {
     "nav.label": "主导航",
     "nav.home": "首页",
+    "nav.projects": "项目",
     "nav.demo": "演示",
     "language.target": "EN",
     "language.title": "切换到英文",

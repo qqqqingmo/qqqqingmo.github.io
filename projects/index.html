@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Selected projects by Jiangyue Zeng, including visualization systems and creative image-processing tools."
+      content="Selected research and system design projects by Jiangyue Zeng, spanning cultural heritage visualization and interactive image generation."
     />
     <meta name="author" content="Jiangyue Zeng" />
     <meta property="og:title" content="Projects / Jiangyue Zeng" />
     <meta
       property="og:description"
-      content="Selected projects by Jiangyue Zeng, including visualization systems and creative image-processing tools."
+      content="Selected research and system design projects by Jiangyue Zeng, spanning cultural heritage visualization and interactive image generation."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qqqqingmo.github.io/projects/" />
@@ -25,7 +25,7 @@
       href="https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
     />
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=20260524-1" />
     <script>
       const savedTheme = localStorage.getItem("homepage-theme");
       if (savedTheme === "dark") {
@@ -80,7 +80,7 @@
         <p class="projects-kicker" data-i18n="hero.kicker">Projects</p>
         <h1 data-i18n="hero.title">Selected Projects</h1>
         <p data-i18n="hero.lead">
-          A compact index for project cases that are safe to publish and easy to inspect.
+              
         </p>
       </section>
 
@@ -108,19 +108,19 @@
         </a>
 
         <a class="portfolio-card" href="kaleidoscope-generator/">
-          <figure class="portfolio-thumb generated-thumb">
-            <canvas
-              id="kaleidoscope-thumb"
-              width="720"
-              height="480"
-              aria-label="Generated kaleidoscope pattern preview"
-            ></canvas>
+          <figure class="portfolio-thumb">
+            <img
+              class="kaleidoscope-cover"
+              src="../assets/kaleidoscope-generator/cover.jpg"
+              alt="Kaleidoscope Pattern Generator pattern preview"
+              data-i18n-alt="project.kaleidoscope.alt"
+            />
           </figure>
           <div class="portfolio-copy">
             <p class="portfolio-type" data-i18n="project.kaleidoscope.type">Interactive System</p>
             <h2 data-i18n="project.kaleidoscope.title">Kaleidoscope Pattern Generator</h2>
             <p data-i18n="project.kaleidoscope.desc">
-              An interactive pattern generation system built with browser-side Canvas, demonstrating image processing and parameter controls.
+              An interactive image-pattern system for region sampling, transformation structures, parameter control, and export.
             </p>
             <div class="portfolio-tags">
               <span>Canvas</span>
@@ -137,6 +137,6 @@
       <span>© 2026 Jiangyue Zeng</span>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260524-1"></script>
   </body>
 </html>

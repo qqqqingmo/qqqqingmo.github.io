@@ -30,19 +30,23 @@ const translations = {
     "demo.source": "Source texture",
     "demo.sourceHint": "Drag inside the image",
     "demo.output": "Generated pattern",
-    "demo.outputHint": "Rendered in real time",
+    "controls.image": "Image",
     "controls.upload": "Upload local image",
-    "controls.randomize": "New sample",
-    "controls.honeycomb": "Honeycomb",
+    "controls.randomize": "Other sample",
+    "controls.pattern": "Pattern type",
+    "controls.weave": "Cross weave",
     "controls.triangle": "Triangle",
     "controls.square": "Square",
-    "controls.brick": "Brick",
     "controls.segments": "Segments",
+    "controls.density": "Weave density",
     "controls.rotation": "Rotation",
     "controls.scale": "Texture scale",
-    "controls.repeatX": "Horizontal tiles",
-    "controls.repeatY": "Vertical tiles",
+    "controls.tiles": "Tiles",
+    "controls.repeatX": "H",
+    "controls.repeatY": "V",
+    "controls.options": "Options",
     "controls.mirror": "Mirror alternate slices",
+    "controls.mirrorWeave": "Mirror weave",
     "controls.animate": "Motion",
     "controls.download": "Export PNG",
     "role.kicker": "Work",
@@ -61,7 +65,7 @@ const translations = {
     "boundary.item1":
       "This page does not include the full dataset, executable build, cache files, or the original project source code.",
     "boundary.item2":
-      "The live demo uses a synthetic sample texture by default; local uploads stay inside the browser session.",
+      "The live demo includes two curated sample inputs; local uploads stay inside the browser session.",
     "boundary.item3":
       "The page is a static implementation and GitHub Pages friendly, deployable without server configuration or private paths.",
     "footer.projects": "Back to Projects",
@@ -95,21 +99,25 @@ const translations = {
     "demo.desc":
       '基于 <strong>Canvas</strong> 的交互式纹样生成系统：选择纹理焦点、切换生成结构、调整旋转/缩放/重复次数，在浏览器内实时渲染结果。上传的图片只在本地浏览器处理，不会进入仓库或服务器。',
     "demo.source": "输入纹理",
-    "demo.sourceHint": "可拖拽选区中心",
+    "demo.sourceHint": "拖拽选区中心",
     "demo.output": "生成结果",
-    "demo.outputHint": "实时渲染",
+    "controls.image": "图像",
     "controls.upload": "上传本地图片",
-    "controls.randomize": "更换示例",
-    "controls.honeycomb": "蜂窝",
+    "controls.randomize": "切换示例",
+    "controls.pattern": "纹样结构",
+    "controls.weave": "十字编织",
     "controls.triangle": "三角",
     "controls.square": "方形",
-    "controls.brick": "砖形",
     "controls.segments": "镜像切片",
+    "controls.density": "编织密度",
     "controls.rotation": "纹理旋转",
     "controls.scale": "纹理缩放",
-    "controls.repeatX": "水平平铺",
-    "controls.repeatY": "竖直平铺",
+    "controls.tiles": "平铺",
+    "controls.repeatX": "水平",
+    "controls.repeatY": "竖直",
+    "controls.options": "选项",
     "controls.mirror": "交替镜像",
+    "controls.mirrorWeave": "镜像编织",
     "controls.animate": "动态预览",
     "controls.download": "导出 PNG",
     "role.kicker": "工作",
@@ -126,7 +134,7 @@ const translations = {
     "boundary.kicker": "边界",
     "boundary.title": "展示版本说明",
     "boundary.item1": "页面不包含完整数据集、可执行构建、缓存文件或原项目完整源码。",
-    "boundary.item2": "实时 demo 默认使用合成示例纹理；本地上传图片只停留在当前浏览器会话。",
+    "boundary.item2": "实时 demo 仅包含两个展示用输入样例；本地上传图片只停留在当前浏览器会话。",
     "boundary.item3": "页面为静态实现，适配 GitHub Pages，不需要服务器配置或私有路径。",
     "footer.projects": "返回项目列表",
   },
@@ -262,8 +270,10 @@ const initKaleidoscopeDemo = () => {
     repeatX: document.querySelector("#repeat-x"),
     repeatY: document.querySelector("#repeat-y"),
     mirror: document.querySelector("#mirror-source"),
+    mirrorLabel: document.querySelector("#mirror-label"),
     animate: document.querySelector("#animate-output"),
     download: document.querySelector("#download-pattern"),
+    segmentsLabel: document.querySelector("#segments-label"),
     segmentsValue: document.querySelector("#segments-value"),
     rotationValue: document.querySelector("#rotation-value"),
     scaleValue: document.querySelector("#scale-value"),
@@ -272,22 +282,23 @@ const initKaleidoscopeDemo = () => {
   };
 
   const patternPresets = {
-    honeycomb: { segments: 10, repeatX: 2, repeatY: 2, scale: 118 },
+    weave: { segments: 2, repeatX: 3, repeatY: 3, scale: 122 },
     triangle: { segments: 12, repeatX: 2, repeatY: 3, scale: 112 },
     square: { segments: 8, repeatX: 3, repeatY: 3, scale: 126 },
-    brick: { segments: 14, repeatX: 3, repeatY: 2, scale: 104 },
   };
 
   const state = {
-    pattern: "honeycomb",
+    pattern: "triangle",
     seed: 18,
+    sampleIndex: 0,
+    sourceRevision: 0,
     focusX: textureCanvas.width * 0.54,
     focusY: textureCanvas.height * 0.48,
-    segments: 10,
+    segments: 12,
     rotation: 0,
-    scale: 1.18,
+    scale: 1.12,
     repeatX: 2,
-    repeatY: 2,
+    repeatY: 3,
     mirror: true,
     animate: false,
     dragActive: false,
@@ -373,22 +384,44 @@ const initKaleidoscopeDemo = () => {
     textureCtx.drawImage(image, (w - drawW) * 0.5, (h - drawH) * 0.5, drawW, drawH);
   };
 
+  const resetFocus = () => {
+    state.focusX = sourceCanvas.width * 0.5;
+    state.focusY = sourceCanvas.height * 0.5;
+  };
+
+  const showBundledSample = (index) => {
+    state.sampleIndex = index;
+    state.sourceRevision += 1;
+    const requestRevision = state.sourceRevision;
+
+    if (index === 0) {
+      state.seed = 18;
+      drawSyntheticTexture();
+      resetFocus();
+      render();
+      return;
+    }
+
+    const image = new Image();
+    image.onload = () => {
+      if (requestRevision !== state.sourceRevision) {
+        return;
+      }
+      drawImageCover(image);
+      resetFocus();
+      render();
+    };
+    image.src = "assets/sample-02.jpg";
+  };
+
   const selectorPoints = () => {
     const size = 72 + Number(controls.scale.value) * 0.44;
-    if (state.pattern === "square") {
+    if (state.pattern === "square" || state.pattern === "weave") {
       return [
         [-size * 0.5, -size * 0.5],
         [size * 0.5, -size * 0.5],
         [size * 0.5, size * 0.5],
         [-size * 0.5, size * 0.5],
-      ];
-    }
-    if (state.pattern === "brick") {
-      return [
-        [-size * 0.68, -size * 0.38],
-        [size * 0.68, -size * 0.38],
-        [size * 0.68, size * 0.38],
-        [-size * 0.68, size * 0.38],
       ];
     }
     const angleOffset = state.pattern === "triangle" ? -Math.PI / 2 : -Math.PI / 6;
@@ -448,7 +481,6 @@ const initKaleidoscopeDemo = () => {
     const halfWidth = Math.tan(angle * 0.5) * radius;
     const baseScale =
       (Math.max(width / textureCanvas.width, height / textureCanvas.height) * state.scale * 1.32);
-    const brickOffset = state.pattern === "brick" && index % 2 === 1 ? angle * 0.5 : 0;
     const bleed = 1;
 
     ctx.save();
@@ -459,7 +491,7 @@ const initKaleidoscopeDemo = () => {
 
     for (let i = 0; i < state.segments; i += 1) {
       ctx.save();
-      ctx.rotate(i * angle + brickOffset);
+      ctx.rotate(i * angle);
       if (state.mirror && i % 2 === 1) {
         ctx.scale(1, -1);
       }
@@ -477,6 +509,97 @@ const initKaleidoscopeDemo = () => {
     ctx.restore();
   };
 
+  const drawWeaveTriangle = (ctx, points, x, y, width, height, rotation, mirrored) => {
+    const sampleSize = clamp(460 / state.scale, 108, textureCanvas.width);
+    const sourceX = clamp(state.focusX - sampleSize * 0.5, 0, textureCanvas.width - sampleSize);
+    const sourceY = clamp(state.focusY - sampleSize * 0.5, 0, textureCanvas.height - sampleSize);
+    const extent = Math.hypot(width, height);
+
+    ctx.save();
+    ctx.beginPath();
+    points.forEach(([pointX, pointY], index) => {
+      if (index === 0) {
+        ctx.moveTo(pointX, pointY);
+      } else {
+        ctx.lineTo(pointX, pointY);
+      }
+    });
+    ctx.closePath();
+    ctx.clip();
+    ctx.translate(x + width * 0.5, y + height * 0.5);
+    ctx.rotate(rotation + (state.rotation * Math.PI) / 180 + state.phase);
+    if (state.mirror && mirrored) {
+      ctx.scale(-1, 1);
+    }
+    ctx.drawImage(
+      textureCanvas,
+      sourceX,
+      sourceY,
+      sampleSize,
+      sampleSize,
+      -extent * 0.5,
+      -extent * 0.5,
+      extent,
+      extent
+    );
+    ctx.restore();
+  };
+
+  const drawWeaveCell = (ctx, x, y, width, height, alternate) => {
+    const centerX = x + width * 0.5;
+    const centerY = y + height * 0.5;
+    const turns = alternate ? Math.PI : 0;
+    const pieces = [
+      [[x, y], [x + width, y], [centerX, centerY]],
+      [[x + width, y], [x + width, y + height], [centerX, centerY]],
+      [[x + width, y + height], [x, y + height], [centerX, centerY]],
+      [[x, y + height], [x, y], [centerX, centerY]],
+    ];
+
+    pieces.forEach((points, index) => {
+      drawWeaveTriangle(
+        ctx,
+        points,
+        x,
+        y,
+        width,
+        height,
+        turns + index * (Math.PI / 2),
+        (index + Number(alternate)) % 2 === 1
+      );
+    });
+  };
+
+  // Original Icon 5 approach: diagonal triangle masks, mirrored partners, then a 45 degree woven repeat.
+  const drawWeaveResult = (ctx, width, height) => {
+    const density = state.segments;
+    const tileWidth = width / (state.repeatX * density);
+    const tileHeight = height / (state.repeatY * density);
+    const diagonal = Math.hypot(width, height);
+    const columns = Math.ceil(diagonal / tileWidth) + 4;
+    const rows = Math.ceil(diagonal / tileHeight) + 4;
+    const offsetX = (width - columns * tileWidth) * 0.5;
+    const offsetY = (height - rows * tileHeight) * 0.5;
+
+    ctx.save();
+    ctx.translate(width * 0.5, height * 0.5);
+    ctx.rotate(Math.PI / 4);
+    ctx.translate(-width * 0.5, -height * 0.5);
+    for (let row = 0; row < rows; row += 1) {
+      for (let col = 0; col < columns; col += 1) {
+        drawWeaveCell(
+          ctx,
+          offsetX + col * tileWidth,
+          offsetY + row * tileHeight,
+          tileWidth + 1,
+          tileHeight + 1,
+          (row + col) % 2 === 1
+        );
+      }
+    }
+    ctx.restore();
+  };
+
   const drawResult = () => {
     const w = resultCanvas.width;
     const h = resultCanvas.height;
@@ -487,10 +610,13 @@ const initKaleidoscopeDemo = () => {
     }
     resultCtx.fillRect(0, 0, w, h);
 
-    const tileW = w / state.repeatX;
-    const tileH = h / state.repeatY;
-    for (let row = 0; row < state.repeatY; row += 1) {
-      for (let col = 0; col < state.repeatX; col += 1) {
+    if (state.pattern === "weave") {
+      drawWeaveResult(resultCtx, w, h);
+    } else {
+      const tileW = w / state.repeatX;
+      const tileH = h / state.repeatY;
+      for (let row = 0; row < state.repeatY; row += 1) {
+        for (let col = 0; col < state.repeatX; col += 1) {
         resultCtx.save();
         resultCtx.translate(col * tileW + tileW * 0.5, row * tileH + tileH * 0.5);
         if (col % 2 === 1) {
@@ -502,6 +628,7 @@ const initKaleidoscopeDemo = () => {
         resultCtx.translate(-tileW * 0.5, -tileH * 0.5);
         drawUnit(resultCtx, 0, 0, tileW, tileH, row + col);
         resultCtx.restore();
+        }
       }
     }
 
@@ -526,6 +653,9 @@ const initKaleidoscopeDemo = () => {
   };
 
   const syncControlsFromState = () => {
+    const isWeave = state.pattern === "weave";
+    controls.segments.min = isWeave ? "1" : "4";
+    controls.segments.max = isWeave ? "5" : "20";
     controls.segments.value = String(state.segments);
     controls.rotation.value = String(state.rotation);
     controls.scale.value = String(Math.round(state.scale * 100));
@@ -536,6 +666,12 @@ const initKaleidoscopeDemo = () => {
     controls.patternButtons.forEach((button) => {
       button.classList.toggle("is-active", button.dataset.pattern === state.pattern);
     });
+    const segmentsKey = isWeave ? "controls.density" : "controls.segments";
+    controls.segmentsLabel.dataset.i18n = segmentsKey;
+    controls.segmentsLabel.textContent = translations[currentLanguage][segmentsKey];
+    const mirrorKey = isWeave ? "controls.mirrorWeave" : "controls.mirror";
+    controls.mirrorLabel.dataset.i18n = mirrorKey;
+    controls.mirrorLabel.textContent = translations[currentLanguage][mirrorKey];
     updateOutputs();
   };
 
@@ -630,9 +766,7 @@ const initKaleidoscopeDemo = () => {
   });
 
   controls.randomize.addEventListener("click", () => {
-    state.seed += 17;
-    drawSyntheticTexture();
-    render();
+    showBundledSample(state.sampleIndex === 0 ? 1 : 0);
   });
 
   controls.upload.addEventListener("change", () => {
@@ -642,11 +776,17 @@ const initKaleidoscopeDemo = () => {
     }
     const image = new Image();
     const objectUrl = URL.createObjectURL(file);
+    state.sampleIndex = -1;
+    state.sourceRevision += 1;
+    const requestRevision = state.sourceRevision;
     image.onload = () => {
+      if (requestRevision !== state.sourceRevision) {
+        URL.revokeObjectURL(objectUrl);
+        return;
+      }
       drawImageCover(image);
       URL.revokeObjectURL(objectUrl);
-      state.focusX = sourceCanvas.width * 0.5;
-      state.focusY = sourceCanvas.height * 0.5;
+      resetFocus();
       render();
     };
     image.src = objectUrl;

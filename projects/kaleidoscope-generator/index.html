@@ -31,7 +31,7 @@
       href="https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
     />
     <link rel="stylesheet" href="../../style.css" />
-    <link rel="stylesheet" href="style.css?v=20260523-3" />
+    <link rel="stylesheet" href="style.css?v=20260524-13" />
     <script>
       const savedTheme = localStorage.getItem("homepage-theme");
       if (savedTheme === "dark") {
@@ -131,97 +131,106 @@
         </div>
 
         <div class="demo-workspace" aria-label="Kaleidoscope live demo">
-          <figure class="canvas-panel source-panel">
-            <figcaption>
-              <span data-i18n="demo.source">Source texture</span>
-              <small data-i18n="demo.sourceHint">Drag inside the image</small>
-            </figcaption>
-            <canvas
-              id="source-canvas"
-              width="760"
-              height="760"
-              aria-label="Source image with selected pattern area"
-            ></canvas>
-          </figure>
-
           <form class="control-panel" aria-label="Pattern controls">
-            <div class="control-row upload-row">
-              <label class="file-control">
-                <input id="image-upload" type="file" accept="image/png,image/jpeg,image/webp" />
-                <span data-i18n="controls.upload">Upload local image</span>
-              </label>
-              <button id="randomize-source" class="secondary-button" type="button" data-i18n="controls.randomize">
-                New sample
-              </button>
-            </div>
+            <fieldset class="toolbar-group image-tools">
+              <legend data-i18n="controls.image">Image</legend>
+              <div class="upload-row">
+                <label class="file-control">
+                  <input id="image-upload" type="file" accept="image/png,image/jpeg,image/webp" />
+                  <span data-i18n="controls.upload">Upload local image</span>
+                </label>
+                <button id="randomize-source" class="secondary-button" type="button" data-i18n="controls.randomize">
+                  Other sample
+                </button>
+              </div>
+            </fieldset>
 
-            <div class="pattern-options" role="group" aria-label="Pattern mode">
-              <button class="pattern-button is-active" type="button" data-pattern="honeycomb" data-i18n="controls.honeycomb">Honeycomb</button>
-              <button class="pattern-button" type="button" data-pattern="triangle" data-i18n="controls.triangle">Triangle</button>
-              <button class="pattern-button" type="button" data-pattern="square" data-i18n="controls.square">Square</button>
-              <button class="pattern-button" type="button" data-pattern="brick" data-i18n="controls.brick">Brick</button>
-            </div>
+            <fieldset class="toolbar-group pattern-tools">
+              <legend data-i18n="controls.pattern">Pattern type</legend>
+              <div class="pattern-options" role="group" aria-label="Pattern mode">
+                <button class="pattern-button is-active" type="button" data-pattern="triangle" data-i18n="controls.triangle">Triangle</button>
+                <button class="pattern-button" type="button" data-pattern="square" data-i18n="controls.square">Square</button>
+                <button class="pattern-button" type="button" data-pattern="weave" data-i18n="controls.weave">Cross weave</button>
+              </div>
+            </fieldset>
 
-            <label class="range-control">
-              <span data-i18n="controls.segments">Segments</span>
-              <output id="segments-value">10</output>
-              <input id="segments" type="range" min="4" max="20" step="1" value="10" />
+            <label class="range-control parameter-control">
+                <span id="segments-label" data-i18n="controls.segments">Segments</span>
+                <output id="segments-value">12</output>
+                <input id="segments" type="range" min="4" max="20" step="1" value="12" />
             </label>
 
-            <label class="range-control">
-              <span data-i18n="controls.rotation">Rotation</span>
-              <output id="rotation-value">0°</output>
-              <input id="rotation" type="range" min="-180" max="180" step="1" value="0" />
+            <label class="range-control parameter-control">
+                <span data-i18n="controls.rotation">Rotation</span>
+                <output id="rotation-value">0°</output>
+                <input id="rotation" type="range" min="-180" max="180" step="1" value="0" />
             </label>
 
-            <label class="range-control">
-              <span data-i18n="controls.scale">Texture scale</span>
-              <output id="scale-value">118%</output>
-              <input id="scale" type="range" min="70" max="180" step="1" value="118" />
-            </label>
-
-            <div class="repeat-grid">
-              <label class="range-control compact">
-                <span data-i18n="controls.repeatX">Horizontal repeat</span>
-                <output id="repeat-x-value">2</output>
-                <input id="repeat-x" type="range" min="1" max="5" step="1" value="2" />
-              </label>
-
-              <label class="range-control compact">
-                <span data-i18n="controls.repeatY">Vertical repeat</span>
-                <output id="repeat-y-value">2</output>
-                <input id="repeat-y" type="range" min="1" max="5" step="1" value="2" />
-              </label>
-            </div>
-
-            <div class="control-row">
+            <fieldset class="toolbar-group toggle-tools">
+              <legend data-i18n="controls.options">Options</legend>
               <label class="toggle-control">
                 <input id="mirror-source" type="checkbox" checked />
-                <span data-i18n="controls.mirror">Mirror alternate slices</span>
+                <span id="mirror-label" data-i18n="controls.mirror">Mirror alternate slices</span>
               </label>
               <label class="toggle-control">
                 <input id="animate-output" type="checkbox" />
                 <span data-i18n="controls.animate">Motion</span>
               </label>
-            </div>
+            </fieldset>
 
-            <a id="download-pattern" class="download-button" href="#" download="kaleidoscope-pattern.png" data-i18n="controls.download">
-              Export PNG
-            </a>
           </form>
 
-          <figure class="canvas-panel result-panel">
-            <figcaption>
-              <span data-i18n="demo.output">Generated pattern</span>
-              <small data-i18n="demo.outputHint">Rendered in real time</small>
-            </figcaption>
-            <canvas
-              id="result-canvas"
-              width="760"
-              height="760"
-              aria-label="Generated kaleidoscope pattern"
-            ></canvas>
-          </figure>
+          <div class="canvas-row">
+            <figure class="canvas-panel source-panel">
+              <figcaption>
+                <div class="caption-title">
+                  <span data-i18n="demo.source">Source texture</span>
+                  <small data-i18n="demo.sourceHint">Drag inside the image</small>
+                </div>
+                <label class="caption-range-control">
+                  <span data-i18n="controls.scale">Texture scale</span>
+                  <input id="scale" type="range" min="50" max="250" step="1" value="112" />
+                  <output id="scale-value">112%</output>
+                </label>
+              </figcaption>
+              <canvas
+                id="source-canvas"
+                width="760"
+                height="760"
+                aria-label="Source image with selected pattern area"
+              ></canvas>
+            </figure>
+
+            <figure class="canvas-panel result-panel">
+              <figcaption>
+                <span data-i18n="demo.output">Generated pattern</span>
+                <div class="result-actions">
+                  <div class="caption-tile-tools">
+                    <span class="caption-tools-title" data-i18n="controls.tiles">Tiles</span>
+                    <label class="caption-mini-control">
+                      <span data-i18n="controls.repeatX">H</span>
+                      <input id="repeat-x" type="range" min="1" max="5" step="1" value="2" />
+                      <output id="repeat-x-value">2</output>
+                    </label>
+                    <label class="caption-mini-control">
+                      <span data-i18n="controls.repeatY">V</span>
+                      <input id="repeat-y" type="range" min="1" max="5" step="1" value="3" />
+                      <output id="repeat-y-value">3</output>
+                    </label>
+                  </div>
+                  <a id="download-pattern" class="download-button result-download" href="#" download="kaleidoscope-pattern.png" data-i18n="controls.download">
+                    Export PNG
+                  </a>
+                </div>
+              </figcaption>
+              <canvas
+                id="result-canvas"
+                width="760"
+                height="760"
+                aria-label="Generated kaleidoscope pattern"
+              ></canvas>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -259,6 +268,6 @@
       <span>© 2026 Jiangyue Zeng</span>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260524-15"></script>
   </body>
 </html>

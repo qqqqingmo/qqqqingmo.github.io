@@ -126,6 +126,7 @@
 .portfolio-grid {
   display: grid;
   gap: 1rem;
+  grid-auto-rows: 17rem;
 }
 
 .portfolio-card {
@@ -142,6 +143,8 @@
     box-shadow var(--transition),
     transform var(--transition),
     border-color var(--transition);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .portfolio-card:hover {
@@ -152,7 +155,7 @@
 
 .portfolio-thumb {
   overflow: hidden;
-  min-height: 12.5rem;
+  min-height: 0;
   margin: 0;
   border-radius: 0.5rem;
   background:
@@ -166,6 +169,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.portfolio-thumb .kaleidoscope-cover {
+  object-position: 50% 40%;
 }
 
 .portfolio-copy {
@@ -265,11 +272,16 @@
 }
 
 @media (max-width: 780px) {
+  .portfolio-grid {
+    grid-auto-rows: 30rem;
+  }
+
   .portfolio-card {
     grid-template-columns: 1fr;
   }
 
   .portfolio-thumb {
+    height: 13.5rem;
     min-height: 13.5rem;
   }
 }

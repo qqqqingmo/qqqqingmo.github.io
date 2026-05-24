@@ -289,9 +289,15 @@
 
 .demo-workspace {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.72fr) minmax(0, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
-  align-items: start;
+}
+
+.canvas-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: stretch;
 }
 
 .canvas-panel,
@@ -325,10 +331,12 @@
 
 .canvas-panel figcaption {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
+  height: 3.55rem;
   padding: 0.8rem 0.9rem;
+  box-sizing: border-box;
   border-bottom: 1px solid var(--card-border);
   color: var(--primary);
   font-size: 0.875rem;
@@ -342,6 +350,7 @@
   font-weight: 500;
   line-height: 1rem;
   text-align: right;
+  white-space: nowrap;
 }
 
 .canvas-panel canvas {
@@ -353,29 +362,54 @@
 }
 
 #source-canvas {
-  aspect-ratio: 1;
+  width: 100%;
+  height: auto;
   cursor: crosshair;
   touch-action: none;
 }
 
 #result-canvas {
-  aspect-ratio: 1;
+  width: 100%;
+  height: auto;
 }
 
 .control-panel {
   display: grid;
+  grid-template-columns:
+    minmax(12rem, 1.15fr)
+    minmax(12rem, 1.25fr)
+    repeat(2, minmax(7rem, 0.7fr))
+    minmax(10rem, 1fr);
   gap: 1rem;
-  padding: 1rem;
+  align-items: end;
+  padding: 0.7rem 0.8rem 0.75rem;
 }
 
-.control-row,
-.repeat-grid {
+.toolbar-group {
   display: grid;
-  gap: 0.75rem;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.toolbar-group legend,
+.range-control > span {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 0.45rem;
+  color: var(--neutral-600);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1rem;
+  text-transform: uppercase;
 }
 
 .upload-row {
-  grid-template-columns: minmax(0, 1fr) auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
 }
 
 .file-control {
@@ -390,27 +424,32 @@
   pointer-events: none;
 }
 
-.file-control span,
-.secondary-button,
-.download-button {
-  width: 100%;
-}
-
 .secondary-button,
 .pattern-button {
   font-family: inherit;
 }
 
+.file-control span,
+.secondary-button {
+  width: 100%;
+  min-height: 2rem;
+  padding: 0.35rem 0.45rem;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
 .pattern-options {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.55rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, 1.2fr);
+  gap: 0.4rem;
 }
 
 .pattern-button {
-  min-height: 2.25rem;
-  padding: 0.45rem 0.65rem;
+  min-height: 2rem;
+  padding: 0.35rem 0.35rem;
   box-shadow: none;
+  font-size: 0.72rem;
+  white-space: nowrap;
 }
 
 .pattern-button.is-active {
@@ -421,54 +460,162 @@
 
 .range-control {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.45rem 0.75rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-width: 0;
   color: var(--neutral-700);
-  font-size: 0.8125rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  line-height: 1.25rem;
+  line-height: 1rem;
 }
 
 .range-control output {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 0;
   color: var(--accent);
   font-variant-numeric: tabular-nums;
+  font-size: 0.72rem;
 }
 
 .range-control input {
   grid-column: 1 / -1;
   width: 100%;
+  margin: 0;
   accent-color: var(--accent);
 }
 
-.repeat-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.toggle-tools {
+  gap: 0.25rem;
 }
 
 .toggle-control {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.3rem;
   color: var(--neutral-700);
-  font-size: 0.8125rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  line-height: 1.25rem;
+  line-height: 1rem;
+  white-space: nowrap;
+}
+
+.toggle-control span {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .toggle-control input {
-  width: 1rem;
-  height: 1rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  margin: 0;
   accent-color: var(--accent);
 }
 
 .download-button {
+  min-height: 2.2rem;
   color: #ffffff;
   background: #be5a38;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.72rem;
+  white-space: nowrap;
 }
 
 .download-button:hover {
   border-color: rgba(190, 90, 56, 0.45);
   color: #ffffff;
   background: #a3472c;
+}
+
+.result-download {
+  width: auto;
+  min-height: 1.9rem;
+  padding: 0.3rem 0.55rem;
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+
+.caption-range-control {
+  display: grid;
+  grid-template-columns: auto 5.4rem auto;
+  gap: 0.4rem;
+  align-items: center;
+  min-width: 0;
+  color: var(--neutral-600);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+
+.caption-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.caption-title > span {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.caption-range-control input,
+.caption-mini-control input {
+  width: 100%;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.caption-range-control output,
+.caption-mini-control output {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.result-actions {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 0.22rem;
+  margin-left: auto;
+  min-width: 0;
+}
+
+.result-panel figcaption {
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.result-panel figcaption > span {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.caption-tile-tools {
+  display: flex;
+  gap: 0.28rem;
+  align-items: center;
+  flex: 0 0 auto;
+  margin-right: 0.1rem;
+}
+
+.caption-tools-title {
+  color: var(--neutral-600);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+
+.caption-mini-control {
+  display: grid;
+  grid-template-columns: 0.55rem 2.25rem 0.55rem;
+  gap: 0.12rem;
+  align-items: center;
+  width: 3.59rem;
+  color: var(--neutral-600);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1rem;
 }
 
 .contribution-grid {
@@ -576,6 +723,7 @@
 @media (max-width: 980px) {
   .project-hero,
   .demo-workspace,
+  .canvas-row,
   .contribution-grid {
     grid-template-columns: 1fr;
   }
@@ -593,6 +741,15 @@
 
   .project-meta {
     transform: none;
+  }
+
+  .control-panel {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .image-tools,
+  .pattern-tools {
+    grid-column: span 2;
   }
 }
 
@@ -615,9 +772,14 @@
     padding: 0.45rem 0.5rem;
   }
 
-  .upload-row,
-  .repeat-grid {
-    grid-template-columns: 1fr;
+  .control-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0.75rem;
+  }
+
+  .image-tools,
+  .pattern-tools {
+    grid-column: 1 / -1;
   }
 
   .project-footer {
@@ -664,6 +826,17 @@
   .canvas-panel figcaption {
     align-items: flex-start;
     flex-direction: column;
+    height: 5.75rem;
+  }
+
+  .result-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .caption-range-control {
+    width: 100%;
+    grid-template-columns: auto minmax(0, 1fr) auto;
   }
 
   .demo-title-row {
