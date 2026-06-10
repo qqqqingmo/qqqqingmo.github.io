@@ -16,7 +16,7 @@ const translations = {
     "hero.title": "Kaleidoscope Pattern Generator",
     "hero.subtitle": "万花筒图案生成器",
     "hero.lead":
-      'A project case refined from a <strong>PyQt + OpenCV image-processing tool</strong>: users select a local image region, then generate seamless patterns through mirroring, rotation, tiling, parameter controls, and export.',
+      'A project case refined from a <strong>PyQt + OpenCV image-processing tool</strong>: users select a local image region, then generate seamless patterns through mirroring, rotation, tiling, and parameter controls for showcase presentation.',
     "meta.type": "Type",
     "meta.typeValue": "Interactive System / Image Processing",
     "meta.focus": "Focus",
@@ -26,13 +26,13 @@ const translations = {
     "demo.kicker": "Live Demo",
     "demo.title": "Interactive pattern generation",
     "demo.desc":
-      'This demo reconstructs the core interaction with <strong>Canvas</strong>: choose a texture focus, switch generation structures, adjust rotation/scale/repetition, and render results in real time. Uploaded images are processed locally in the browser and are not added to the repository or sent to a server.',
+      'This demo reconstructs the core interaction with <strong>Canvas</strong>: choose a texture focus, switch generation structures, adjust rotation/scale/repetition, and render results in real time. The public page only keeps curated sample previews to present the core interaction and visual outcome.',
     "demo.source": "Source texture",
     "demo.sourceHint": "Drag inside the image",
     "demo.output": "Generated pattern",
     "controls.image": "Image",
     "controls.upload": "Upload local image",
-    "controls.randomize": "Other sample",
+    "controls.randomize": "Switch sample",
     "controls.pattern": "Pattern type",
     "controls.weave": "Cross weave",
     "controls.triangle": "Triangle",
@@ -53,7 +53,7 @@ const translations = {
     "role.title": "Design Rationale",
     "role.product.title": "System design",
     "role.product.desc":
-      'Built a complete interaction flow around <strong>pattern generation, parameter control, and export</strong>: clarifying user flow, core interactions, parameter control, and output capabilities. It generates continuous patterns by mirroring, rotating, and tiling the selected image region.',
+      'Built a complete interaction flow around <strong>pattern generation and parameter control</strong>: clarifying user flow, core interactions, parameter control, and showcase behavior. It generates continuous patterns by mirroring, rotating, and tiling the selected image region.',
     "role.engineering.title": "Computational approach",
     "role.engineering.desc":
       "The original project uses PyQt for UI and OpenCV for region cropping, mirroring, and tiling. This demo recreates this core experience in browser-side Canvas, demonstrating the ability to abstract interaction models across different technology stacks.",
@@ -65,7 +65,7 @@ const translations = {
     "boundary.item1":
       "This page does not include the full dataset, executable build, cache files, or the original project source code.",
     "boundary.item2":
-      "The live demo includes two curated sample inputs; local uploads stay inside the browser session.",
+      "The live demo includes two curated sample inputs for public preview and does not provide custom upload or image export in the showcase page.",
     "boundary.item3":
       "The page is a static implementation and GitHub Pages friendly, deployable without server configuration or private paths.",
     "footer.projects": "Back to Projects",
@@ -87,7 +87,7 @@ const translations = {
     "hero.title": "万花筒图案生成器",
     "hero.subtitle": "Kaleidoscope Pattern Generator",
     "hero.lead":
-      '一个从 <strong>PyQt + OpenCV 图像处理工具</strong>整理出的项目案例：用户选择局部图像后，系统通过镜像、旋转和平铺生成连续纹样，并提供参数化控制与导出功能。',
+      '一个从 <strong>PyQt + OpenCV 图像处理工具</strong>整理出的项目案例：用户选择局部图像后，系统通过镜像、旋转和平铺生成连续纹样，并提供参数化控制与展示。',
     "meta.type": "类型",
     "meta.typeValue": "交互系统 / 图像处理",
     "meta.focus": "关注点",
@@ -97,7 +97,7 @@ const translations = {
     "demo.kicker": "实时 demo",
     "demo.title": "交互实时纹样生成",
     "demo.desc":
-      '基于 <strong>Canvas</strong> 的交互式纹样生成系统：选择纹理焦点、切换生成结构、调整旋转/缩放/重复次数，在浏览器内实时渲染结果。上传的图片只在本地浏览器处理，不会进入仓库或服务器。',
+      '基于 <strong>Canvas</strong> 的交互式纹样生成系统：选择纹理焦点、切换生成结构、调整旋转/缩放/重复次数，在浏览器内实时渲染结果。公开页面仅保留内置示例预览，用于展示核心交互与视觉效果。',
     "demo.source": "输入纹理",
     "demo.sourceHint": "拖拽选区中心",
     "demo.output": "生成结果",
@@ -124,7 +124,7 @@ const translations = {
     "role.title": "设计思路",
     "role.product.title": "系统设计",
     "role.product.desc":
-      '围绕<strong>纹样生成、参数控制与导出流程</strong>构建完整交互：将图案探索、参数比较与结果保存组织为连贯工作流，使创作尝试能够快速迭代并沉淀为可用输出。',
+      '围绕<strong>纹样生成与参数控制</strong>构建完整交互：将图案探索、参数比较与展示预览组织为连贯工作流，让核心方法和视觉结果可以被清晰呈现。',
     "role.engineering.title": "计算方法",
     "role.engineering.desc":
       "原项目使用 PyQt 构建界面、OpenCV 处理选区裁切与镜像平铺；本 demo 用 Canvas 在浏览器端复刻核心体验，展示跨技术栈抽象同一交互模型的能力。",
@@ -134,7 +134,7 @@ const translations = {
     "boundary.kicker": "边界",
     "boundary.title": "展示版本说明",
     "boundary.item1": "页面不包含完整数据集、可执行构建、缓存文件或原项目完整源码。",
-    "boundary.item2": "实时 demo 仅包含两个展示用输入样例；本地上传图片只停留在当前浏览器会话。",
+    "boundary.item2": "实时 demo 仅保留两个展示用内置输入样例，不提供自定义上传或图片导出。",
     "boundary.item3": "页面为静态实现，适配 GitHub Pages，不需要服务器配置或私有路径。",
     "footer.projects": "返回项目列表",
   },
@@ -261,7 +261,6 @@ const initKaleidoscopeDemo = () => {
   const textureCtx = textureCanvas.getContext("2d");
 
   const controls = {
-    upload: document.querySelector("#image-upload"),
     randomize: document.querySelector("#randomize-source"),
     patternButtons: Array.from(document.querySelectorAll("[data-pattern]")),
     segments: document.querySelector("#segments"),
@@ -272,7 +271,6 @@ const initKaleidoscopeDemo = () => {
     mirror: document.querySelector("#mirror-source"),
     mirrorLabel: document.querySelector("#mirror-label"),
     animate: document.querySelector("#animate-output"),
-    download: document.querySelector("#download-pattern"),
     segmentsLabel: document.querySelector("#segments-label"),
     segmentsValue: document.querySelector("#segments-value"),
     rotationValue: document.querySelector("#rotation-value"),
@@ -767,34 +765,6 @@ const initKaleidoscopeDemo = () => {
 
   controls.randomize.addEventListener("click", () => {
     showBundledSample(state.sampleIndex === 0 ? 1 : 0);
-  });
-
-  controls.upload.addEventListener("change", () => {
-    const file = controls.upload.files && controls.upload.files[0];
-    if (!file) {
-      return;
-    }
-    const image = new Image();
-    const objectUrl = URL.createObjectURL(file);
-    state.sampleIndex = -1;
-    state.sourceRevision += 1;
-    const requestRevision = state.sourceRevision;
-    image.onload = () => {
-      if (requestRevision !== state.sourceRevision) {
-        URL.revokeObjectURL(objectUrl);
-        return;
-      }
-      drawImageCover(image);
-      URL.revokeObjectURL(objectUrl);
-      resetFocus();
-      render();
-    };
-    image.src = objectUrl;
-  });
-
-  controls.download.addEventListener("click", () => {
-    render();
-    controls.download.href = resultCanvas.toDataURL("image/png");
   });
 
   sourceCanvas.addEventListener("pointerdown", (event) => {

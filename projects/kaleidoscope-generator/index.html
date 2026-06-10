@@ -90,7 +90,7 @@
           <h1 data-i18n="hero.title">Kaleidoscope Pattern Generator</h1>
           <p class="project-subtitle" data-i18n="hero.subtitle">万花筒图案生成器</p>
           <p class="project-lead" data-i18n-html="hero.lead">
-            一个从 <strong>PyQt + OpenCV 图像处理工具</strong>整理出的项目案例：用户选择局部图像后，系统通过镜像、旋转和平铺生成连续纹样，并提供参数化控制与导出流程。
+            一个从 <strong>PyQt + OpenCV 图像处理工具</strong>整理出的项目案例：用户选择局部图像后，系统通过镜像、旋转和平铺生成连续纹样，并提供参数化控制与展示。
           </p>
           </div>
         </div>
@@ -126,7 +126,7 @@
             />
           </div>
           <p data-i18n-html="demo.desc">
-            基于 <strong>Canvas</strong> 的交互式纹样生成系统：选择纹理焦点、切换生成结构、调整旋转/缩放/重复次数，在浏览器内实时渲染结果。上传的图片只在本地浏览器处理，不会进入仓库或服务器。
+            基于 <strong>Canvas</strong> 的交互式纹样生成系统：选择纹理焦点、切换生成结构、调整旋转/缩放/重复次数，在浏览器内实时渲染结果。公开页面仅保留内置示例预览，用于展示核心交互与视觉效果。
           </p>
         </div>
 
@@ -135,10 +135,6 @@
             <fieldset class="toolbar-group image-tools">
               <legend data-i18n="controls.image">Image</legend>
               <div class="upload-row">
-                <label class="file-control">
-                  <input id="image-upload" type="file" accept="image/png,image/jpeg,image/webp" />
-                  <span data-i18n="controls.upload">Upload local image</span>
-                </label>
                 <button id="randomize-source" class="secondary-button" type="button" data-i18n="controls.randomize">
                   Other sample
                 </button>
@@ -218,9 +214,6 @@
                       <output id="repeat-y-value">3</output>
                     </label>
                   </div>
-                  <a id="download-pattern" class="download-button result-download" href="#" download="kaleidoscope-pattern.png" data-i18n="controls.download">
-                    Export PNG
-                  </a>
                 </div>
               </figcaption>
               <canvas
@@ -243,7 +236,7 @@
           <article>
             <h3 data-i18n="role.product.title">System design</h3>
             <p data-i18n-html="role.product.desc">
-              围绕<strong>纹样生成、参数控制与导出流程</strong>构建完整交互：梳理用户流程、核心交互、参数控制和输出能力，通过镜像、旋转、平铺用户选择的图像局部生成连续纹样。
+              围绕<strong>纹样生成与参数控制</strong>构建完整交互：将图案探索、参数比较与展示预览组织为连贯工作流，让核心方法和视觉结果可以被清晰呈现。
             </p>
           </article>
           <article>
