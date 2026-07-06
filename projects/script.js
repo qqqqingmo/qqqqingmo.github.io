@@ -106,7 +106,6 @@ const applyLanguage = (language) => {
     languageToggle.setAttribute("title", dictionary["language.title"]);
   }
 
-  localStorage.setItem("homepage-language", currentLanguage);
   applyTheme(currentTheme);
 };
 
@@ -128,13 +127,7 @@ const getInitialTheme = () => {
 };
 
 const getInitialLanguage = () => {
-  const params = new URLSearchParams(window.location.search);
-  const requested = params.get("lang");
-  if (requested === "zh" || requested === "en") {
-    return requested;
-  }
-  const saved = localStorage.getItem("homepage-language");
-  return saved === "zh" || saved === "en" ? saved : "en";
+  return "en";
 };
 
 if (themeToggle) {

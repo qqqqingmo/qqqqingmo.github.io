@@ -191,7 +191,6 @@ const applyLanguage = (language) => {
     languageToggle.setAttribute("title", dictionary["language.title"]);
   }
 
-  localStorage.setItem("homepage-language", currentLanguage);
   applyTheme(currentTheme);
 };
 
@@ -213,13 +212,7 @@ const getInitialTheme = () => {
 };
 
 const getInitialLanguage = () => {
-  const params = new URLSearchParams(window.location.search);
-  const requested = params.get("lang");
-  if (requested === "zh" || requested === "en") {
-    return requested;
-  }
-  const saved = localStorage.getItem("homepage-language");
-  return saved === "zh" || saved === "en" ? saved : "en";
+  return "en";
 };
 
 if (themeToggle) {
@@ -400,6 +393,8 @@ const initKaleidoscopeDemo = () => {
       return;
     }
 
+    const sampleSources = ["assets/sample-02.webp", "assets/sample-02.jpg"];
+    let sourceIndex = 0;
     const image = new Image();
     image.onload = () => {
       if (requestRevision !== state.sourceRevision) {
@@ -409,7 +404,13 @@ const initKaleidoscopeDemo = () => {
       resetFocus();
       render();
     };
-    image.src = "assets/sample-02.jpg";
+    image.onerror = () => {
+      sourceIndex += 1;
+      if (sourceIndex < sampleSources.length) {
+        image.src = sampleSources[sourceIndex];
+      }
+    };
+    image.src = sampleSources[sourceIndex];
   };
 
   const selectorPoints = () => {

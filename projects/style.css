@@ -163,6 +163,7 @@
     var(--neutral-50);
 }
 
+.portfolio-thumb picture,
 .portfolio-thumb img,
 .portfolio-thumb canvas {
   display: block;

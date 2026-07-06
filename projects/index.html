@@ -89,8 +89,11 @@
           <figure class="portfolio-thumb">
             <img
               src="../assets/dunhuang-pattern-vis/poster.jpg"
+              width="1902"
+              height="1080"
               alt="Dunhuang Pattern Visualization demo poster"
               data-i18n-alt="project.dunhuang.alt"
+              decoding="async"
             />
           </figure>
           <div class="portfolio-copy">
@@ -109,12 +112,18 @@
 
         <a class="portfolio-card" href="kaleidoscope-generator/">
           <figure class="portfolio-thumb">
-            <img
-              class="kaleidoscope-cover"
-              src="../assets/kaleidoscope-generator/cover.jpg"
-              alt="Kaleidoscope Pattern Generator pattern preview"
-              data-i18n-alt="project.kaleidoscope.alt"
-            />
+            <picture>
+              <source srcset="../assets/kaleidoscope-generator/cover.webp" type="image/webp" />
+              <img
+                class="kaleidoscope-cover"
+                src="../assets/kaleidoscope-generator/cover.jpg"
+                width="1030"
+                height="1030"
+                alt="Kaleidoscope Pattern Generator pattern preview"
+                data-i18n-alt="project.kaleidoscope.alt"
+                decoding="async"
+              />
+            </picture>
           </figure>
           <div class="portfolio-copy">
             <p class="portfolio-type" data-i18n="project.kaleidoscope.type">Interactive System</p>
@@ -137,6 +146,6 @@
       <span>© 2026 Jiangyue Zeng</span>
     </footer>
 
-    <script src="script.js?v=20260524-1"></script>
+    <script src="script.js?v=20260706-1"></script>
   </body>
 </html>

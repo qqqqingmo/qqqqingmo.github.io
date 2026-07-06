@@ -43,7 +43,7 @@ const translations = {
       "Training-free video relighting and background replacement with an emphasis on temporal consistency, structure preservation, and detail transfer.",
     "publication.paper": "Paper",
     "publication.project": "Project",
-    "publication.plaid.meta": "CCF-A Under Review",
+    "publication.plaid.meta": "Under Review",
     "publication.plaid.authors":
       "<strong>Jiangyue Zeng</strong>, Anonymous Co-authors",
     "publication.plaid.desc":
@@ -106,7 +106,7 @@ const translations = {
     "about.p1":
       `我是<span class="about-name-mark">曾姜月${nameUnderlineImage}</span>，北京大学元培学院人工智能方向本科生，研究兴趣主要为生成式人工智能、人工智能与艺术、图像与视频生成等方向。`,
     "about.p2":
-      '目前在北京大学王选计算机研究所 <a href="http://struct.wict.pku.edu.cn/" target="_blank" rel="noopener noreferrer">STRUCT</a>小组科研实习，师从<a href="https://williamyang1991.github.io/" target="_blank" rel="noopener noreferrer">杨帅</a>和<a href="http://struct.wict.pku.edu.cn/people/liujiaying.html" target="_blank" rel="noopener noreferrer">刘家瑛</a>。',
+      '目前在北京大学王选计算机研究所 <a href="http://struct.wict.pku.edu.cn/" target="_blank" rel="noopener noreferrer">STRUCT</a>小组科研实习，指导老师为<a href="https://williamyang1991.github.io/" target="_blank" rel="noopener noreferrer">杨帅</a>和<a href="http://struct.wict.pku.edu.cn/people/liujiaying.html" target="_blank" rel="noopener noreferrer">刘家瑛</a>。',
     "publications.title": "论文",
     "publication.flowportal.meta": "CVPR 2026",
     "publication.flowportal.authors":
@@ -115,7 +115,7 @@ const translations = {
       "训练自由的视频重光照与背景替换方法，重点关注时间一致性、结构保持与细节迁移。",
     "publication.paper": "论文",
     "publication.project": "项目主页",
-    "publication.plaid.meta": "CCF-A Under Review",
+    "publication.plaid.meta": "Under Review",
     "publication.plaid.authors":
       "<strong>Jiangyue Zeng</strong>，匿名合著者",
     "publication.plaid.desc":
@@ -168,17 +168,7 @@ const setMetaContent = (selector, value) => {
   }
 };
 
-const updateUrlLanguage = (language) => {
-  const url = new URL(window.location.href);
-  if (language === "zh") {
-    url.searchParams.set("lang", "zh");
-  } else {
-    url.searchParams.delete("lang");
-  }
-  window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
-};
-
-const applyLanguage = (language, { persist = true, updateUrl = true } = {}) => {
+const applyLanguage = (language) => {
   currentLanguage = language === "zh" ? "zh" : "en";
   const dictionary = translations[currentLanguage];
 
@@ -229,13 +219,6 @@ const applyLanguage = (language, { persist = true, updateUrl = true } = {}) => {
     languageToggle.setAttribute("title", dictionary["language.title"]);
   }
 
-  if (persist) {
-    localStorage.setItem("homepage-language", currentLanguage);
-  }
-  if (updateUrl) {
-    updateUrlLanguage(currentLanguage);
-  }
-
   setActiveLink();
 };
 
@@ -260,17 +243,6 @@ const getInitialTheme = () => {
 };
 
 const getInitialLanguage = () => {
-  const params = new URLSearchParams(window.location.search);
-  const requested = params.get("lang");
-  if (requested === "zh" || requested === "en") {
-    return requested;
-  }
-
-  const saved = localStorage.getItem("homepage-language");
-  if (saved === "zh" || saved === "en") {
-    return saved;
-  }
-
   return "en";
 };
 
@@ -349,7 +321,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-applyLanguage(getInitialLanguage(), { persist: false, updateUrl: false });
+applyLanguage(getInitialLanguage());
 applyTheme(getInitialTheme());
 setHeaderState();
 setActiveLink();

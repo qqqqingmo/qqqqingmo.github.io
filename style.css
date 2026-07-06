@@ -34,7 +34,10 @@
   --timeline-link-hover-bg: rgba(212, 165, 98, 0.1);
   --card-bg: rgba(251, 252, 254, 0.96);
   --card-border: rgba(220, 228, 238, 0.75);
-  --grid-line: rgba(220, 228, 238, 0.45);
+  --grid-line-rgb: 220 228 238;
+  --grid-line-base-opacity: 0.45;
+  --grid-intensity: 0.7;
+  --grid-line: rgb(var(--grid-line-rgb) / calc(var(--grid-line-base-opacity) * var(--grid-intensity)));
 }
 
 [data-theme="dark"] {
@@ -64,7 +67,8 @@
   --timeline-link-hover-bg: rgba(14, 159, 178, 0.12);
   --card-bg: rgba(30, 41, 59, 0.92);
   --card-border: rgba(51, 65, 85, 0.6);
-  --grid-line: rgba(51, 65, 85, 0.35);
+  --grid-line-rgb: 51 65 85;
+  --grid-line-base-opacity: 0.35;
 }
 
 @media (min-width: 1024px) {
