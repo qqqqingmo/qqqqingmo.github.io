@@ -32,9 +32,9 @@ const translations = {
     "interest.generation": "Image and video generation",
     "about.title": "About",
     "about.p1":
-      `I am <span class="about-name-mark">Jiangyue Zeng${nameUnderlineImage}</span>, an undergraduate student in the AI direction of Yuanpei College at Peking University, with research interests primarily in Generative AI, AI for Art, and image/video generation.`,
+      `I am <span class="about-name-mark">Jiangyue Zeng${nameUnderlineImage}</span>, an undergraduate student in the Artificial Intelligence direction (<a href="https://www.tongclass.ac.cn/" target="_blank" rel="noopener noreferrer">Tong Class</a>) at Yuanpei College, Peking University. My research interests lie in Generative AI, AI for Art, and image/video generation.`,
     "about.p2":
-      'Currently a research intern at <a href="http://struct.wict.pku.edu.cn/" target="_blank" rel="noopener noreferrer">STRUCT</a> (Spatial and Temporal Restoration, Understanding and Compression Team), Wangxuan Institute of Computer Technology, Peking University, advised by <a href="https://williamyang1991.github.io/" target="_blank" rel="noopener noreferrer">Shuai Yang</a> and <a href="http://struct.wict.pku.edu.cn/people/liujiaying.html" target="_blank" rel="noopener noreferrer">Jiaying Liu</a>.',
+      'I am currently a research intern at <a href="http://struct.wict.pku.edu.cn/" target="_blank" rel="noopener noreferrer">STRUCT</a> (Spatial and Temporal Restoration, Understanding and Compression Team), Wangxuan Institute of Computer Technology, Peking University, advised by <a href="https://williamyang1991.github.io/" target="_blank" rel="noopener noreferrer">Shuai Yang</a> and <a href="http://struct.wict.pku.edu.cn/people/liujiaying.html" target="_blank" rel="noopener noreferrer">Jiaying Liu</a>.',
     "publications.title": "Publications",
     "publication.flowportal.meta": "CVPR 2026",
     "publication.flowportal.authors":
@@ -104,7 +104,7 @@ const translations = {
     "interest.generation": "图像与视频生成",
     "about.title": "关于我",
     "about.p1":
-      `我是<span class="about-name-mark">曾姜月${nameUnderlineImage}</span>，北京大学元培学院人工智能方向本科生，研究兴趣主要为生成式人工智能、人工智能与艺术、图像与视频生成等方向。`,
+      `我是<span class="about-name-mark">曾姜月${nameUnderlineImage}</span>，北京大学元培学院人工智能方向（<a href="https://www.tongclass.ac.cn/" target="_blank" rel="noopener noreferrer">通班</a>）本科生，研究兴趣主要为生成式人工智能、人工智能与艺术、图像与视频生成等方向。`,
     "about.p2":
       '目前在北京大学王选计算机研究所 <a href="http://struct.wict.pku.edu.cn/" target="_blank" rel="noopener noreferrer">STRUCT</a>小组科研实习，指导老师为<a href="https://williamyang1991.github.io/" target="_blank" rel="noopener noreferrer">杨帅</a>和<a href="http://struct.wict.pku.edu.cn/people/liujiaying.html" target="_blank" rel="noopener noreferrer">刘家瑛</a>。',
     "publications.title": "论文",
