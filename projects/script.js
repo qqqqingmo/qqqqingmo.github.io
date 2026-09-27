@@ -2,7 +2,7 @@ const translations = {
   en: {
     "meta.title": "Projects / Jiangyue Zeng",
     "meta.description":
-      "Selected research and system design projects by Jiangyue Zeng, spanning cultural heritage visualization and interactive image generation.",
+      "Selected projects by Jiangyue Zeng, spanning macOS app design, cultural heritage visualization, and interactive image generation.",
     "nav.label": "Primary navigation",
     "nav.home": "Home",
     "language.target": "中文",
@@ -15,6 +15,11 @@ const translations = {
     "hero.lead":
       "  ",
     "projects.label": "Project list",
+    "project.coursewatch.alt": "CourseWatch macOS app showing course updates in a timeline",
+    "project.coursewatch.type": "Open-source macOS App",
+    "project.coursewatch.title": "CourseWatch",
+    "project.coursewatch.desc":
+      "A course update companion for PKU students. It brings announcements, assignments, recordings, grades, and course materials into one clear timeline.",
     "project.dunhuang.alt": "Dunhuang Pattern Visualization demo poster",
     "project.dunhuang.type": "Research Visualization",
     "project.dunhuang.title": "Dunhuang Pattern Visualization",
@@ -29,7 +34,7 @@ const translations = {
   },
   zh: {
     "meta.title": "项目 / 曾姜月",
-    "meta.description": "曾姜月的研究与系统设计项目，涵盖文化遗产可视化与交互式图像生成。",
+    "meta.description": "曾姜月的项目作品，涵盖 macOS 应用、文化遗产可视化与交互式图像生成。",
     "nav.label": "主导航",
     "nav.home": "首页",
     "language.target": "EN",
@@ -41,6 +46,11 @@ const translations = {
     "hero.title": "研究与设计项目",
     "hero.lead": "  ",
     "projects.label": "项目列表",
+    "project.coursewatch.alt": "课讯 macOS 应用的课程动态时间线界面",
+    "project.coursewatch.type": "开源 macOS 应用",
+    "project.coursewatch.title": "课讯",
+    "project.coursewatch.desc":
+      "为北大学生设计的课程动态助手：汇总公告、作业、录播、成绩与课程资料，集中查看更新和待办。",
     "project.dunhuang.alt": "敦煌纹样可视化系统演示封面",
     "project.dunhuang.type": "研究可视化",
     "project.dunhuang.title": "敦煌纹样可视化系统",

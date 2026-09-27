@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CourseWatch is an open-source macOS app that gathers PKU course updates and deadlines in one timeline." />
+    <meta name="author" content="Jiangyue Zeng" />
+    <meta property="og:title" content="CourseWatch / 课讯" />
+    <meta property="og:description" content="An open-source macOS companion for PKU course updates and deadlines." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://qqqqingmo.github.io/projects/coursewatch/" />
+    <meta property="og:image" content="https://qqqqingmo.github.io/assets/coursewatch/screenshot.png" />
+    <meta name="theme-color" content="#fefffe" />
+    <title>CourseWatch / 课讯 · Jiangyue Zeng</title>
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="dns-prefetch" href="https://google-fonts.jialeliu.com" />
+    <link rel="preconnect" href="https://google-fonts.jialeliu.com" crossorigin />
+    <link rel="stylesheet" href="https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      if (localStorage.getItem("homepage-theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+  </head>
+  <body>
+    <header class="projects-header">
+      <nav class="projects-nav" aria-label="Primary navigation" data-i18n-aria="nav.label">
+        <a class="projects-brand" href="../../" data-i18n="profile.name">Jiangyue Zeng</a>
+        <div class="projects-nav-links">
+          <div class="projects-nav-menu">
+            <a href="../../" data-i18n="nav.home">Home</a>
+            <a href="../" data-i18n="nav.projects">Projects</a>
+          </div>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to Chinese" title="Switch to Chinese">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />
+              <path d="M3.8 9h16.4M3.8 15h16.4M12 3c2 2.3 3 5.3 3 9s-1 6.7-3 9M12 3c-2 2.3-3 5.3-3 9s1 6.7 3 9" />
+            </svg>
+            <span data-language-target>中文</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="projects-page coursewatch-page">
+      <section class="coursewatch-hero">
+        <div class="coursewatch-intro">
+          <p class="projects-kicker" data-i18n="hero.kicker">Open-source macOS app</p>
+          <h1 data-i18n="hero.title">CourseWatch</h1>
+          <p class="coursewatch-subtitle" data-i18n="hero.subtitle">课讯</p>
+          <p class="coursewatch-lead" data-i18n-html="hero.lead">
+            A calmer way to keep up with PKU courses. CourseWatch checks for <strong>new announcements, assignments, recordings, and grades</strong>, plus updates to course materials and syllabi, then brings them into one timeline.
+          </p>
+          <div class="coursewatch-actions">
+            <a class="coursewatch-button primary" href="https://github.com/qqqqingmo/pku-coursewatch" target="_blank" rel="noopener noreferrer" data-i18n="hero.github">View on GitHub ↗</a>
+            <div class="coursewatch-download-group">
+              <a class="coursewatch-button" href="https://github.com/qqqqingmo/pku-coursewatch/releases" target="_blank" rel="noopener noreferrer" data-i18n="hero.download">Download for macOS ↗</a>
+              <img class="coursewatch-download-doodle" src="../../素材/2画盘.png" width="115" height="115" alt="" aria-hidden="true" />
+            </div>
+          </div>
+        </div>
+        <div class="coursewatch-meta">
+          <div><span data-i18n="meta.platform">Platform</span><strong>macOS</strong></div>
+          <div><span data-i18n="meta.stack">Built with</span><strong>SwiftUI</strong></div>
+          <div><span data-i18n="meta.scope">For</span><strong data-i18n="meta.scopeValue">PKU students</strong></div>
+        </div>
+      </section>
+
+      <figure class="coursewatch-showcase">
+        <img src="../../assets/coursewatch/screenshot.png" width="1960" height="1334" alt="CourseWatch desktop interface with course updates, filters, and assignments" data-i18n-alt="showcase.alt" decoding="async" />
+        <figcaption data-i18n="showcase.caption">Course updates, deadlines, and reading status in one view.</figcaption>
+      </figure>
+
+      <section class="coursewatch-section" aria-labelledby="features-heading">
+        <div class="coursewatch-section-heading">
+          <p class="projects-kicker" data-i18n="features.kicker">What it does</p>
+          <h2 id="features-heading" data-i18n="features.title">Built for the little things that are easy to miss.</h2>
+        </div>
+        <div class="coursewatch-feature-grid">
+          <article>
+            <span class="feature-index">01</span>
+            <h3 data-i18n="features.timeline.title">One timeline</h3>
+            <p data-i18n="features.timeline.desc">Browse new course activity by time, type, and course. Unread items and unfinished assignments remain easy to spot.</p>
+          </article>
+          <article>
+            <span class="feature-index">02</span>
+            <h3 data-i18n="features.deadlines.title">Deadlines with context</h3>
+            <p data-i18n="features.deadlines.desc">Track assignments, add your own tasks, and send due dates to Apple Calendar with advance reminders.</p>
+          </article>
+          <article>
+            <span class="feature-index">03</span>
+            <h3 data-i18n="features.sources.title">Course sites together</h3>
+            <p data-i18n="features.sources.desc">Check PKU Course, with optional syncing for PKU Class and configured Gradescope courses. Add notes and pin important updates.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="projects-footer">
+      <a href="../" data-i18n="footer.back">Back to Projects</a>
+      <span>© 2026 Jiangyue Zeng</span>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -176,6 +176,21 @@
   object-position: 50% 40%;
 }
 
+.portfolio-thumb.coursewatch-thumb {
+  display: grid;
+  place-items: center;
+  padding: 0.7rem;
+  background: linear-gradient(145deg, #e0f5f3, #d8eaf0);
+}
+
+.portfolio-thumb.coursewatch-thumb img {
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 28px rgba(9, 87, 97, 0.16);
+}
+
 .portfolio-copy {
   display: grid;
   align-content: center;
