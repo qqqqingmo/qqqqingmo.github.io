@@ -361,6 +361,171 @@
         }
       },
       "category": "Background replacement & relighting"
+    },
+    {
+      "id": "golden-beach",
+      "task": "background",
+      "category": "Background replacement & relighting",
+      "title": "Golden light on the beach",
+      "caption": "Text-guided background replacement adapts foreground illumination to a sunlit beach.",
+      "frames": 120,
+      "fps": 30,
+      "size": [
+        700,
+        464
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/golden-beach-raw.mp4",
+          "poster": "media/golden-beach-raw.jpg"
+        },
+        "ours": {
+          "video": "media/golden-beach-ours.mp4",
+          "poster": "media/golden-beach-ours.jpg"
+        }
+      }
+    },
+    {
+      "id": "warm-park",
+      "task": "background",
+      "category": "Background replacement & relighting",
+      "title": "Warm light in the park",
+      "caption": "A new park background and warm illumination, with the original expression and clothing retained.",
+      "frames": 120,
+      "fps": 30,
+      "size": [
+        700,
+        464
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/warm-park-raw.mp4",
+          "poster": "media/warm-park-raw.jpg"
+        },
+        "ours": {
+          "video": "media/warm-park-ours.mp4",
+          "poster": "media/warm-park-ours.jpg"
+        }
+      }
+    },
+    {
+      "id": "autumn-park",
+      "task": "background",
+      "category": "Background replacement & relighting",
+      "title": "An autumn park setting",
+      "caption": "Text-guided background replacement and relighting in an outdoor park.",
+      "frames": 120,
+      "fps": 30,
+      "size": [
+        700,
+        464
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/autumn-park-raw.mp4",
+          "poster": "media/autumn-park-raw.jpg"
+        },
+        "ours": {
+          "video": "media/autumn-park-ours.mp4",
+          "poster": "media/autumn-park-ours.jpg"
+        }
+      }
+    },
+    {
+      "id": "ablation-harmonization",
+      "task": "ablations",
+      "category": "CogVideoX pipeline · Module ablation",
+      "title": "Two-step light harmonization",
+      "caption": "The text-guided harmonization step adjusts foreground lighting to the new environment.",
+      "frames": 120,
+      "fps": 30,
+      "size": [
+        496,
+        328
+      ],
+      "labels": {
+        "source": "Source",
+        "raw": "Without text-guided step",
+        "ours": "Full pipeline"
+      },
+      "methods": {
+        "source": {
+          "video": "media/ablation-harmonization-source.mp4",
+          "poster": "media/ablation-harmonization-source.jpg"
+        },
+        "raw": {
+          "video": "media/ablation-harmonization-raw.mp4",
+          "poster": "media/ablation-harmonization-raw.jpg"
+        },
+        "ours": {
+          "video": "media/ablation-harmonization-ours.mp4",
+          "poster": "media/ablation-harmonization-ours.jpg"
+        }
+      }
+    },
+    {
+      "id": "ablation-video-prior",
+      "task": "ablations",
+      "category": "CogVideoX pipeline · Module ablation",
+      "title": "Video-prior refinement",
+      "caption": "The video prior refines the frame-wise harmonized sequence for more coherent appearance over time.",
+      "frames": 120,
+      "fps": 30,
+      "size": [
+        496,
+        328
+      ],
+      "labels": {
+        "source": "Source",
+        "raw": "Without video prior",
+        "ours": "Full pipeline"
+      },
+      "methods": {
+        "source": {
+          "video": "media/ablation-video-prior-source.mp4",
+          "poster": "media/ablation-video-prior-source.jpg"
+        },
+        "raw": {
+          "video": "media/ablation-video-prior-raw.mp4",
+          "poster": "media/ablation-video-prior-raw.jpg"
+        },
+        "ours": {
+          "video": "media/ablation-video-prior-ours.mp4",
+          "poster": "media/ablation-video-prior-ours.jpg"
+        }
+      }
+    },
+    {
+      "id": "ablation-rpa",
+      "task": "ablations",
+      "category": "CogVideoX pipeline · Module ablation",
+      "title": "Foreground recovery with RPA",
+      "caption": "Appearance projection and RPA preserve foreground detail during refinement under the new illumination.",
+      "frames": 120,
+      "fps": 30,
+      "size": [
+        496,
+        328
+      ],
+      "labels": {
+        "source": "Source",
+        "raw": "Without foreground recovery",
+        "ours": "Full pipeline"
+      },
+      "methods": {
+        "source": {
+          "video": "media/ablation-rpa-source.mp4",
+          "poster": "media/ablation-rpa-source.jpg"
+        },
+        "raw": {
+          "video": "media/ablation-rpa-raw.mp4",
+          "poster": "media/ablation-rpa-raw.jpg"
+        },
+        "ours": {
+          "video": "media/ablation-rpa-ours.mp4",
+          "poster": "media/ablation-rpa-ours.jpg"
+        }
+      }
     }
   ]
 }

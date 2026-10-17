@@ -12,7 +12,7 @@ async function main(){
     const keys=c.methods.source?['source','raw','ours']:['raw','ours'];
     const pair=card.querySelector('.video-pair'),panel=pair.firstElementChild.cloneNode(true);
     pair.replaceChildren(...keys.map(()=>panel.cloneNode(true)));pair.dataset.count=keys.length;
-    const labels={source:c.task==='colorization'?'Grayscale input':'Source',raw:c.methods.source?'Initial result':'Source',ours:'Ours'};
+    const labels={source:c.task==='colorization'?'Grayscale input':'Source',raw:c.methods.source?'Initial result':'Source',ours:'Ours',...c.labels};
     const videos=[...card.querySelectorAll('video')];
     for(const [i,method]of keys.entries()){videos[i].poster=c.methods[method].poster;videos[i].dataset.src=c.methods[method].video;videos[i].setAttribute('aria-label',`${c.title}: ${labels[method]}`);const label=pair.children[i].querySelector('.video-label');label.className=`video-label ${method}-label`;label.textContent=labels[method]}
     if(c.reference){const ref=document.createElement('figure');ref.className='reference';const img=document.createElement('img');img.src=c.reference;img.alt='Reference background';img.loading='lazy';const label=document.createElement('figcaption');label.textContent='Reference';ref.append(img,label);card.querySelector('.card-heading').append(ref)}

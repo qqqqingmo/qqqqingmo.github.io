@@ -14,3 +14,9 @@
 .framework-description{font-size:15px;line-height:1.85;color:#46554d;margin:20px 0 0}
 @media(max-width:700px){.framework-description{font-size:14px;line-height:1.8}}
 .framework math{font-size:1.08em;white-space:nowrap}
+.topbar nav{flex-wrap:wrap;justify-content:center}
+#ablations .video-label{position:static;display:block;border-radius:0;text-align:center;padding:7px 4px;font-size:12px}
+#ablations .video-window{aspect-ratio:auto;display:flex;flex-direction:column}
+#ablations video{aspect-ratio:var(--ratio);height:auto;order:1}
+#ablations .video-label{order:0}
+@media(max-width:700px){#ablations .video-label{font-size:9px;min-height:36px;display:flex;align-items:center;justify-content:center}.topbar nav{gap:8px 15px}}

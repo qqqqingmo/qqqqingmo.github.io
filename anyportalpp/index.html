@@ -5,10 +5,10 @@
   <meta name="description" content="AnyPortal++: Task-Adaptive Projection for Consistent Video Appearance Editing. Video results for background editing, stylization, and colorization.">
   <title>AnyPortal++ — Consistent Video Appearance Editing</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="layout-v2.css?v=20261017-symbols">
+  <link rel="stylesheet" href="layout-v2.css?v=20261017-ablations">
 </head>
 <body>
-<header class="topbar"><a class="wordmark" href="#top">AnyPortal<span>++</span></a><nav aria-label="Page navigation"><a href="#background">Background</a><a href="#refinement">Refinement</a><a href="#stylization">Stylization</a><a href="#colorization">Colorization</a></nav></header>
+<header class="topbar"><a class="wordmark" href="#top">AnyPortal<span>++</span></a><nav aria-label="Page navigation"><a href="#background">Background</a><a href="#refinement">Refinement</a><a href="#stylization">Stylization</a><a href="#colorization">Colorization</a><a href="#ablations">Ablations</a></nav></header>
 <main id="top">
   <section class="hero">
     <div class="eyebrow">VIDEO APPEARANCE EDITING</div>
@@ -31,8 +31,9 @@
   <section id="refinement" class="task-section"><div class="task-heading"><span class="task-number">02</span><div><h2>Refining the initial relighting result</h2><p>Recovering source-consistent facial structure and expression while retaining the new illumination.</p></div></div><div class="cases"></div></section>
   <section id="stylization" class="task-section"><div class="task-heading"><span class="task-number">03</span><div><h2>Video stylization</h2><p>Repairing local structural artifacts and improving their consistency across stylized frames.</p></div></div><div class="cases"></div></section>
   <section id="colorization" class="task-section"><div class="task-heading"><span class="task-number">04</span><div><h2>Video colorization</h2><p>Stabilizing the initial colors while preserving the grayscale source's brightness and detail.</p></div></div><div class="cases"></div></section>
+  <section id="ablations" class="task-section"><div class="task-heading"><span class="task-number">05</span><div><h2>What each component contributes</h2><p>Module ablations in the CogVideoX-based background-editing pipeline: light harmonization, video-prior refinement, and foreground recovery with RPA.</p></div></div><div class="cases"></div></section>
 </main>
 <footer><a class="wordmark" href="#top">AnyPortal<span>++</span></a><p>Task-Adaptive Projection for Consistent Video Appearance Editing</p><a href="#top">Back to top ↑</a></footer>
 <template id="case-template"><article class="result-card"><div class="card-heading"><div><div class="case-origin"></div><h3></h3><p class="case-caption"></p></div><button class="zoom-button" type="button" aria-pressed="false">Zoom detail</button></div><div class="video-pair"><figure><div class="video-window"><video muted playsinline preload="none" disablepictureinpicture></video><span class="video-label raw-label">Raw</span></div></figure><figure><div class="video-window"><video muted playsinline preload="none" disablepictureinpicture></video><span class="video-label ours-label">Ours</span></div></figure></div><div class="controls"><button type="button" class="play-button" aria-label="Play paired videos">▶ Play</button><button type="button" class="reset-button" aria-label="Replay from first frame">↺</button><input type="range" class="scrubber" min="0" max="1000" value="0" aria-label="Video timeline"><output class="frame-count">Frame 1</output><label class="speed-label"><span class="sr-only">Playback speed</span><select aria-label="Playback speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label><button class="expand-button" aria-label="Expand comparison" title="Expand comparison">⛶</button></div><p class="play-status" aria-live="polite"></p></article></template>
-<script src="app.js" defer></script>
+<script src="app.js?v=20261017-ablations" defer></script>
 </body></html>
