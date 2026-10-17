@@ -1,0 +1,10 @@
+{
+  "title": "AnyPortal++: Task-Adaptive Projection for Consistent Video Appearance Editing",
+  "authors": [
+    "Jiangyue Zeng",
+    "Wenshuo Gao",
+    "Shuai Yang"
+  ],
+  "affiliation": "Wangxuan Institute of Computer Technology, Peking University",
+  "abstract": "Despite rapid advances in video generation, achieving temporally coherent appearance edits with fine-grained control remains challenging. Pre-trained text-to-video models offer rich temporal priors, but how to leverage these priors for video appearance editing while preserving task-relevant content remains under-explored. We present AnyPortal++, a training-free framework that couples video temporal priors with Task-Adaptive Appearance Projection. The projection specifies what appearance information should be retained for a given editing objective and uses task-dependent references to preserve it during refinement. This principle allows different editing tasks to share a common framework while adapting preservation requirements to their intended appearance changes. We further introduce a sparse projection schedule that reduces decoding and re-encoding overhead, with task-dependent schedules balancing temporal coherence and appearance preservation against computational cost. Experiments on background replacement and relighting, stylization, and colorization demonstrate the effectiveness of our framework in balancing temporal consistency and appearance preservation."
+}

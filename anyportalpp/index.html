@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="AnyPortal++: Task-Adaptive Projection for Consistent Video Appearance Editing. Video results for background editing, stylization, and colorization.">
+  <title>AnyPortal++ — Consistent Video Appearance Editing</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout-v2.css">
+</head>
+<body>
+<header class="topbar"><a class="wordmark" href="#top">AnyPortal<span>++</span></a><nav aria-label="Page navigation"><a href="#background">Background</a><a href="#refinement">Refinement</a><a href="#stylization">Stylization</a><a href="#colorization">Colorization</a></nav></header>
+<main id="top">
+  <section class="hero">
+    <div class="eyebrow">VIDEO APPEARANCE EDITING</div>
+    <h1><span class="project-name">AnyPortal<span>++</span></span><span class="subtitle">Task-Adaptive Projection for<br class="desktop-break"> Consistent Video Appearance Editing</span></h1>
+    <p id="authors" class="authors">Jiangyue Zeng <span>·</span> Wenshuo Gao <span>·</span> Shuai Yang</p>
+    <p id="affiliation" class="affiliation">Wangxuan Institute of Computer Technology, Peking University</p>
+    <a class="primary-link" href="#results">Explore video results <span aria-hidden="true">↓</span></a>
+  </section>
+  <figure class="teaser"><img src="assets/teaser.png" alt="AnyPortal++ examples of text- and image-guided background editing, stylization, and colorization." fetchpriority="high"><figcaption>A shared projection framework for temporally consistent video appearance editing.</figcaption></figure>
+  <section id="overview" class="abstract section"><div class="section-kicker">OVERVIEW</div><h2>Different edits. A common framework.</h2><p id="abstract">Loading abstract…</p></section>
+  <section class="framework section"><div class="section-kicker">METHOD</div><h2>Temporal priors meet appearance projection.</h2><p class="section-intro">Task-adaptive projection preserves the appearance information relevant to each editing objective during video refinement.</p><figure><img loading="lazy" src="assets/pipeline.png" alt="AnyPortal++ task-adaptive appearance projection and reconstruction-consistent latent feedback framework."></figure></section>
+  <div id="results" class="results-heading section"><div><div class="section-kicker">VIDEO RESULTS</div><h2>See the difference over time.</h2></div><p>Videos play in sync.<br>Compare the source, initial edit, and refined result.</p></div>
+  <div id="load-error" role="alert" hidden>Could not load the results. Please refresh the page.</div>
+  <section id="background" class="task-section"><div class="task-heading"><span class="task-number">01</span><div><h2>Background replacement &amp; relighting</h2><p>New surroundings and illumination, with coherent foreground detail.</p></div></div><div class="cases"></div></section>
+  <section id="refinement" class="task-section"><div class="task-heading"><span class="task-number">02</span><div><h2>Refining the initial relighting result</h2><p>Recovering source-consistent facial structure and expression while retaining the new illumination.</p></div></div><div class="cases"></div></section>
+  <section id="stylization" class="task-section"><div class="task-heading"><span class="task-number">03</span><div><h2>Video stylization</h2><p>Repairing local structural artifacts and improving their consistency across stylized frames.</p></div></div><div class="cases"></div></section>
+  <section id="colorization" class="task-section"><div class="task-heading"><span class="task-number">04</span><div><h2>Video colorization</h2><p>Stabilizing the initial colors while preserving the grayscale source's brightness and detail.</p></div></div><div class="cases"></div></section>
+</main>
+<footer><a class="wordmark" href="#top">AnyPortal<span>++</span></a><p>Task-Adaptive Projection for Consistent Video Appearance Editing</p><a href="#top">Back to top ↑</a></footer>
+<template id="case-template"><article class="result-card"><div class="card-heading"><div><div class="case-origin"></div><h3></h3><p class="case-caption"></p></div><button class="zoom-button" type="button" aria-pressed="false">Zoom detail</button></div><div class="video-pair"><figure><div class="video-window"><video muted playsinline preload="none" disablepictureinpicture></video><span class="video-label raw-label">Raw</span></div></figure><figure><div class="video-window"><video muted playsinline preload="none" disablepictureinpicture></video><span class="video-label ours-label">Ours</span></div></figure></div><div class="controls"><button type="button" class="play-button" aria-label="Play paired videos">▶ Play</button><button type="button" class="reset-button" aria-label="Replay from first frame">↺</button><input type="range" class="scrubber" min="0" max="1000" value="0" aria-label="Video timeline"><output class="frame-count">Frame 1</output><label class="speed-label"><span class="sr-only">Playback speed</span><select aria-label="Playback speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label><button class="expand-button" aria-label="Expand comparison" title="Expand comparison">⛶</button></div><p class="play-status" aria-live="polite"></p></article></template>
+<script src="app.js" defer></script>
+</body></html>

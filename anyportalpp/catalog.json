@@ -1,0 +1,366 @@
+{
+  "cases": [
+    {
+      "id": "legacy_A_CG",
+      "task": "stylization",
+      "title": "Coherent ear structure",
+      "caption": "Refinement repairs the split earlobe visible in the initial stylization and stabilizes its shape across frames.",
+      "frames": 49,
+      "fps": 23.976023976023978,
+      "roi": [
+        0.1,
+        0.2,
+        0.46,
+        0.9
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/legacy_A_CG-raw.mp4",
+          "poster": "media/legacy_A_CG-raw.jpg"
+        },
+        "ours": {
+          "video": "media/legacy_A_CG-ours.mp4",
+          "poster": "media/legacy_A_CG-ours.jpg"
+        },
+        "source": {
+          "video": "media/legacy_A_CG-source.mp4",
+          "poster": "media/legacy_A_CG-source.jpg"
+        }
+      },
+      "size": [
+        512,
+        224
+      ],
+      "category": "Video stylization"
+    },
+    {
+      "id": "fresco_glass_cg_TFpnp",
+      "task": "stylization",
+      "title": "Hands, glasses, and facial detail",
+      "caption": "Refinement recovers hand and facial structure from the source while preserving the stylized appearance.",
+      "frames": 13,
+      "fps": 5.0,
+      "roi": [
+        0.01,
+        0.15,
+        0.65,
+        0.98
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/fresco_glass_cg_TFpnp-raw.mp4",
+          "poster": "media/fresco_glass_cg_TFpnp-raw.jpg"
+        },
+        "ours": {
+          "video": "media/fresco_glass_cg_TFpnp-ours.mp4",
+          "poster": "media/fresco_glass_cg_TFpnp-ours.jpg"
+        },
+        "source": {
+          "video": "media/fresco_glass_cg_TFpnp-source.mp4",
+          "poster": "media/fresco_glass_cg_TFpnp-source.jpg"
+        }
+      },
+      "size": [
+        368,
+        512
+      ],
+      "category": "Video stylization"
+    },
+    {
+      "id": "relighting-eyes",
+      "task": "refinement",
+      "title": "Preserving the original expression",
+      "caption": "Refinement corrects the distorted eye shape in the initial relighting result, recovering the closed-eye expression of the source video.",
+      "frames": 49,
+      "fps": 8,
+      "roi": [
+        0.12,
+        0.14,
+        0.64,
+        0.8
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/relighting-eyes-raw.mp4",
+          "poster": "media/relighting-eyes-raw.jpg"
+        },
+        "ours": {
+          "video": "media/relighting-eyes-ours.mp4",
+          "poster": "media/relighting-eyes-ours.jpg"
+        },
+        "source": {
+          "video": "media/relighting-eyes-source.mp4",
+          "poster": "media/relighting-eyes-source.jpg"
+        }
+      },
+      "size": [
+        720,
+        480
+      ],
+      "category": "Relighting refinement"
+    },
+    {
+      "id": "davis_bus",
+      "task": "colorization",
+      "title": "Consistent vehicle colors",
+      "caption": "Maintaining the bus colors as the scene moves.",
+      "frames": 49,
+      "fps": 8,
+      "roi": [
+        0.1,
+        0.25,
+        0.85,
+        0.85
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/davis_bus-raw.mp4",
+          "poster": "media/davis_bus-raw.jpg"
+        },
+        "ours": {
+          "video": "media/davis_bus-ours.mp4",
+          "poster": "media/davis_bus-ours.jpg"
+        },
+        "source": {
+          "video": "media/davis_bus-source.mp4",
+          "poster": "media/davis_bus-source.jpg"
+        }
+      },
+      "size": [
+        512,
+        288
+      ],
+      "category": "Video colorization"
+    },
+    {
+      "id": "davis_longboard",
+      "task": "colorization",
+      "title": "Stable clothing appearance",
+      "caption": "Reducing color fluctuations on the shirt across frames.",
+      "frames": 49,
+      "fps": 8,
+      "roi": [
+        0.28,
+        0,
+        0.7,
+        0.6
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/davis_longboard-raw.mp4",
+          "poster": "media/davis_longboard-raw.jpg"
+        },
+        "ours": {
+          "video": "media/davis_longboard-ours.mp4",
+          "poster": "media/davis_longboard-ours.jpg"
+        },
+        "source": {
+          "video": "media/davis_longboard-source.mp4",
+          "poster": "media/davis_longboard-source.jpg"
+        }
+      },
+      "size": [
+        512,
+        288
+      ],
+      "category": "Video colorization"
+    },
+    {
+      "id": "cg-portrait",
+      "task": "stylization",
+      "title": "A consistent CG portrait",
+      "caption": "Preserving the edited appearance through changes in expression.",
+      "frames": 230,
+      "fps": 24,
+      "roi": null,
+      "methods": {
+        "raw": {
+          "video": "media/cg-portrait-raw.mp4",
+          "poster": "media/cg-portrait-raw.jpg"
+        },
+        "ours": {
+          "video": "media/cg-portrait-ours.mp4",
+          "poster": "media/cg-portrait-ours.jpg"
+        },
+        "source": {
+          "video": "media/cg-portrait-source.mp4",
+          "poster": "media/cg-portrait-source.jpg"
+        }
+      },
+      "size": [
+        512,
+        368
+      ],
+      "category": "Video stylization"
+    },
+    {
+      "id": "cat-living-room",
+      "task": "background",
+      "title": "From outdoors to a sunlit room",
+      "caption": "Text-guided background replacement and relighting.",
+      "frames": 120,
+      "fps": 30,
+      "size": [
+        700,
+        464
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/cat-living-room-raw.mp4",
+          "poster": "media/cat-living-room-raw.jpg"
+        },
+        "ours": {
+          "video": "media/cat-living-room-ours.mp4",
+          "poster": "media/cat-living-room-ours.jpg"
+        }
+      },
+      "category": "Background replacement & relighting"
+    },
+    {
+      "id": "campfire",
+      "task": "background",
+      "title": "A warm campfire scene",
+      "caption": "Text-guided editing preserves the subject in a new illuminated environment.",
+      "frames": 120,
+      "fps": 30,
+      "size": [
+        700,
+        464
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/campfire-raw.mp4",
+          "poster": "media/campfire-raw.jpg"
+        },
+        "ours": {
+          "video": "media/campfire-ours.mp4",
+          "poster": "media/campfire-ours.jpg"
+        }
+      },
+      "category": "Background replacement & relighting"
+    },
+    {
+      "id": "stage-lighting",
+      "task": "background",
+      "title": "Under stage lights",
+      "caption": "Image-guided relighting transfers the red-and-blue stage illumination.",
+      "frames": 120,
+      "fps": 30,
+      "size": [
+        496,
+        328
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/stage-lighting-raw.mp4",
+          "poster": "media/stage-lighting-raw.jpg"
+        },
+        "ours": {
+          "video": "media/stage-lighting-ours.mp4",
+          "poster": "media/stage-lighting-ours.jpg"
+        }
+      },
+      "reference": "media/stage-lighting-reference.jpg",
+      "category": "Background replacement & relighting"
+    },
+    {
+      "id": "beach-sunset",
+      "task": "background",
+      "title": "At the beach at sunset",
+      "caption": "Image-guided background editing with warm sunset illumination.",
+      "frames": 120,
+      "fps": 30,
+      "size": [
+        496,
+        328
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/beach-sunset-raw.mp4",
+          "poster": "media/beach-sunset-raw.jpg"
+        },
+        "ours": {
+          "video": "media/beach-sunset-ours.mp4",
+          "poster": "media/beach-sunset-ours.jpg"
+        }
+      },
+      "reference": "media/beach-sunset-reference.jpg",
+      "category": "Background replacement & relighting"
+    },
+    {
+      "id": "bridge-evening",
+      "task": "background",
+      "title": "An evening by the bridge",
+      "caption": "Image-guided editing adapts the subject to a new background and its lighting.",
+      "frames": 120,
+      "fps": 30,
+      "size": [
+        496,
+        328
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/bridge-evening-raw.mp4",
+          "poster": "media/bridge-evening-raw.jpg"
+        },
+        "ours": {
+          "video": "media/bridge-evening-ours.mp4",
+          "poster": "media/bridge-evening-ours.jpg"
+        }
+      },
+      "reference": "media/bridge-evening-reference.jpg",
+      "category": "Background replacement & relighting"
+    },
+    {
+      "id": "davis_loading",
+      "task": "colorization",
+      "title": "Colors through object motion",
+      "caption": "Temporally coherent appearance as objects and people move.",
+      "frames": 49,
+      "fps": 8,
+      "roi": null,
+      "methods": {
+        "raw": {
+          "video": "media/davis_loading-raw.mp4",
+          "poster": "media/davis_loading-raw.jpg"
+        },
+        "ours": {
+          "video": "media/davis_loading-ours.mp4",
+          "poster": "media/davis_loading-ours.jpg"
+        },
+        "source": {
+          "video": "media/davis_loading-source.mp4",
+          "poster": "media/davis_loading-source.jpg"
+        }
+      },
+      "size": [
+        512,
+        288
+      ],
+      "category": "Video colorization"
+    },
+    {
+      "id": "museum",
+      "task": "background",
+      "title": "Dancing in a museum",
+      "caption": "Text-guided background replacement and relighting during body motion.",
+      "frames": 49,
+      "fps": 8,
+      "size": [
+        720,
+        480
+      ],
+      "methods": {
+        "raw": {
+          "video": "media/museum-raw.mp4",
+          "poster": "media/museum-raw.jpg"
+        },
+        "ours": {
+          "video": "media/museum-ours.mp4",
+          "poster": "media/museum-ours.jpg"
+        }
+      },
+      "category": "Background replacement & relighting"
+    }
+  ]
+}
