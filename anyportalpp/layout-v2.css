@@ -10,3 +10,4 @@
  .video-pair[data-count="3"] video{aspect-ratio:var(--ratio);height:auto;order:1}
  .video-pair[data-count="3"] .video-label{order:0}
 }
+.framework img{aspect-ratio:1900 / 493;object-fit:cover;object-position:50% 40.972222%}
