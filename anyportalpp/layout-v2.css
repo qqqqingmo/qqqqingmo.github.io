@@ -13,3 +13,4 @@
 .framework img{aspect-ratio:1900 / 493;object-fit:cover;object-position:50% 40.972222%}
 .framework-description{font-size:15px;line-height:1.85;color:#46554d;margin:20px 0 0}
 @media(max-width:700px){.framework-description{font-size:14px;line-height:1.8}}
+.framework math{font-size:1.08em;white-space:nowrap}
