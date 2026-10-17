@@ -10,7 +10,7 @@
  .video-pair[data-count="3"] video{aspect-ratio:var(--ratio);height:auto;order:1}
  .video-pair[data-count="3"] .video-label{order:0}
 }
-.framework img{aspect-ratio:1900 / 493;object-fit:cover;object-position:50% 40.972222%}
+.framework img{height:auto;aspect-ratio:auto;object-fit:contain;object-position:center}
 .framework-description{font-size:15px;line-height:1.85;color:#46554d;margin:20px 0 0}
 @media(max-width:700px){.framework-description{font-size:14px;line-height:1.8}}
 .framework math{font-size:1.08em;white-space:nowrap}
