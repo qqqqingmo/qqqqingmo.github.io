@@ -5,7 +5,7 @@
   <meta name="description" content="AnyPortal++: Task-Adaptive Projection for Consistent Video Appearance Editing. Video results for background editing, stylization, and colorization.">
   <title>AnyPortal++ — Consistent Video Appearance Editing</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="layout-v2.css?v=20261017-crop">
+  <link rel="stylesheet" href="layout-v2.css?v=20261017-framework">
 </head>
 <body>
 <header class="topbar"><a class="wordmark" href="#top">AnyPortal<span>++</span></a><nav aria-label="Page navigation"><a href="#background">Background</a><a href="#refinement">Refinement</a><a href="#stylization">Stylization</a><a href="#colorization">Colorization</a></nav></header>
@@ -19,7 +19,12 @@
   </section>
   <figure class="teaser"><img src="assets/teaser.png" alt="AnyPortal++ examples of text- and image-guided background editing, stylization, and colorization." fetchpriority="high"><figcaption>A shared projection framework for temporally consistent video appearance editing.</figcaption></figure>
   <section id="overview" class="abstract section"><div class="section-kicker">OVERVIEW</div><h2>Different edits. A common framework.</h2><p id="abstract">Loading abstract…</p></section>
-  <section class="framework section"><div class="section-kicker">METHOD</div><h2>Temporal priors meet appearance projection.</h2><p class="section-intro">Task-adaptive projection preserves the appearance information relevant to each editing objective during video refinement.</p><figure><img loading="lazy" src="assets/pipeline.png" alt="AnyPortal++ task-adaptive appearance projection and reconstruction-consistent latent feedback framework."></figure></section>
+  <section class="framework section">
+    <div class="section-kicker">METHOD</div><h2>Temporal priors meet appearance projection.</h2>
+    <p class="section-intro">AnyPortal++ refines an initially edited video with a frozen video generative prior, while task-adaptive projection preserves the appearance information that defines the edit.</p>
+    <figure><img loading="lazy" src="assets/pipeline.png" alt="AnyPortal++ task-adaptive appearance projection and reconstruction-consistent latent feedback framework."></figure>
+    <p class="framework-description">At selected denoising steps, we decode the clean prediction and restore task-relevant components using the source and/or edited video as references: foreground detail for relighting, source structure and edited appearance for stylization, and source luminance for colorization. Reconstruction-consistent latent feedback (RPA) then carries intermediate corrections into subsequent denoising while compensating for VAE reconstruction discrepancies. Sparse projection reduces repeated decoding and re-encoding, and the final projection directly produces the output.</p>
+  </section>
   <div id="results" class="results-heading section"><div><div class="section-kicker">VIDEO RESULTS</div><h2>See the difference over time.</h2></div><p>Videos play in sync.<br>Compare the source, initial edit, and refined result.</p></div>
   <div id="load-error" role="alert" hidden>Could not load the results. Please refresh the page.</div>
   <section id="background" class="task-section"><div class="task-heading"><span class="task-number">01</span><div><h2>Background replacement &amp; relighting</h2><p>New surroundings and illumination, with coherent foreground detail.</p></div></div><div class="cases"></div></section>
