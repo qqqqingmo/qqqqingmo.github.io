@@ -640,6 +640,118 @@
       "roi": null
     },
     {
+      "id": "style-full-rerender_real2sculpture_fatezero_aligned_full21",
+      "task": "stylization",
+      "category": "Video stylization",
+      "title": "Refining a sculpted portrait",
+      "caption": "Source, initial sculpted edit, and refinement with matched source framing.",
+      "frames": 21,
+      "fps": 5.0,
+      "size": [
+        512,
+        512
+      ],
+      "methods": {
+        "source": {
+          "video": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-source.mp4",
+          "poster": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-source.jpg"
+        },
+        "raw": {
+          "video": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-raw.mp4",
+          "poster": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-raw.jpg"
+        },
+        "ours": {
+          "video": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-ours.mp4",
+          "poster": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-ours.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
+      "id": "style-full-rerender_mountain_fatezero_full11",
+      "task": "stylization",
+      "category": "Video stylization",
+      "title": "Temporal refinement of an ink-wash landscape",
+      "caption": "Source, initial ink-wash edit, and refined video over the complete available sequence.",
+      "frames": 11,
+      "fps": 5.0,
+      "size": [
+        512,
+        512
+      ],
+      "methods": {
+        "source": {
+          "video": "media/style-full-rerender_mountain_fatezero_full11-source.mp4",
+          "poster": "media/style-full-rerender_mountain_fatezero_full11-source.jpg"
+        },
+        "raw": {
+          "video": "media/style-full-rerender_mountain_fatezero_full11-raw.mp4",
+          "poster": "media/style-full-rerender_mountain_fatezero_full11-raw.jpg"
+        },
+        "ours": {
+          "video": "media/style-full-rerender_mountain_fatezero_full11-ours.mp4",
+          "poster": "media/style-full-rerender_mountain_fatezero_full11-ours.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
+      "id": "style-full-fresco_deer_white_TFpnp_full16",
+      "task": "stylization",
+      "category": "Video stylization",
+      "title": "Refining an animated deer",
+      "caption": "Temporal refinement of the edited deer while retaining the white cartoon appearance.",
+      "frames": 16,
+      "fps": 5.0,
+      "size": [
+        512,
+        448
+      ],
+      "methods": {
+        "source": {
+          "video": "media/style-full-fresco_deer_white_TFpnp_full16-source.mp4",
+          "poster": "media/style-full-fresco_deer_white_TFpnp_full16-source.jpg"
+        },
+        "raw": {
+          "video": "media/style-full-fresco_deer_white_TFpnp_full16-raw.mp4",
+          "poster": "media/style-full-fresco_deer_white_TFpnp_full16-raw.jpg"
+        },
+        "ours": {
+          "video": "media/style-full-fresco_deer_white_TFpnp_full16-ours.mp4",
+          "poster": "media/style-full-fresco_deer_white_TFpnp_full16-ours.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
+      "id": "style-full-fresco_fox_greeting_rerender_full16",
+      "task": "stylization",
+      "category": "Video stylization",
+      "title": "Refining a greeting fox",
+      "caption": "Source, initial ReRender edit, and refinement through the greeting motion.",
+      "frames": 16,
+      "fps": 5.0,
+      "size": [
+        512,
+        512
+      ],
+      "methods": {
+        "source": {
+          "video": "media/style-full-fresco_fox_greeting_rerender_full16-source.mp4",
+          "poster": "media/style-full-fresco_fox_greeting_rerender_full16-source.jpg"
+        },
+        "raw": {
+          "video": "media/style-full-fresco_fox_greeting_rerender_full16-raw.mp4",
+          "poster": "media/style-full-fresco_fox_greeting_rerender_full16-raw.jpg"
+        },
+        "ours": {
+          "video": "media/style-full-fresco_fox_greeting_rerender_full16-ours.mp4",
+          "poster": "media/style-full-fresco_fox_greeting_rerender_full16-ours.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
       "id": "style-more-legacy_C_anime",
       "task": "stylization",
       "category": "Video stylization",
