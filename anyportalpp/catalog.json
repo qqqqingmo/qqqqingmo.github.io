@@ -168,8 +168,8 @@
     {
       "id": "cg-portrait",
       "task": "stylization",
-      "title": "A consistent CG portrait",
-      "caption": "Preserving the edited appearance through changes in expression.",
+      "title": "Reduced detail flicker",
+      "caption": "Refinement reduces flicker in fine details while preserving the CG appearance.",
       "frames": 230,
       "fps": 24,
       "roi": null,
@@ -526,6 +526,34 @@
           "poster": "media/ablation-rpa-raw.jpg"
         }
       }
+    },
+    {
+      "id": "style-full-rerender_real2sculpture_fatezero_aligned_full21",
+      "task": "stylization",
+      "category": "Video stylization",
+      "title": "More stable hair detail",
+      "caption": "Refinement reduces temporal jitter in the hair details of the sculpted portrait.",
+      "frames": 20,
+      "fps": 5,
+      "size": [
+        512,
+        512
+      ],
+      "methods": {
+        "source": {
+          "video": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-source-trim1.mp4",
+          "poster": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-source-trim1.jpg"
+        },
+        "raw": {
+          "video": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-raw-trim1.mp4",
+          "poster": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-raw-trim1.jpg"
+        },
+        "ours": {
+          "video": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-ours-trim1.mp4",
+          "poster": "media/style-full-rerender_real2sculpture_fatezero_aligned_full21-ours-trim1.jpg"
+        }
+      },
+      "roi": null
     },
     {
       "id": "style-more-legacy_C_anime",
