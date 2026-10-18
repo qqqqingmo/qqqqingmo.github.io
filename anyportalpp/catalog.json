@@ -526,6 +526,146 @@
           "poster": "media/ablation-rpa-raw.jpg"
         }
       }
+    },
+    {
+      "id": "style-more-rerender_woman_pix2vid",
+      "task": "stylization",
+      "category": "Video stylization",
+      "title": "Coherent portrait appearance",
+      "caption": "Temporal refinement of the edited portrait through changes in facial expression.",
+      "frames": 9,
+      "fps": 5.0,
+      "size": [
+        512,
+        368
+      ],
+      "methods": {
+        "source": {
+          "video": "media/style-more-rerender_woman_pix2vid-source.mp4",
+          "poster": "media/style-more-rerender_woman_pix2vid-source.jpg"
+        },
+        "raw": {
+          "video": "media/style-more-rerender_woman_pix2vid-raw.mp4",
+          "poster": "media/style-more-rerender_woman_pix2vid-raw.jpg"
+        },
+        "ours": {
+          "video": "media/style-more-rerender_woman_pix2vid-ours.mp4",
+          "poster": "media/style-more-rerender_woman_pix2vid-ours.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
+      "id": "style-more-rerender_swan_text2vidzero",
+      "task": "stylization",
+      "category": "Video stylization",
+      "title": "Temporal refinement of a swan edit",
+      "caption": "Source, initial edit, and refined appearance across the swan sequence.",
+      "frames": 21,
+      "fps": 5.0,
+      "size": [
+        512,
+        384
+      ],
+      "methods": {
+        "source": {
+          "video": "media/style-more-rerender_swan_text2vidzero-source.mp4",
+          "poster": "media/style-more-rerender_swan_text2vidzero-source.jpg"
+        },
+        "raw": {
+          "video": "media/style-more-rerender_swan_text2vidzero-raw.mp4",
+          "poster": "media/style-more-rerender_swan_text2vidzero-raw.jpg"
+        },
+        "ours": {
+          "video": "media/style-more-rerender_swan_text2vidzero-ours.mp4",
+          "poster": "media/style-more-rerender_swan_text2vidzero-ours.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
+      "id": "style-more-rerender_sculpture2real_text2vidzero",
+      "task": "stylization",
+      "category": "Video stylization",
+      "title": "Refining a sculpture-to-human edit",
+      "caption": "Temporal refinement of the edited face while retaining the sculpture-to-human transformation.",
+      "frames": 21,
+      "fps": 5.0,
+      "size": [
+        512,
+        320
+      ],
+      "methods": {
+        "source": {
+          "video": "media/style-more-rerender_sculpture2real_text2vidzero-source.mp4",
+          "poster": "media/style-more-rerender_sculpture2real_text2vidzero-source.jpg"
+        },
+        "raw": {
+          "video": "media/style-more-rerender_sculpture2real_text2vidzero-raw.mp4",
+          "poster": "media/style-more-rerender_sculpture2real_text2vidzero-raw.jpg"
+        },
+        "ours": {
+          "video": "media/style-more-rerender_sculpture2real_text2vidzero-ours.mp4",
+          "poster": "media/style-more-rerender_sculpture2real_text2vidzero-ours.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
+      "id": "style-more-rerender_real2sculpture_text2vidzero",
+      "task": "stylization",
+      "category": "Video stylization",
+      "title": "Coherent sculpted appearance",
+      "caption": "Temporal refinement of the sculpted appearance and local facial detail.",
+      "frames": 21,
+      "fps": 5.0,
+      "size": [
+        512,
+        320
+      ],
+      "methods": {
+        "source": {
+          "video": "media/style-more-rerender_real2sculpture_text2vidzero-source.mp4",
+          "poster": "media/style-more-rerender_real2sculpture_text2vidzero-source.jpg"
+        },
+        "raw": {
+          "video": "media/style-more-rerender_real2sculpture_text2vidzero-raw.mp4",
+          "poster": "media/style-more-rerender_real2sculpture_text2vidzero-raw.jpg"
+        },
+        "ours": {
+          "video": "media/style-more-rerender_real2sculpture_text2vidzero-ours.mp4",
+          "poster": "media/style-more-rerender_real2sculpture_text2vidzero-ours.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
+      "id": "style-more-legacy_C_anime",
+      "task": "stylization",
+      "category": "Video stylization",
+      "title": "Stable dome-top detail",
+      "caption": "Refinement reduces flicker in the dark ornament atop the dome, stabilizing fine architectural detail.",
+      "frames": 48,
+      "fps": 23.976023976023978,
+      "size": [
+        512,
+        288
+      ],
+      "methods": {
+        "source": {
+          "video": "media/style-more-legacy_C_anime-source.mp4",
+          "poster": "media/style-more-legacy_C_anime-source.jpg"
+        },
+        "raw": {
+          "video": "media/style-more-legacy_C_anime-raw.mp4",
+          "poster": "media/style-more-legacy_C_anime-raw.jpg"
+        },
+        "ours": {
+          "video": "media/style-more-legacy_C_anime-ours.mp4",
+          "poster": "media/style-more-legacy_C_anime-ours.jpg"
+        }
+      },
+      "roi": null
     }
   ]
 }
