@@ -5,7 +5,7 @@
       "task": "stylization",
       "title": "Coherent ear structure",
       "caption": "Refinement repairs the split earlobe visible in the initial stylization and stabilizes its shape across frames.",
-      "frames": 49,
+      "frames": 48,
       "fps": 23.976023976023978,
       "roi": [
         0.1,
@@ -15,16 +15,16 @@
       ],
       "methods": {
         "raw": {
-          "video": "media/legacy_A_CG-raw.mp4",
-          "poster": "media/legacy_A_CG-raw.jpg"
+          "video": "media/legacy_A_CG-raw-trim1.mp4",
+          "poster": "media/legacy_A_CG-raw-trim1.jpg"
         },
         "ours": {
-          "video": "media/legacy_A_CG-ours.mp4",
-          "poster": "media/legacy_A_CG-ours.jpg"
+          "video": "media/legacy_A_CG-ours-trim1.mp4",
+          "poster": "media/legacy_A_CG-ours-trim1.jpg"
         },
         "source": {
-          "video": "media/legacy_A_CG-source.mp4",
-          "poster": "media/legacy_A_CG-source.jpg"
+          "video": "media/legacy_A_CG-source-trim1.mp4",
+          "poster": "media/legacy_A_CG-source-trim1.jpg"
         }
       },
       "size": [
@@ -38,7 +38,7 @@
       "task": "stylization",
       "title": "Hands, glasses, and facial detail",
       "caption": "Refinement recovers hand and facial structure from the source while preserving the stylized appearance.",
-      "frames": 13,
+      "frames": 12,
       "fps": 5.0,
       "roi": [
         0.01,
@@ -48,16 +48,16 @@
       ],
       "methods": {
         "raw": {
-          "video": "media/fresco_glass_cg_TFpnp-raw.mp4",
-          "poster": "media/fresco_glass_cg_TFpnp-raw.jpg"
+          "video": "media/fresco_glass_cg_TFpnp-raw-trim1.mp4",
+          "poster": "media/fresco_glass_cg_TFpnp-raw-trim1.jpg"
         },
         "ours": {
-          "video": "media/fresco_glass_cg_TFpnp-ours.mp4",
-          "poster": "media/fresco_glass_cg_TFpnp-ours.jpg"
+          "video": "media/fresco_glass_cg_TFpnp-ours-trim1.mp4",
+          "poster": "media/fresco_glass_cg_TFpnp-ours-trim1.jpg"
         },
         "source": {
-          "video": "media/fresco_glass_cg_TFpnp-source.mp4",
-          "poster": "media/fresco_glass_cg_TFpnp-source.jpg"
+          "video": "media/fresco_glass_cg_TFpnp-source-trim1.mp4",
+          "poster": "media/fresco_glass_cg_TFpnp-source-trim1.jpg"
         }
       },
       "size": [
