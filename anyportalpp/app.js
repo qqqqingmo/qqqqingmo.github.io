@@ -1,7 +1,7 @@
 'use strict';
 const players=[];
 async function main(){
-  const [paper,catalog]=await Promise.all(['paper.json','catalog.json'].map(async path=>{const r=await fetch(path);if(!r.ok)throw new Error(path);return r.json()}));
+  const [paper,catalog]=await Promise.all(['paper.json','catalog.json?v=20261018-ablation-order'].map(async path=>{const r=await fetch(path);if(!r.ok)throw new Error(path);return r.json()}));
   document.querySelector('#abstract').textContent=paper.abstract;
   document.querySelector('#affiliation').textContent=paper.affiliation;
   for(const c of catalog.cases){

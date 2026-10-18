@@ -454,12 +454,12 @@
           "poster": "media/ablation-harmonization-source.jpg"
         },
         "raw": {
-          "video": "media/ablation-harmonization-raw.mp4",
-          "poster": "media/ablation-harmonization-raw.jpg"
-        },
-        "ours": {
           "video": "media/ablation-harmonization-ours.mp4",
           "poster": "media/ablation-harmonization-ours.jpg"
+        },
+        "ours": {
+          "video": "media/ablation-harmonization-raw.mp4",
+          "poster": "media/ablation-harmonization-raw.jpg"
         }
       }
     },
@@ -486,12 +486,12 @@
           "poster": "media/ablation-video-prior-source.jpg"
         },
         "raw": {
-          "video": "media/ablation-video-prior-raw.mp4",
-          "poster": "media/ablation-video-prior-raw.jpg"
-        },
-        "ours": {
           "video": "media/ablation-video-prior-ours.mp4",
           "poster": "media/ablation-video-prior-ours.jpg"
+        },
+        "ours": {
+          "video": "media/ablation-video-prior-raw.mp4",
+          "poster": "media/ablation-video-prior-raw.jpg"
         }
       }
     },
@@ -518,12 +518,12 @@
           "poster": "media/ablation-rpa-source.jpg"
         },
         "raw": {
-          "video": "media/ablation-rpa-raw.mp4",
-          "poster": "media/ablation-rpa-raw.jpg"
-        },
-        "ours": {
           "video": "media/ablation-rpa-ours.mp4",
           "poster": "media/ablation-rpa-ours.jpg"
+        },
+        "ours": {
+          "video": "media/ablation-rpa-raw.mp4",
+          "poster": "media/ablation-rpa-raw.jpg"
         }
       }
     }
