@@ -582,6 +582,146 @@
         }
       },
       "roi": null
+    },
+    {
+      "id": "davis_bear",
+      "task": "colorization",
+      "category": "Video colorization",
+      "title": "Stable plant colors",
+      "caption": "Refinement reduces color flicker in the plants on the right side of the frame.",
+      "frames": 49,
+      "fps": 8,
+      "size": [
+        512,
+        288
+      ],
+      "methods": {
+        "source": {
+          "video": "media/davis_bear-source-selected.mp4",
+          "poster": "media/davis_bear-source-selected.jpg"
+        },
+        "raw": {
+          "video": "media/davis_bear-raw-selected.mp4",
+          "poster": "media/davis_bear-raw-selected.jpg"
+        },
+        "ours": {
+          "video": "media/davis_bear-ours-selected.mp4",
+          "poster": "media/davis_bear-ours-selected.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
+      "id": "davis_koala",
+      "task": "colorization",
+      "category": "Video colorization",
+      "title": "Consistent color over time",
+      "caption": "Refinement stabilizes the colorization across frames.",
+      "frames": 49,
+      "fps": 8,
+      "size": [
+        512,
+        288
+      ],
+      "methods": {
+        "source": {
+          "video": "media/davis_koala-source-selected.mp4",
+          "poster": "media/davis_koala-source-selected.jpg"
+        },
+        "raw": {
+          "video": "media/davis_koala-raw-selected.mp4",
+          "poster": "media/davis_koala-raw-selected.jpg"
+        },
+        "ours": {
+          "video": "media/davis_koala-ours-selected.mp4",
+          "poster": "media/davis_koala-ours-selected.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
+      "id": "davis_pigs",
+      "task": "colorization",
+      "category": "Video colorization",
+      "title": "Stable colorization",
+      "caption": "Refinement produces more stable colors throughout the sequence.",
+      "frames": 49,
+      "fps": 8,
+      "size": [
+        512,
+        288
+      ],
+      "methods": {
+        "source": {
+          "video": "media/davis_pigs-source-selected.mp4",
+          "poster": "media/davis_pigs-source-selected.jpg"
+        },
+        "raw": {
+          "video": "media/davis_pigs-raw-selected.mp4",
+          "poster": "media/davis_pigs-raw-selected.jpg"
+        },
+        "ours": {
+          "video": "media/davis_pigs-ours-selected.mp4",
+          "poster": "media/davis_pigs-ours-selected.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
+      "id": "davis_mallard-water",
+      "task": "colorization",
+      "category": "Video colorization",
+      "title": "Consistent water colors",
+      "caption": "Refinement reduces color fluctuations on the water surface.",
+      "frames": 49,
+      "fps": 8,
+      "size": [
+        512,
+        288
+      ],
+      "methods": {
+        "source": {
+          "video": "media/davis_mallard-water-source-selected.mp4",
+          "poster": "media/davis_mallard-water-source-selected.jpg"
+        },
+        "raw": {
+          "video": "media/davis_mallard-water-raw-selected.mp4",
+          "poster": "media/davis_mallard-water-raw-selected.jpg"
+        },
+        "ours": {
+          "video": "media/davis_mallard-water-ours-selected.mp4",
+          "poster": "media/davis_mallard-water-ours-selected.jpg"
+        }
+      },
+      "roi": null
+    },
+    {
+      "id": "davis_paragliding-launch",
+      "task": "colorization",
+      "category": "Video colorization",
+      "title": "Stable clothing and backpack colors",
+      "caption": "Refinement stabilizes the colors of the trousers and backpack as the subject moves.",
+      "frames": 49,
+      "fps": 8,
+      "size": [
+        512,
+        288
+      ],
+      "methods": {
+        "source": {
+          "video": "media/davis_paragliding-launch-source-selected.mp4",
+          "poster": "media/davis_paragliding-launch-source-selected.jpg"
+        },
+        "raw": {
+          "video": "media/davis_paragliding-launch-raw-selected.mp4",
+          "poster": "media/davis_paragliding-launch-raw-selected.jpg"
+        },
+        "ours": {
+          "video": "media/davis_paragliding-launch-ours-selected.mp4",
+          "poster": "media/davis_paragliding-launch-ours-selected.jpg"
+        }
+      },
+      "roi": null
     }
   ]
 }
